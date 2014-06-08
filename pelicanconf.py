@@ -6,7 +6,7 @@ AUTHOR = u'tai2'
 SITENAME = u'blog.tai2.net'
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Asia/Tokyo'
 
 DEFAULT_LANG = u'jp'
 
