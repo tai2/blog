@@ -11,6 +11,8 @@ TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = u'jp'
 IGNORE_FILES = ('*~', '*.swp')
 
+TYPOGRIFY = True
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
