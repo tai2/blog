@@ -8,8 +8,8 @@ SITEURL = ''
 
 LOCALE = ('en_US', 'ja_JP')
 TIMEZONE = 'Asia/Tokyo'
-
 DEFAULT_LANG = u'jp'
+IGNORE_FILES = ('*~', '*.swp')
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
