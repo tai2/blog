@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'tai2'
 SITENAME = u'blog.tai2.net'
 SITEURL = ''
+AUTHOR_SAVE_AS = False
 
 LOCALE = ('en_US', 'ja_JP')
 TIMEZONE = 'Asia/Tokyo'
