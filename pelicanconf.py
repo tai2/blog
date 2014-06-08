@@ -11,6 +11,7 @@ LOCALE = ('en_US', 'ja_JP')
 TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = u'jp'
 IGNORE_FILES = ('*~', '*.swp')
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 TYPOGRIFY = True
 
