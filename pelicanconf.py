@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 AUTHOR = u'tai2'
 SITENAME = u'blog.tai2.net'
 SITEURL = ''
-AUTHOR_SAVE_AS = False
 
 LOCALE = ('en_US', 'ja_JP')
 TIMEZONE = 'Asia/Tokyo'
@@ -13,6 +12,7 @@ DEFAULT_LANG = u'jp'
 IGNORE_FILES = ('*~', '*.swp')
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
+THEME = 'gum'
 TYPOGRIFY = True
 DISQUS_SITENAME = 'tai2'
 
@@ -28,6 +28,7 @@ SOCIAL = (('twitter', 'https://twitter.com/__tai2__'),
 
 DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
+AUTHOR_SAVE_AS = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
