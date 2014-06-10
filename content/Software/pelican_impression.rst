@@ -3,10 +3,10 @@ Static Site GeneratorのPelicanを使ってみた
 
 :slug: pelican-impression
 :tags: pelican, python, blog, oss
-:summary: 主にお客さまに向けて、自分がどんなことをやっているのか、考えているのかを知ってもらう目的で、Blogをはじめることにしました。Blogシステムとして採用した Python製のStatic Site Generatorである `Pelican <http://docs.getpelican.com/en/>`_ についての記事です。
+:summary: 主にお客さまに向けて、自分がどんなことをやっているのか、考えているのかを知ってもらう目的で、Blogをはじめることにしました。まずは、Blogシステムとして採用した Python製のStatic Site Generatorである `Pelican <http://docs.getpelican.com/en/>`_ についての記事です。
 
 主にお客さまに向けて、自分がどんなことをやっているのか、考えているのかを知ってもらう目的で、Blogをはじめることにしました。
-Blogシステムとして採用した Python製のStatic Site Generatorである `Pelican <http://docs.getpelican.com/en/>`_ についての記事です。
+まずは、Blogシステムとして採用した Python製のStatic Site Generatorである `Pelican <http://docs.getpelican.com/en/>`_ についての記事です。
 
 Static Site Generator
 =====================
@@ -63,6 +63,6 @@ Static Site GeneratorのPelicanを採用した理由
  * makeコマンドを使用するあたり、センスがいい
  * WordPressなどよりもテーマの記述や拡張が簡単に行えそう
 
-また、導入の仮定で、Jinja2,pygments,Fabricといった便利そうなPythonライブラリを知れたのも個人的によかったです。
+また、導入の過程で、Jinja2,pygments,Fabricといった便利そうなPythonライブラリを知れたのも個人的によかったです。
 動的なブログシステムでも同じですが、なんとなくインストールして、自分用にカスタマイズしてるだけでもたのしいですよ。
 
