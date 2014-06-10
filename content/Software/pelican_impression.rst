@@ -18,7 +18,7 @@ Static Site Generator
 
 .. class:: credit
 
-Photo by `TexasEagla <://flic.kr/p/hGPnQM>`_
+Photo by `TexasEagla <http://flic.kr/p/hGPnQM>`_
 
 新しいもの好きのWeb製作者の間で、Webサイトの構築用にStatic Site Generatorというものが注目を集めているようです。
 GitHub Pagesで使われている `Jekyll <http://jekyllrb.com/>`_ や、 `Octpress <http://octopress.org/>`_ などが有名です。
