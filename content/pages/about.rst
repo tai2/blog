@@ -48,6 +48,7 @@ Pythonの案件があればぜひやりたいです。
  * JavaScript
  * Objective-C
  * Python
+ * PHP
  * Perl
 
 (おおざっぱに書いた量順)
