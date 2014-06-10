@@ -12,7 +12,7 @@ DEFAULT_LANG = u'jp'
 IGNORE_FILES = ('*~', '*.swp')
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
-THEME = 'gum'
+THEME = 'gum_custom'
 TYPOGRIFY = True
 DISQUS_SITENAME = 'tai2'
 
