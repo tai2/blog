@@ -16,6 +16,10 @@ Static Site Generator
    :width: 100%
    :alt: Flying pelican
 
+.. class:: credit
+
+Photo by `TexasEagla <://flic.kr/p/hGPnQM>`_
+
 新しいもの好きのWeb製作者の間で、Webサイトの構築用にStatic Site Generatorというものが注目を集めているようです。
 GitHub Pagesで使われている `Jekyll <http://jekyllrb.com/>`_ や、 `Octpress <http://octopress.org/>`_ などが有名です。
 
@@ -46,7 +50,7 @@ Disqusでアカウントを作成して、pelicanの設定ファイルに1行設
 使うときの流れ
 ==============
 
-簡単にPelicanでコンテンツを更新するときの流れは簡単です。付属のスクリプトが、コマンド一発でサイトへのアップロードまで世話してくれます。
+Pelicanでコンテンツを更新するときの流れは簡単です。付属のスクリプトが、コマンド一発でサイトへのアップロードまで世話してくれます。
 
  1. contents/ 以下の元ファイル(reSTやMarkDown)をテキストエディタで編集
  2. 付属の make ssh_uploadコマンドで、ファイルを生成&アップロード
