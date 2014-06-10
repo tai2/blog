@@ -29,5 +29,8 @@ DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
 AUTHOR_SAVE_AS = False
 
+PLUGIN_PATH = "plugins"
+PLUGINS = ["simple_footnotes"]
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
