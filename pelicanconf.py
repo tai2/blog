@@ -14,7 +14,6 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 THEME = 'gum_custom'
 TYPOGRIFY = True
-DISQUS_SITENAME = 'tai2'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

@@ -12,6 +12,7 @@ from pelicanconf import *
 
 SITEURL = 'http://blog.tai2.net'
 RELATIVE_URLS = False
+DISQUS_SITENAME = 'tai2'
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
