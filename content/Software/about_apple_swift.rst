@@ -64,6 +64,8 @@ Swiftでは、Objective-Cとの互換性は保たれていますが、C関数を
 
 いずれにしろ、Cライブラリを使うことが不可能になるということは有り得ないと思うので、ちょっとめんどうにはなるかもしれませんが、問題はないと思います。
 
+**※追記** Cライブラリもインポートして使えるという `記述がありました <https://developer.apple.com/library/prerelease/ios/documentation/swift/conceptual/buildingcocoaapps/index.html>`_。*Any Objective-C framework (or C library) that’s accessible as a module can be imported directly into Swift. This includes all of the Objective-C system frameworks—such as Foundation, UIKit, and SpriteKit—as well as common C libraries supplied with the system.* この記述だけみると、ユーザー提供のCライブラリはインポートできないようにも読めますが、どうなんでしょうね。
+
 劇的な工数削減はないかも
 ------------------------
 
