@@ -1,7 +1,7 @@
 XMLHttpRequestによるネイティブアプリ-WebView間でのストリーミングデータ送信実験
 ##############################################################################
 
-:date: 2010-06-17
+:date: 2014-06-17
 :slug: xhr-bulktransfer-ios
 :tags: ios, xmlhttprequest, webkit, experiment
 :summary: モバイルアプリ開発で、ネイティブコードから、WebView内のJavaScriptに大量のデータを高速に流し込めると、いろいろとうれしいことが考えられます(たとえば、ネイティブアプリで生成した映像を、非圧縮動画としてWebViewに転送して表示したりできるかもしれません)。これを実現できないか模索してみます。まずは、XMLHttpRequestでのデータ転送を検証してみました。

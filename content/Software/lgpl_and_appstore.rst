@@ -1,7 +1,7 @@
 (L)GPLとApp StoreとVLC for iOS
 ###############################
 
-:date: 2010-06-29
+:date: 2014-06-29
 :slug: lgpl_and_appstore
 :tags: apple, ios, gpl, lgpl, license, fsf, vlc, oss
 :summary: 主に仕事で、ffmpegやVLCのような(L)GPLのもとに配布されているプログラムを利用することが、ちょくちょくあるのですが、GPLプログラムはApp Storeで配布できないという話をツイッターでみかけたのをきっかけに、そのあたりどうなっているのか調べてみました。

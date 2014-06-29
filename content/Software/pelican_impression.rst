@@ -1,7 +1,7 @@
 Static Site GeneratorのPelicanを使ってみた
 ##########################################
 
-:date: 2010-06-10
+:date: 2014-06-10
 :slug: pelican-impression
 :tags: pelican, python, blog, oss
 :summary: 主にお客さまに向けて、自分がどんなことをやっているのか、考えているのかを知ってもらう目的で、Blogをはじめることにしました。まずは、Blogシステムとして採用した Python製のStatic Site Generatorである `Pelican <http://docs.getpelican.com/en/>`_ についての記事です。
