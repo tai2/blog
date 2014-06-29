@@ -1,6 +1,7 @@
 XMLHttpRequestによるネイティブアプリ-WebView間でのストリーミングデータ送信実験
 ##############################################################################
 
+:date: 2010-06-17
 :slug: xhr-bulktransfer-ios
 :tags: ios, xmlhttprequest, webkit, experiment
 :summary: モバイルアプリ開発で、ネイティブコードから、WebView内のJavaScriptに大量のデータを高速に流し込めると、いろいろとうれしいことが考えられます(たとえば、ネイティブアプリで生成した映像を、非圧縮動画としてWebViewに転送して表示したりできるかもしれません)。これを実現できないか模索してみます。まずは、XMLHttpRequestでのデータ転送を検証してみました。
@@ -15,11 +16,11 @@ WebViewとの通信手段
 
 モバイルアプリで、ネイティブコードとWebView内のJavaScriptが通信する方法には、以下のような仕組みなどがあります。
 
- 1. XMLHttpRequest
- 2. WebSocket
- 3. `Server-sent event <http://www.html5rocks.com/en/tutorials/eventsource/basics/>`_
- 4. `stringByEvaluatingJavaScriptFromString <https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html>`_ (iOS)
- 5. `addJavascriptInterface <http://developer.android.com/reference/android/webkit/WebView.html>`_ (Android)
+1. XMLHttpRequest
+2. WebSocket
+3. `Server-sent event <http://www.html5rocks.com/en/tutorials/eventsource/basics/>`_
+4. `stringByEvaluatingJavaScriptFromString <https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html>`_ (iOS)
+5. `addJavascriptInterface <http://developer.android.com/reference/android/webkit/WebView.html>`_ (Android)
 
 以下、簡単に各手法の特徴を述べます。
 
@@ -60,9 +61,9 @@ XMLHttpRequestでのストリーミング転送を行うにあたっては、い
 
 さて、結果ですが、以下のようなことがわかりました。
 
- * チャンクサイズを大きくするほど、転送速度が早くなる
- * 第一世代iPad mini実機で、160Mbps程度(チャンクサイズ1MB)。
- * **レスポンスのメモリが開放されずにアプリが落ちてしまう**
+* チャンクサイズを大きくするほど、転送速度が早くなる
+* 第一世代iPad mini実機で、160Mbps程度(チャンクサイズ1MB)。
+* **レスポンスのメモリが開放されずにアプリが落ちてしまう**
    
 VGA 30fps生RGBで221Mbps必要であることを考えると、もうすこしで実用可能な速度に届きそうなのですが、いろいろ試しているうちに、レスポンスが開放されないという致命的な問題に気付きました。Instrumentsで見ると、レスポンスに使っているArrayBufferオブジェクトが開放されずにそのまま蓄積されていっています。
 WebKitのコードを見ると、XMLHttpRequest::openしたときに開放処理(参照カウントのデクリメント)をしているのですが、メモリ上に残っているということは、他の部分からも参照されていて参照カウントが残っているのだと思います。

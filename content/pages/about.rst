@@ -41,28 +41,28 @@ Pythonの案件があればぜひやりたいです。
 つかったことのある言語としては、以下のようなものがありますが、とくにこだわりはありません。
 やったことのない言語でも、必要に応じて覚えます。
 
- * C++98
- * Java
- * ActionScript 3
- * C
- * JavaScript
- * Objective-C
- * Python
- * PHP
- * Perl
+* C++98
+* Java
+* ActionScript 3
+* C
+* JavaScript
+* Objective-C
+* Python
+* PHP
+* Perl
 
 (おおざっぱに書いた量順)
 
 実績
 ====
 
- * iPhone,Androidネイティブアプリ開発いろいろ
- * HTML5 Canvasアプリ開発(Processing.js)
- * Adobe Airを含めActionScript 3でのアプリ開発いろいろ
- * 動画・静止画の自動編集エンジン開発(C,OpenGL)
- * 動画ストリーミングサーバー開発(C++98,boost,Python)
- * C++でのWindowsデスクトップアプリ開発いろいろ(Win32,Qt,wxWidgets,OpenGL,DirectX等)
- * PHP,Java等でのWebシステム開発いろいろ(Concrete5,CodeIgniter,Restlet,Seasar2等)
- * Firefox,Chromeのアドオン開発
- * ffmpeg等OSSの改造いくつか
+* iPhone,Androidネイティブアプリ開発いろいろ
+* HTML5 Canvasアプリ開発(Processing.js)
+* Adobe Airを含めActionScript 3でのアプリ開発いろいろ
+* 動画・静止画の自動編集エンジン開発(C,OpenGL)
+* 動画ストリーミングサーバー開発(C++98,boost,Python)
+* C++でのWindowsデスクトップアプリ開発いろいろ(Win32,Qt,wxWidgets,OpenGL,DirectX等)
+* PHP,Java等でのWebシステム開発いろいろ(Concrete5,CodeIgniter,Restlet,Seasar2等)
+* Firefox,Chromeのアドオン開発
+* ffmpeg等OSSの改造いくつか
 
