@@ -12,7 +12,7 @@ DEFAULT_LANG = u'jp'
 IGNORE_FILES = ('*~', '*.swp')
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
-THEME = 'gum_custom'
+THEME = 'built-texts-custom'
 TYPOGRIFY = True
 
 # Feed generation is usually not desired when developing
