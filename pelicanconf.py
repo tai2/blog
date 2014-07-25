@@ -11,6 +11,7 @@ TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = u'jp'
 IGNORE_FILES = ('*~', '*.swp')
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+FILENAME_METADATA = '(?P<slug>.*)'
 
 THEME = 'built-texts-custom'
 TYPOGRIFY = True
@@ -25,7 +26,8 @@ SOCIAL = (('twitter', 'https://twitter.com/__tai2__'),
           ('github', 'https://github.com/tai2/'))
 
 LINKS = (('tai2.net', 'http://tai2.net/'),
-         ('blog.mikiishijima.com', 'http://blog.mikiishijima.com/'))
+         ('blog.mikiishijima.com', 'http://blog.mikiishijima.com/'),
+         ('Article Candidates', 'https://gist.github.com/tai2/5cb13126ed4ebb79a73d'))
 
 DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
