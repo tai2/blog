@@ -3,7 +3,7 @@ Android Wearのデザイン原則
 
 :date: 2014-10-2
 :tags: android, wearable, ui, usability, design
-:summary: iOSアプリのUIを設計するときに、設定をどこに配置するかで悩むことがありますが、ユーザビリティーを考えるのであれば、設定アプリにアプリの設定を置くべきではありません。
+:summary: Android Wearは時計型のAndroidデバイスです。コンセプト自体、携帯電話型やタブレット型(以下、ハンドヘルドとまとめて呼びます)のAndroidデバイスとかかなり異なったものになっており、アプリ開発にあたっては、Android Wearの独自の概念を理解しておく必要があります。
 
 .. contents:: 目次
 
