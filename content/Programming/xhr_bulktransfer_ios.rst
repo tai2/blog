@@ -43,7 +43,7 @@ XMLHttpRequestでのストリーミング転送
 iOSで、アプリ内にWebサーバーを立てて、XMLHttpRequestでの転送を行って、どの程度速度が出るか実験してみました。
 コードは、githubに置いてあります: `XHRBulkTransferDemo_iOS <https://github.com/tai2/XHRBulkTransferDemo_iOS>`_
 
-.. image:: images/xhr.png
+.. image:: {filename}/images/xhr.png
    :align: center
    :alt: In-app web server to webview
 

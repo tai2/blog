@@ -14,13 +14,13 @@ iOSでアプリ設定を置く場所は、大きく2つに分けられます。
 1は、OSにプリインストールされているもので、作成するアプリ自体とは別のアプリになります。
 この中に、 OSの基本設定に加えて、アプリ個別の設定を置くことができます。
 
-.. image:: images/settings_app.png
+.. image:: {filename}/images/settings_app.png
    :align: center
    :alt: Settings App Screen Shot
 
 2は、アプリ内に設定用の画面を配置したりします。項目が少なければ、設定のためだけの画面を用意しなくても、メインのUIに設定用のコントロールを配置すれば十分かもしれません。次の図は、Twitterアプリの設定画面です。
 
-.. image:: images/twitter_app_settings.png
+.. image:: {filename}/images/twitter_app_settings.png
    :align: center
    :alt: Twitter App Settings Screen Shot
 
@@ -31,7 +31,7 @@ iOSでアプリ設定を置く場所は、大きく2つに分けられます。
 
 設定アプリ内に設定を置く場合は、Settings Bundleというリソースファイルを作成し、Xcodeの専用のエディタからデータ定義を作成すれば、それだけでデータ編集用のUI定義・表示まで行ってくれるので、実装コストは非常に低いです。十分なデータ型もそろっており、階層的に整理することもできるので、たいていの設定を記述するために十分な表現力を持っています。次の図は、Settings Bundleの作成画面です。
 
-.. image:: images/settings_root_template.jpg
+.. image:: {filename}/images/settings_root_template.jpg
    :align: center
    :alt: Settings Bundle Screen Shot
 

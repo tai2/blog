@@ -17,7 +17,7 @@ WebSocketでのストリーミング転送
 iOSで、アプリ内にWebSocketサーバーを立てて、WebView内のWebSocketオブジェクトへの転送を行い、どの程度速度が出るか実験してみました。
 コードは、githubに置いてあります: `WebSocketBulkTransferDemo_iOS <https://github.com/tai2/WebSocketBulkTransferDemo_iOS>`_
 
-.. image:: images/websocket.png
+.. image:: {filename}/images/websocket.png
    :align: center
    :alt: In-app web server to webview
 

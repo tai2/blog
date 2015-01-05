@@ -6,7 +6,7 @@ ffmpegをビジネスで利用したときに特許侵害になる可能性
 :tags: ffmpeg, mpeg-la, patent
 :summary: 主に仕事で、ffmpegやVLCのようなOSSを利用して、動画をデコードしたりエンコードすることがちょくちょくあるのですが、そういうのを使ったときにMEPG-LAの保有している特許プールに突っ込むことにならないのか、気になったのでこの際ハッキリさせておくことにしました。
 
-.. image:: images/ffmpeg-logo.png
+.. image:: {filename}/images/ffmpeg-logo.png
    :align: center
    :alt: ffmpeg logo
 

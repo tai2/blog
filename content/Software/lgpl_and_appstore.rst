@@ -6,7 +6,7 @@
 :tags: apple, ios, gpl, lgpl, license, fsf, vlc, oss
 :summary: 主に仕事で、ffmpegやVLCのような(L)GPLのもとに配布されているプログラムを利用することが、ちょくちょくあるのですが、GPLプログラムはApp Storeで配布できないという話をツイッターでみかけたのをきっかけに、そのあたりどうなっているのか調べてみました。
 
-.. image:: images/lgpl.png
+.. image:: {filename}/images/lgpl.png
    :align: center
    :alt: LGPL logo
 

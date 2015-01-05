@@ -6,7 +6,7 @@ Appleの新言語Swiftが発表されました
 :tags: apple, swift, objective-c, ios
 :summary: 先日のWWDC基調講演で、Appleの新言語 `Swift <https://developer.apple.com/swift/>`_ が発表されました。これは、いままでApple製品用のソフトウェアを開発するときに使われていたObjective-Cを置き換えるものです。発表と同時に言語のドキュメントも公開されて、開発者からも概ね好意的に受けとめられているようです。
  
-.. image:: images/swift_hello.png
+.. image:: {filename}/images/swift_hello.png
    :align: center
    :alt: swift hello world code
 
