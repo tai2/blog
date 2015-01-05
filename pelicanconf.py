@@ -13,7 +13,7 @@ IGNORE_FILES = ('*~', '*.swp')
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 FILENAME_METADATA = '(?P<slug>.*)'
 
-THEME = 'built-texts-custom'
+THEME = 'pelican-blueidea'
 TYPOGRIFY = True
 
 # Feed generation is usually not desired when developing
@@ -31,9 +31,9 @@ LINKS = (('tai2.net', 'http://tai2.net/'),
 
 DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
-AUTHOR_SAVE_AS = False
+AUTHOR_SAVE_AS = ''
 
-PLUGIN_PATH = "plugins"
+PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["simple_footnotes"]
 
 # Uncomment following line if you want document-relative URLs when developing
