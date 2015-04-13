@@ -1,7 +1,8 @@
 About Me
 #########
 
-武藤大樹。1981年生まれ。
+武藤大樹。1981年生まれ。ネット上の名前はtai2。
+アクティブなSNSは `ツイッター <https://twitter.com/__tai2__>`_ 。
 
 フリーランスプログラマーとして、ソフトウェア受託開発を生業にしています。
 `ウルフギャング <http://engineer.typemag.jp/article/nico_tuning>`_ という開発チームを組んでたりもします。
@@ -36,8 +37,7 @@ About Me
 プログラミング言語
 ==================
 
-Pythonが好きですが、残念ながら仕事ではちょっとした作業以外には、ほぼ使ったことがありません。
-Pythonの案件があればぜひやりたいです。
+好きな言語はPythonです。
 つかったことのある言語としては、以下のようなものがありますが、とくにこだわりはありません。
 やったことのない言語でも、必要に応じて覚えます。
 
@@ -56,6 +56,8 @@ Pythonの案件があればぜひやりたいです。
 実績
 ====
 
+* Django,Tornadoによるウェブサービス開発(Python)。
+* `Lynda.com <https://www.lynda.jp/trainers/taiju-muto>`_ へのビデオコース提供
 * `LiVEARTH <http://livearth.jp/>`_ サーバーAPI(Node.js)
 * iPhone,Androidネイティブアプリ開発いろいろ
 * HTML5 Canvasアプリ開発(Processing.js)
