@@ -147,6 +147,7 @@ NodeSchool Tokyoについての他の記事
 * `nodeschool tokyo (東京Node学園 入学式) <http://togetter.com/li/807537>`_
 * `東京Node学園 入学式に参加してきました:-) <http://ba-kgr.hatenablog.com/entry/2015/04/12/231154>`_
 * `NodeSchoolに参加しました <http://blog.livedoor.jp/kaidouji85/archives/5004079.html>`_
+* `nodeschool tokyo 東京Node学園　入学式行ってきました！ <http://k2lab.hateblo.jp/entry/2015/04/12/233921>`_
 
 他にもレポートしている記事などがあればぜひ教えてください。
 
