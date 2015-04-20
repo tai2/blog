@@ -80,7 +80,7 @@ NodeSchoolは元々は、Node.jsを使ってプログラムを作ったり、知
 * `how-to-npm-jp <https://www.npmjs.com/package/how-to-npm-jp>`_ npm入門
 * `tower-of-babel <https://www.npmjs.com/package/tower-of-babel>`_ ES6入門
 
-参加者は、満員の150名程度。メンターも正確には把握していませんが最終的に20名程度集uたようです。
+参加者は、満員の150名程度。メンターも正確には把握していませんが最終的に20名程度集まったようです。
 
 .. image:: {filename}/images/nodeschool-tokyo-picture.jpg
    :align: center
@@ -111,7 +111,7 @@ NodeSchool Tokyoの活動
 
 NodeSchoolの `東京コミュニティ <http://nodeschool.io/tokyo/>`_ は、 `Sota Yamashtia <https://github.com/sotayamashita>`_ さんの
 `声掛け <https://github.com/nodeschool/tokyo/issues/2>`_ で、
-今年の1月ごろから徐々に人が集り始めて、この度ついにイベントを開催することができました。
+今年の1月ごろから徐々に人が集まり始めて、この度ついにイベントを開催することができました。
 ちなみに、今回のイベントは、「東京Node学園 入学式」と銘打たれていることからもわかる通り、
 `東京Node学園 <http://nodefest.jp/>`_ という有名な日本のNode.jsコミュニティイベントに協賛してもらう形で行われました。
 150人もの大人数が集ったのは、東京Node学園の場を借りられたことが大きかったと思います。
