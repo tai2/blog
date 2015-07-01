@@ -60,6 +60,7 @@ About Me
 * `Lynda.com <https://www.lynda.jp/trainers/taiju-muto>`_ へのビデオコース提供
 * `LiVEARTH <http://livearth.jp/>`_ サーバーAPI(Node.js)
 * iPhone,Androidネイティブアプリ開発いろいろ
+* Tizenアプリ開発(C)
 * HTML5 Canvasアプリ開発(Processing.js)
 * Adobe Airを含めActionScript 3でのアプリ開発いろいろ
 * 動画・静止画の自動編集エンジン開発(C,OpenGL)
