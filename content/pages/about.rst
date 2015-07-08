@@ -43,11 +43,11 @@ About Me
 
 * C++98
 * Java
-* ActionScript 3
-* C
 * JavaScript
-* Objective-C
+* C
 * Python
+* ActionScript 3
+* Objective-C
 * PHP
 * Perl
 
