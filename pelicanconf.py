@@ -36,5 +36,10 @@ AUTHOR_SAVE_AS = ''
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["simple_footnotes"]
 
+# Theme specific settings.
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_SUBMENU = False
+DISPLAY_CATEGORIES_ON_POSTINFO = False
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
