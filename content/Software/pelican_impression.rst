@@ -71,3 +71,9 @@ Static Site GeneratorのPelicanを採用した理由
 また、導入の過程で、Jinja2,pygments,Fabricといった便利そうなPythonライブラリを知れたのも個人的によかったです。
 動的なブログシステムでも同じですが、なんとなくインストールして、自分用にカスタマイズしてるだけでもたのしいですよ。
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
+

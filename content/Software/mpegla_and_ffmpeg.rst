@@ -60,3 +60,9 @@ ffmpegのような非商業活動をしているところに対して特許権�
 * `Frequently Asked Questions about software patents <https://www.ffii.org/Frequently%20Asked%20Questions%20ab
   out%20software%20patents>`_
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
+

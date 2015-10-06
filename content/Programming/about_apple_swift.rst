@@ -72,3 +72,8 @@ Swiftでは、Objective-Cとの互換性は保たれていますが、C関数を
 
 心理的にも実際的にも、かなり開発し易くなることは確かですが、とは言え、それで開発工数が半分とか、十分の一になるかと言われると、そうはならない気がしています。そもそも、Objective-Cがそこまでよくはなかったとは言え、どうしようもなく悪いというわけでもありませんでした(C言語と比べれば)。また、わたしが普段やっているような小さい規模の案件だと、プログラミング言語やコーディング作業自体よりは、フレームワークの使いかたで悩んだりハマったりしてる割合が多いような気がします。もっと大きな案件になってくると、プログラミング言語自体の構造化能力が、より効いてくるというのはありそうですが。とはいえ、気持ち良くプログラミングできるのは良いことなので、やはりSwiftはiOS開発者にとって歓迎すべきものです。
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。

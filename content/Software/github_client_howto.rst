@@ -393,3 +393,9 @@ upstreamの更新を取得する煩雑な手順も不要です。Syncボタン�
 
 本稿では、Gitの基本概念について述べました。また、GitHub for Mac/Windowsを使用して、プロジェクトをフォークし、ローカルマシンで修正を加えて、プルリクエストを作成するまでの流れをひととおり説明しました。
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
+

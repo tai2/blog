@@ -178,3 +178,9 @@ iOSには、1次元または2次元の整列されたデータを表示するの
 * UI操作時のインタラクションまで考えて欲しい
 * プラットフォームごとの特性について学んだ上でデザインして欲しい
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
+

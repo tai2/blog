@@ -210,3 +210,9 @@ Left Wondering Why VideoLan Relicensed Some Code to LGPL (2012/11/22)
 The Problem with Using LGPL v2.1 Code in an iOS App (2013/07/23)
   http://roadfiresoftware.com/2013/08/the-problem-with-using-lgpl-v2-1-code-in-an-ios-app/
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
+
