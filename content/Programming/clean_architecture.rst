@@ -4,9 +4,9 @@
 :date: 2015-10-5
 :slug: the_clean_architecture
 :tags: architecture
-:summary: Robert Martin による、The Clean Architecture の翻訳です。
+:summary: Robert Martin (a.k.a.ボブおじさん) による、The Clean Architecture の翻訳です。
 
-`Robert Martin <https://twitter.com/unclebobmartin>`_ による、 `The Clean Architecture <http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html>`_ の翻訳です。
+`Robert Martin (a.k.a. ボブおじさん) <https://twitter.com/unclebobmartin>`_ による、 `The Clean Architecture <http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html>`_ の翻訳です。
 
 この記事を翻訳して公開したことは `8th Light, Inc. <http://8thlight.com/>`_ に報告済みです。公開の停止を求められた場合は、取り下げます。
 
