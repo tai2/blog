@@ -8,7 +8,7 @@
 
 `Alistair Cockburn <http://alistair.cockburn.us/>`_ による `Hexagonal architecture <http://alistair.cockburn.us/Hexagonal+architecture>`_ の翻訳です。PoEAAで言及されていることから、2002年ごろにはすでにC2 Wikiにページがあった模様。似たようなアーキテクチャである `クリーンアーキテクチャ <{filename}clean_architecture.rst>`_ も翻訳したので参考にしてください。
 
-この記事を翻訳して公開したことはAlistair Cockburnに報告済みです。公開の停止を求められた場合は、取り下げます。
+この記事は著者から許可を得て公開しています。Thanks to Alistair Cockburn!
 
 .. contents:: 目次
 
