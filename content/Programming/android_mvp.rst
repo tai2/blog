@@ -108,8 +108,8 @@ FlowとMortarを使ったMVPアーキテクチャでは、 `Dagger 1 <http://squ
 その後、GoogleがDaggerの後継ライブラリとして、 `Dagger 2を提案しました <https://github.com/square/dagger/issues/366>`_ 。
 
 どちらも用途としては同じで、アノテーションによってDependency Injectionを実現するためのものであり、javax.inject(JSR-330)の一実装です。
-Dagger 2の最大の特徴は、それがソースコードジェネレータであるということです。そのため、コンパイル時に静的型チェックの恩恵を受けられます。
-一方で、Dagger 1は、ランタイムのリフレクションによって、動的に依存性を解決します。
+Dagger 2の最大の特徴は、それが **完全な** オブジェクトグラフの構成と検証をコンパイル時に行うということです。そのため、生成されるコードは簡潔で、素早いものになります。
+一方で、Dagger 1は、オブジェクトグラフの構成(リンク)をランタイムに行います。また、オブジェクトグラフを動的に拡張することが可能です。つまり、コンパイル時のオブジェクトグラフ検証を完全には行いません。
 
 いま現在Squareが内部的にどちらを使ってるのかはさだかではないのですが、 `2015年1月時点ではDagger 1を使っており <https://github.com/JakeWharton/u2020/issues/158>`_ 、すぐに移行する予定もなかったようです。
 ただし、Dagger 1は、今年の5月で更新が止まっています。
@@ -119,8 +119,8 @@ Dagger 2の最大の特徴は、それがソースコードジェネレータで
 
 一方で、Dagger 2とFlow/Mortarを併用したMVPアプリ開発は、Square社員でMortarの開発にも参加している `Pierre-Yves Ricau <https://github.com/pyricau>`_ を含め、何人かがやりかたを提案してはいるのですが、
 確立された方法はないという状況です。そのため、Dagger 2と併用する場合には、導入までの努力が多く必要になると思います。
-また、MVPアプリで使う場合には、画面ごとに異なるオブジェクトグラフを作成したいのですが、それをやろうとすると、けっきょくランタイムのリフレクションが必要になり、
-Dagger 2の最大のメリットであるソースコード生成による静的型チェックのサポートが受けられなくなってしまいます。[ref]Dagger 2がやっているのと同様に、アノテーションを見て、足りない部分を自力でソースコード生成して補うというところまでやれば、Dagger 2の長所を活かせると思いますが、そこまでやる気力はありませんでした。[/ref]
+また、MVPアプリで使う場合には、画面ごとに異なるオブジェクトグラフを作成したいのですが、それをスマートにやろうとすると、けっきょくランタイムのリフレクションが必要になり、
+それであれば、ランタイムに柔軟なオブジェクトグラフの構成ができるDagger 1のほうが向いているかもしれません。[ref]Dagger 2がやっているのと同様に、アノテーションを見て、足りない部分を自力でソースコード生成して補うというところまでやれば、Dagger 2の長所を活かせると思いますが、そこまでやる気力はありませんでした。[/ref]
 
 そう考えると、けっきょくのところ、Android MVPをやるには、現時点では、Dagger 1のほうがいい選択なのかもしれません。
 筆者がプロジェクトをはじめる前には、いまほど深い理解もなく、どちらのほうが良い選択なのかも判断が難しかったので、新しい方のDagger 2を採用しました。
@@ -678,6 +678,7 @@ Flow/Mortarを利用することで、かえってボイラープレートが増
 * `An Investigation into Flow and Mortar <https://www.bignerdranch.com/blog/an-investigation-into-flow-and-mortar/>`_ Flow/Mortarの解説。ただしAPIが古い。
 * `Fragments vs. CustomViews に一つの結論を出してみた <http://qiita.com/KeithYokoma/items/9e049f12ca38d942e4fd>`_ Fragmentとカスタムビューベースの設計の比較。
 * `Snorkeling with Dagger 2 <https://github.com/konmik/konmik.github.io/wiki/Snorkeling-with-Dagger-2>`_ Dagger 2の解説記事。おすすめ。
+* `Dagger 2 - The redaggering - Google Slides <https://docs.google.com/presentation/d/1fby5VeGU9CN8zjw4lAb2QPPsKRxx6mSwCe9q7ECNSJQ/pub?start=false&loop=false&delayms=3000>`_ DIライブラリの進化の歴史。
 * `BowerとMacGlashanのMVP論文要約 <http://blog.tai2.net/bower-and-macglashan-mvp-architecture.html>`_ 現在普及しているMVPの原型を提案した論文の要約。
 * `pyricau/dagger2-mortar-flow-experiment <https://github.com/pyricau/dagger2-mortar-flow-experiment>`_ Square社員のPierre-Yves RicauによるFlow/Mortar/Dagger 2の試案。
 * `lukaspili/Mortar-Flow-Dagger2-demo <https://github.com/lukaspili/Mortar-Flow-Dagger2-demo>`_ Flow/Mortar/Dagger 2のデモ実装。
