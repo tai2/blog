@@ -132,7 +132,7 @@ JavaScriptでは、名前空間やブロック構文のような仕組みが用�
 セミコロンにまつわる論争
 ========================
 
-さて、前述の通り、Bootstrapは、ステートメント末尾にセミコロンを付与しないスタイルを取っています。Bootstrapのクリエイターの一人である、Jacob Thorntonはこの理由について `ブログで説明しています。 <http://www.wordsbyf.at/2011/10/31/i-dont-write-javascript/>`_ 
+さて、前述の通り、Bootstrapは、ステートメント末尾にセミコロンを付与しないスタイルを取っています。Bootstrapのクリエイターの一人である、Jacob Thorntonはこの理由について `ブログで説明しています。 <http://www.wordsbyf.at/2011/10/31/i-dont-write-javascript/>`_ [ref]Jacob Thorntonのブログは現在停止中のようですが、GitHubにソースが残っています。https://github.com/fat/wordsbyf.at/blob/master/articles/2011-10-31-i-dont-write-javascript.txt [/ref]
 
 その主張は、
 
