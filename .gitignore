@@ -3,3 +3,6 @@
 *.swp
 output/
 *.pyc
+cache/
+pelican.pid
+srv.pid
