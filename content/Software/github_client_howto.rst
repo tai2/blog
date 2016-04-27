@@ -1,17 +1,17 @@
 GitHub公式クライアントでだれでも簡単GitHubライフをはじめよう
 ############################################################
 
-:date: 2015-02-26
+:date: 2016-04-28
 :slug: github_client_howto
 :tags: git, github, workflow
-:summary: 本稿では、 GitHub 上で運用されている開発プロジェクトに、公式クライアントであるGitHub for Mac / Windows (以下GitHubクライアント) を使用して参加する方法を説明します。本稿は、デザイナーやディレクターなど、プログラマ以外の方を対象とします。 GitHubクライアントを使用すれば、コマンドラインからの操作をほとんど1行わずに開発に参加することが可能です。
+:summary: 本稿では、 GitHub 上で運用されている開発プロジェクトに、公式クライアントであるGitHub Desktopを使用して参加する方法を説明します。本稿は、デザイナーやディレクターなど、プログラマ以外の方を対象とします。 GitHub Desktopを使用すれば、コマンドラインからの操作をほとんど1行わずに開発に参加することが可能です。
 
 .. contents:: 目次
 
-本稿では、 `GitHub <https://github.com/>`_ 上で運用されている開発プロジェクトに、公式クライアントであるGitHub for `Mac <https://mac.github.com/>`_ / `Windows <https://windows.github.com/>`_ (以下GitHubクライアント) を使用して参加する方法を説明します。
+本稿では、 `GitHub <https://github.com/>`_ 上で運用されている開発プロジェクトに、公式クライアントである `GitHub Desktip <https://desktop.github.com/>`_ を使用して参加する方法を説明します。
 
 本稿は、デザイナーやディレクターなど、プログラマ以外の方を対象とします。
-GitHubクライアントを使用すれば、コマンドラインからの操作をほとんど[ref]Macでは2箇所、Windowsでは1箇所のみコマンドラインを使用します。[/ref]行わずに開発に参加することが可能です。
+GitHub Desktopを使用すれば、基本的なフローからはずれない限り、コマンドラインからの操作をまったく行わずに開発に参加することが可能です。
 
 Gitとは
 =======
@@ -24,9 +24,10 @@ Gitを使用すると、ディレクトリに含まれるファイルのスナ�
 Gitを使えば、システム上にある任意のディレクトリをリポジトリ化できます。[ref]リポジトリ化されたディレクトリのルートには、.gitという隠しディレクトリが作成されます。この中にGitが必要とするすべての情報が格納されます。[/ref] 
 実際の使用では、プロジェクトごと(例えば、ウェブサイトに関連するファイル一式など)にリポジトリを作成する場合が多いと思います。
 
-.. image:: {filename}/images/git-snapshots.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/git-snapshots.png
    :alt: Git Snapshots
+
+   Gitではディレクトリの内容を「スナップショット」として積み重ねていく
 
 リポジトリ上に保存されたスナップショットは、いつでも好きなときに復元して、現在のディレクトリに置かれているファイルセットを切り替えることができます。
 
@@ -34,54 +35,61 @@ Gitは行指向のツールです。つまり、Gitのファイル管理機能�
 リポジトリ内にPSDやJPEGなどのバイナリファイル[ref]バイナリファイルの例としては、PNG,JPEGなどの画像ファイル、MP4,AVIなど動画ファイル、PSD,AIなどAdobeソフトのファイルなどが挙げられます。HTML、CSS、Java Scriptなどのソースコードは、テキストファイルで、こちらはGitでの管理が上手く機能します。[/ref]を格納することもできますが、スナップショット間の差分を確認したり、異なるスナップショットを統合するなどの便利な機能は、それらに対しては使えません。
 
 ちなみに、Gitクライアントのオリジナルのバージョンは、コマンドラインで操作するツールです。
-ですが、オリジナル版以外にも、いくつものGUIバージョンが開発されています。GitHubクライアントも数あるGUI版クライアントのうちのひとつです。
+ですが、オリジナル版以外にも、いくつものGUIバージョンが開発されています。GitHub Desktopも数あるGUI版クライアントのうちのひとつです。
 
 GitHubとは
 ===========
 
-.. image:: {filename}/images/octocat.png
-   :align: center
-   :alt: Octcat
+.. figure:: {filename}/images/github_client_howto/octocat.png
+   :alt: Octocat
 
-GitHubは、Gitで管理しているリポジトリをインターネット上で公開するためのウェブサービスです。[ref]GitHub上で管理しているリポジトリを非公開にしておくこともできますが、インターネットを通じてリポジトリにアクセス点は同じです。[/ref]
+   GitHubのキモかわいいマスコットキャラクターOctocat君
+
+GitHubは、Gitで管理しているリポジトリをインターネット上で公開するためのウェブサービスです。[ref]GitHub上で管理しているリポジトリを非公開にしておくこともできますが、インターネットを通じてリポジトリにアクセスする点は同じです。[/ref]
 
 GitHubでは、リポジトリのホスティング以外にも、Issue管理やWikiといったプロジェクト運営のためのいくつかの機能が使えます。
 また、後述のプルリクエスト機能により、公開されているプロジェクトに気軽に貢献できるのが最大の特徴です。
 
-GitHubクライアントの特徴
-========================
+GitHub Desktopの特徴
+=====================
 
-さきほど述べたように、Mac用、Windows用ともに、 `いくつものGUI版Gitクライアント <http://git-scm.com/downloads/guis>`_ があります。
-GitHubクライアントの特徴としては、
+さきほど述べたように、Mac/Windows用ともに、 `いくつものGUI版Gitクライアント <http://git-scm.com/downloads/guis>`_ があります。
+GitHub Desktopの特徴としては、
 
 * コマンドライン版と比べ、大幅に機能が制限されている。
 * GitHubと連携するための機能が実装されている。
-* Mac/Windows用があり、かなり似通ったUIを提供している。
+* Mac/Windows用があり、ほとんど同じUIを提供している。
 
 といったものが挙げられます。
 
-GitHubクライアントは、コマンドライン版ほどパワフルな管理機能は備えていませんが、日々の業務で使うのに必要な最低限の機能は備えています。機能が制限されているぶん、ときに難解と言われるGitの導入障壁がいくぶん軽減されることが期待できます。[ref]Gitに慣れてくると、履歴を綺麗に保ちたいといった欲求が出てきますが、そのときは素直にコマンドライン版を使うのがいいと思います。[/ref]
+GitHub Desktopは、コマンドライン版ほどパワフルな管理機能は備えていませんが、日々の業務で使うのに必要な最低限の機能は備えています。機能が制限されているぶん、ときに難解と言われるGitの導入障壁がいくぶん軽減されることが期待できます。[ref]Gitに慣れてくると、履歴を綺麗に保ちたいといった欲求が出てきますが、そのときは素直にコマンドライン版を使うのがいいと思います。[/ref]
 
-また、GitHubアカウントと連動し、GitHub上で自分と関連付けられているリポジトリを一覧表示したり、プルリクエストといったGitHub特有の機能を直接使うことができるのは、GitHubクライアントならではと言えるでしょう。
-ちなみに、Mac/Windows共に、GitHubクライアントのインストール時に、コマンドライン版もいっしょに導入できます。
+また、GitHubアカウントと連動し、GitHub上で自分と関連付けられているリポジトリを一覧表示したり、プルリクエストといったGitHub特有の機能を直接使うことができるのは、GitHub Desktopならではと言えるでしょう。
+Windows版では、GitHub Desktopのインストール時に、コマンドライン版(GitHub Shell)もいっしょに導入できます。Mac OS Xには最初からgitがインストールされています。
 
 Mac/Windows両対応なのも人に使い方を説明するときには重要です。 
-なお、以降では、とくにことわりのない限り、GitHub for Macのスクリーンショットを使用します。
-Windows版ではボタンのある位置などが若干違う場合がありますが、ほぼ同じ機能を提供しています。[ref]Windows版はプルリクエスト作成やresetができないなど、細かな差異はあります。[/ref]
+なお、以降では、Mac版のスクリーンショットを使用します。Windows版でも、若干の見た目の違いはあるものの、UIのレイアウトや機能などはほとんど同じですので、支障はないかと思います。
 
 なお、この記事で使用しているクライアントのバージョンは、
 
-* GitHub for Mac Faceted Palm (200)
-* GitHub for Windows Eugoogly (2.9.1.0)
+* Mac版 Beset by Computers (220)
+* Windows版 Proctional Fungramming (3.0.17.0)
 
 です。
+
+セットアップ
+==============
+
+アプリケーションをダウンロードしたら、まずはじめに、GitHub DesktopにGitHubのアカウント情報を登録する必要があります。
+アカウント情報の扱いについてはMacとWindowsで若干違いがあり、Macでは、キーチェーンにIDとパスワードが保存されます。
+Windowsでは、初回の設定時に、SSHのキーペアが自動的に生成され、GitHubに登録されます。
 
 GitHubでのワークフロー
 ========================
 
 それでは、実際の使い方の説明に入っていきましょう。
-GitHubで一般に公開されているプロジェクト(リポジトリ)に貢献するためのおおまかなフローは次のような感じになります。
-[ref]Gitを使用したワークフローにはさまざまな形態があります。開発現場に入る際には、その現場でのワークフローがどうなっているのか確認しましょう。この記事で紹介するのは、 `GitHub Flow`__ と呼ばれるワークフローに近いものになっていると思います。[/ref]
+GitHubで一般に公開されているプロジェクト(リポジトリ)に貢献するためのおおまかなフローは次のとおりです。
+[ref]Gitを使用したワークフローにはさまざまな形態があります。開発現場に入る際には、その現場でのワークフローがどうなっているのか確認しましょう。この記事で紹介するのは、 `GitHub Flow`__ と呼ばれるワークフローになっています。[/ref]
 
 .. _GitHubFlow: https://gist.github.com/Gab-km/3705015
 
@@ -94,9 +102,10 @@ __ GitHubFlow_
 5. プッシュする
 6. プルリクエストを作成する
 
-.. image:: {filename}/images/github-workflow1.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-workflow1.png
    :alt: GitHub Workflow
+
+   GitHubでのワークフロー
 
 以下、順を追って説明していきます。
 
@@ -107,11 +116,12 @@ __ GitHubFlow_
 フォークされたプロジェクトは、自分のアカウントに完全にコピーされ、元のプロジェクトに直接影響を与えることはないので、自分の好きに改変することができます。
 自分がオーナーでない、またはコラボレーターに入っていないGitHub上のプロジェクトに貢献するためには、まずはフォークをする必要があります。
 
-まずは、フォークしたいプロジェクトのGitHub上のページを開きましょう。
+まずは、フォークしたいプロジェクトのGitHub上のページをブラウザで開きましょう。
 
-.. image:: {filename}/images/github-fork-button.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-fork-button.png
    :alt: Fork Button
+
+   フォークボタンの場所
 
 ページ右上あたりにある“Fork”と書かれたボタンを押せばフォークできます。
 
@@ -122,43 +132,43 @@ __ GitHubFlow_
 リポジトリをクローンすると、クローンした(自分の手元にある)リポジトリには、どこからクローンしてきたかという情報が記録されます。
 クローンされた元のことをoriginと言います。
 
-.. image:: {filename}/images/github-clone-button.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-clone-button.png
    :alt: Clone Button
 
-フォークしたプロジェクトのページを表示して、“Clone in Desktopと書かれたボタンを押しましょう。自分のローカル環境にリポジトリをクローンできます。
+   クローンボタンの場所
 
-.. image:: {filename}/images/github-clone-desktop.png
-   :align: center
+フォークしたプロジェクトのページを表示して、“Download Zip” の左隣にあるボタンを押しましょう。自分のローカル環境にリポジトリをクローンできます。
+
+.. figure:: {filename}/images/github_client_howto/github-clone-desktop.png
    :alt: Desktop Clone
 
-または、GitHubクライアントの左上にある+ボタンからクローンしてもかまいません。
+   GitHub Desktopからクローンする
 
-GitHubクライアントでは、GitHubからリポジトリをクローンする以外にも、既存のローカルリポジトリ(他のソフトウェアで作成したものなど)をインポートしたり、新規にリポジトリを作成することもできます。
+または、GitHub Desktopの左上にある+ボタンからクローンしてもかまいません。
+
+GitHub Desktopでは、GitHubからリポジトリをクローンする以外にも、既存のローカルリポジトリ(他のソフトウェアで作成したものなど)をインポートしたり、新規にリポジトリを作成することもできます。
 
 3.ブランチを作成する
 ~~~~~~~~~~~~~~~~~~~~
 
-Gitのファイル管理では、スナップショットを任意のタイミングで保存していき、それが履歴を形作ります。
+Gitのファイル管理では、スナップショットを任意のタイミングで保存していき、履歴を形作ります。
 なにもしなければ、それは一本のまっすぐな更新履歴という形になりますが、ブランチを追加する[ref]ブランチを新しく作成することをブランチを **切る** と言ったりもします。[/ref]ことで、履歴を分岐させることができます。
-作成したブランチは、いつでも自由に切り替えることができて、それに追随して、実際のディレクトリの中身も入れ替わります。Gitでは、ブランチの作成や切り替えは、非常に高速に行うことができるのです。[ref]Subversionのような中央管理型のSCMは、そうはいきません。[/ref]
+作成したブランチは、いつでも自由に切り替えることができて、それに追随して、実際のディレクトリの中身も入れ替わります。Gitでは、ブランチの作成や切り替えは、非常に高速に行うことができます。[ref]Subversionのような中央管理型のSCMでは、そうはいきません。[/ref]
 リポジトリを新規に作成すると、masterと呼ばれるデフォルトのブランチがひとつ自動的に作成されます。
 
-.. image:: {filename}/images/git-branch.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/git-branch.png
    :alt: Branch
 
-プロダクトに新しい機能を実装したり[ref]新機能用のブランチをフィーチャーブランチと呼んだりします。[/ref]バグフィックスをしたりするときには、その作業用のブランチを作成します。ブランチの名前は、これから行おうとしている作業を適切に表した名前にしましょう。たとえば、サイトにサイドバーを追加しようとしているなら、add-sidebarのようなブランチ名にします。
+   ブランチでバージョンを「派生」させる
 
-.. image:: {filename}/images/github-client-branch.png
-   :align: center
+プロダクトに新しい機能を実装したり[ref]新機能用のブランチをフィーチャーブランチあるいはトピックブランチと呼んだりします。[/ref]バグフィックスをしたりするときには、その作業用のブランチを作成します。ブランチの名前は、これから行おうとしている作業を適切に表した名前にしましょう。たとえば、サイトにサイドバーを追加しようとしているなら、add-sidebarのようなブランチ名にします。
+
+.. figure:: {filename}/images/github_client_howto/github-client-branch.png
    :alt: GitHub Client Branching
 
-GitHubクライアントでブランチを作成するには、ウィンドウ上部にあるブランチ追加ボタンを押します。Fromで、どのブランチの先端から新たなブランチを派生させるかを指定します。どのブランチから派生させるべきかは、プロジェクトの運用形態により異なりますが、masterやdevelopといった名前のブランチから派生させることが多いでしょう。以降、masterからブランチを作成することを前提として記述しますが、適宜読み替えてください。上記のスクリーンショットは、Mac版の場合になります。Windows版では、下記のように、同じくウィンドウ上部にあるブランチ名をクリックするとプロンプトが表示されますので、そこから新しいブランチを作成してください。
+   ブランチボタンの場所
 
-.. image:: {filename}/images/github-branch-windows.png
-   :align: center
-   :alt: GitHub Client Branching(Windows)
+GitHub Desktopでブランチを作成するには、ウィンドウ上部にあるブランチ追加ボタンを押します。Fromで、どのブランチの先端から新たなブランチを派生させるかを指定します。どのブランチから派生させるべきかは、プロジェクトの運用形態により異なりますが、masterやdevelopといった名前のブランチから派生させることが多いでしょう。以降、masterからブランチを作成することを前提として記述しますが、適宜読み替えてください。
 
 4.機能追加あるいはバグ修正をコミットする
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,26 +176,28 @@ GitHubクライアントでブランチを作成するには、ウィンドウ�
 ブランチを作成したら、実際にファイルを更新していきます。
 ディレクトリのスナップショットをリポジトリに追加することを **コミットする** と言います。あるいは、スナップショットに加える変更全体を指して **コミット** と言ったりもします。
 
-リポジトリを作成したディレクトリ内にファイルを追加したり、あるいはリポジトリに含まれるファイルを更新・削除したりすると、下記の図のように変更点が表示されます。
+リポジトリ化したディレクトリ内にファイルを追加したり、あるいはリポジトリに含まれるファイルを更新・削除したりすると、下記の図のように変更点が表示されます。
 
-.. image:: {filename}/images/github-commit.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-commit.png
    :alt: GitHub Commit
+
+   コミットの差分
 
 ファイル名の左側についているチェックボックスは、コミットにそのファイルを含めるかどうかを表しています。チェックをはずすと、そのファイルに対して加えた変更は、コミットから除外されます。右側のビューでの赤い行は削除される行、緑の行は追加される行を示しています。
 変更内容を確認の上、その内容でスナップショットを保存していいと判断したら、コミットログを記入してコミットボタンを押します。
 
-.. image:: {filename}/images/github-commit-button.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-commit-button.png
    :alt: GitHub Commit Button
 
-コミットをする際には、コミットログとして、最低限1行の要約を記入する必要があります。変更内容を端的に表した内容考えましょう。
+   コミットするときは、変更内容の説明を記入する
+
+コミットをする際には、コミットログとして、最低限1行の要約を記入する必要があります。変更内容を端的に表した文面を考えましょう。
 
 もしコミットした後にコミットログや変更自体の誤りに気付いたら、直前のコミットに限ってアンドゥをすることができます。
 “Undo”ボタンを押してから、再度コミットをし直しましょう。[ref]Undoできるのは、GitHubと同期する前のコミットのみです。1度GitHubと同期してしまったら、例え直前のコミットであってもUndoできません。[/ref]
 
 ひとつのコミットで、あまり大きな修正をするのは避けましょう。大き過ぎるコミットがひとつあるよりは、細かいコミットがたくさんあるほうがいいです。
-その上で、できればひとつのコミットが、論理的な修正単位と対応するようにし、できれば、どのコミットの時点でもコードが、最低限の基準を満たす[ref]たとえば、自動テストが通るとか、ビルドが通るなど[/ref]ようにしておくのが望ましいと思います。
+その上で、できればひとつのコミットが、論理的な修正単位と対応するようにし、できれば、どのコミットの時点でもコードが、最低限の基準を満たす[ref]たとえば、自動テストが通るとか、ビルドが通るなど[/ref]ようにしておくのが望ましいでしょう。
 
 5.プッシュする
 ~~~~~~~~~~~~~~~
@@ -193,17 +205,19 @@ GitHubクライアントでブランチを作成するには、ウィンドウ�
 実装が完了して、すべてコミットできたら、ローカルで作成したブランチをGitHubに送信しましょう。
 これを **プッシュ** と言います。
 
-.. image:: {filename}/images/github-publish-button.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-publish-button.png
    :alt: GitHub Publish Button
+
+   Publishボタンの場所
 
 対象ブランチの右側にある“Publish”ボタンを押せば、ブランチをプッシュできます。
 
-.. image:: {filename}/images/github-sync-button.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-sync-button.png
    :alt: GitHub Sync Button
 
-プッシュ済みのブランチにコミットを追加して、再度そのコミットをGitHubに送信したい場合は、ウィンドウ右上の“Sync”ボタンを押せばOKです。
+   Syncボタンの場所
+
+一度プッシュすると“Publish”ボタンが“Sync”ボタンに変化します。プッシュ済みのブランチにコミットを追加して、再度GitHubに送信したい場合は、“Sync”ボタンを押せばOKです。
 
 6.プルリクエストを作成する
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -212,25 +226,31 @@ GitHubクライアントでブランチを作成するには、ウィンドウ�
 プルリクエストとは、フォーク元のプロジェクトに対して、ブランチで追加したコミットを取り込んで欲しいという要求を送ることです。
 ちなみに、フォーク元のプロジェクトのことをupstreamと呼んだりします。
 
-GitHub上のプロジェクトページをブラウザで表示しましょう。ブランチをプッシュすると、以下のようにプルリクエスト作成ボタンが表示されるはずです。
+プルリクエストを送りたいブランチを選択した状態で、ウィンドウ右上の“Pull Request”ボタンを押すと、以下のようにプルリクエストペインが表示されます。
 
-.. image:: {filename}/images/github-pullrequest-button.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-pullrequest-button.png
    :alt: GitHub Pull Request Button
 
-“Compare & pull request”を押しましょう。マージ先とマージ元のブランチを選択できるようになっています。
-これらが適切であることを確認し、必要に応じてコメントを記入したら、“Create pull request”を押しましょう。
-これで、プルリクエストの作成ができました。
+   プルリクエストボタンの場所
 
-.. image:: {filename}/images/github-pullrequest.png
-   :align: center
-   :alt: GitHub Pull Request 
+2本の線(コミットログ)が表示されており、下側は現在選択しているローカルのブランチ、上側がマージ先のブランチを表しています。
+マージ先のブランチは選択可能です。
+これらが適切であることを確認し、必要に応じてコメントを記入したら、プルリクエストペインの下部にある “Send Pull Request”ボタンを押しましょう。
+
+
+.. figure:: {filename}/images/github_client_howto/github-merge-to.png
+   :alt: GitHub Pull Request Which Branch Merge to
+
+   必要に応じてプルリクエストのマージ先を選択する
+
+これで、プルリクエストの作成ができました。
+プルリクエストを作成すると、“Pull Request”ボタンの表示が変化し、このボタンを押すとブラウザ上でプルリクエストを確認できます。
 
 プルリクエストの作成ができたら、あとは、upstreamのプロジェクトオーナーによるレビューを待ちます。
 レビューした結果、問題がなければ、無事あなたのプルリクエストは、取り込まれることでしょう。
 ブランチに含まれるコミットを、派生元に取り込むことを **マージする** と言います。
 
-もしレビューの結果、問題箇所を指摘された場合は、その点を修正して、再度コミット・プッシュしましょう。
+もしレビューの結果、問題箇所を指摘された場合は、その点を修正して、再度コミット・プッシュ(Sync)しましょう。
 すると、プルリクエスト上にコミットが積み重なっていきます。
 
 マージされれば、プロジェクトへの貢献作業は一段落です。おつかれさまでした。
@@ -247,52 +267,23 @@ GitHubでのワークフロー(2回目以降)
 4. プッシュする
 5. プルリクエストを作成する
 
-.. image:: {filename}/images/github-workflow2.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-workflow2.png
    :alt: GitHub Workflow 2
+
+   GitHubでのワークフロー(2回目以降)
 
 1.upstreamから更新を取得する
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-自分のリポジトリとは独立して、upstreamのほうでも、日々刻々と更新が積み重ねられているため、upstreamのmasterと、自分のリポジトリのmasterの間でズレが生じていきます。作業を開始する前に、必ず、最新の更新を手元のリポジトリに取り込みましょう。
+自分のリポジトリとは独立して、upstreamのほうでも、日々刻々と更新が積み重ねられているため、upstreamのmasterと、自分のリポジトリのmasterの間でズレが生じていきます。作業を開始する前に、必ず、最新の更新を手元のリポジトリに取り込みましょう。GitHub Desktopでは、以前のGitHub for Mac/Windowsと比べて、upstreamからの更新の取り込みが非常に簡単になりました。
 
-upstreamからの更新の取得だけは、現時点では、Mac/Windowsともに対応していませので、コマンドを使用する必要があります。
-まずは、ターミナルからリポジトリを開きましょう。対象のリポジトリを選択した状態で、Macの場合は“Repository”メニューの“Open in Terminal”を、Windowsの場合は、右上の設定アイコンをクリックしてメニューを開き、“Open in Git Shell”を選択します。
+まず、masterブランチを選択します。upstreamのmasterではなく、ローカルのmasterを選択する必要があるので注意してください(XXXXX/masterでなく、ただのmasterを選択する)。
+upstreamに更新がある場合には、“Update from XXXXX/master”というボタンが押せる状態になっています。このボタンを押すと、upstreamでの更新をローカルに取り込んでマージすることができます。
 
-次に、Macでは、upstreamの登録が必要です(Windowsでは自動的に登録されるので、不要です)。
+.. figure:: {filename}/images/github_client_howto/update-from-master.png
+   :alt: GitHub Update from Master
 
-まずは、フォーク元のリポジトリのURLを調べましょう。ブラウザでフォーク元のプロジェクトを開き、
-右側サイドバーの“SSH clone URL”というところに、リポジトリのURLがあるので、コピーしましょう。
-
-.. image:: {filename}/images/github-clone-url.png
-   :align: center
-   :alt: GitHub Clone URL
-
-.. code-block:: none
-
-    git remote add upstream git@github.com:tsumomah/tsumomah.github.io.git
-
-さきほど開いたターミナルで、上記のコマンドを打ち込めば、upstreamという名前で、フォーク元のリポジトリを登録できます
-(最後のURLの部分は、ブラウザからコピーしたものに適宜置き換えてください)。
-
-.. code-block:: none
-
-    git remote remove upstream 
-
-とすれば、upstreamの登録を削除できますので、間違えてしまったときは、1度削除してから、やり直してみてください。
-
-upstreamの登録が完了したら、更新の取得です。ここからは、Mac/Windows共通の操作になります。
-
-.. code-block:: none
-
-    git fetch upstream
-
-これで、upstreamの最新の更新をローカルに取得できました。最後に、これをローカルのmasterにマージしましょう。[ref]プロジェクトによって、メインのブランチがmaster以外(例えばdevelopなど)である場合もあるので、適宜プロジェクトオーナーに確認してください。[/ref]
-
-.. code-block:: none
-
-    git checkout master
-    git merge master upstream/master
+   クローン元から最新の状態を取得する
 
 これで、ローカルのmasterが、upstreamのmasterと同期されました。
 
@@ -305,45 +296,47 @@ upstreamの登録が完了したら、更新の取得です。ここからは、
 コンフリクトの解消
 ===================
 
-プルリクエストを出したときに、次の図のように、左側のマージアイコンが灰色で表示され、自動的にマージができない旨のメッセージがでる場合があります。これは、あなたのブランチを取り込むときに **コンフリクト** が発生することを示しています。
+プルリクエストを出したときに、GitHubウェブサイトのプルリクエスト画面上で、次の図のように、左側のマージアイコンが灰色で表示され、自動的にマージができない旨のメッセージがでる場合があります。これは、あなたのブランチを取り込むときに **コンフリクト** が発生することを示しています。
 
-.. image:: {filename}/images/github-conflict.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-conflict.png
    :alt: GitHub Conflict
+
+   コンフリクトが発生しているとマージできない
+
+GitHub Desktopであれば、プルリクエストペインに次のように警告が表示されます。
+
+.. figure:: {filename}/images/github_client_howto/desktop-conflict.png
+   :alt: GitHub Desktop Conflict
+
+   GitHub Desktopでのコンフリクト表示。
 
 基本的に、Gitはブランチのマージを自動で行ってくれますが、マージ元とマージ先で同じファイルの同じ箇所に対して同時に編集がなされていると、機械的にマージできない場合があります。場合によっては、upstreamのオーナーがコンフリクトを解消してくれることもあるかもしれんが、基本的には、プルリクエストを出す側がコンフリクトを解消したほうが親切でしょう。
 
-コンフリクトが発生したということは、ブランチを作成した後に、upstreamでそのmasterに対してコミットが追加されたことを示しています。
+コンフリクトが発生したということは、ブランチを作成した後に、upstreamでmasterに対してコミットが追加されたことを示しています。
 
-.. image:: {filename}/images/github-conflict-branches.png
-   :align: center
+.. figure:: {filename}/images/github_client_howto/github-conflict-branches.png
    :alt: GitHub Conflicing Branches
 
-そのため、まずは、ローカルのmasterをupstreamと同期させる必要があります。上記で説明したコマンドで、upstreamのコミットをローカルに取り込んでください。
+   自分の作業と並行して、upstreamにも変更が加えられている場合がある
 
-upstreamとの同期ができたら、ローカルのmasterから、いま取り込んだコミットを、プルリクエスト中のブランチにマージしましょう。
-マージをするために、マージビューを開きます。ブランチ一覧が表示されている画面で、ウィンドウ右上あたりにある“Merge View”ボタンを押します。次の図はMac版の画面です。
+そのため、まずは、ローカルのブランチをupstreamと同期させる必要があります。
+さきほどのupstreamからmasterへの更新取得と同じ要領で更新を取得します。
+対象のブランチを選択した上で、“Update from XXXXX/master”ボタンを押せばOKです。
 
-.. image:: {filename}/images/github-mergeview-button.png
-   :align: center
-   :alt: GitHub Merge View Button
+.. figure:: {filename}/images/github_client_howto/retrieve-update-to-branch.png
+   :alt: Retrieve Updates from Upstream
 
-Windowsの場合は、ウィンドウ上あたりにあるブランチ名をクリックすると次図のようなパネルが開くので、“Manage”ボタンを押します。
+   Upstreamからブランチに更新を取り込む
 
-.. image:: {filename}/images/github-windows-mergeview-button.png
-   :align: center
-   :alt: GitHub Merge View Buttoni(Windows)
+するとコンフリクトが生じるはずなので、更新取得後、マージの途中で止まります。
 
-マージビューを開いたら、次の図のように、右側(マージ先)にプルリクエスト中のブランチを、左側にmasterをドラッグアンドドロップして配置します。
+.. figure:: {filename}/images/github_client_howto/conflict-message.png
+   :alt: Conflict message on a file
 
-.. image:: {filename}/images/github-merge.png
-   :align: center
-   :alt: GitHub Branch
+   ファイルにコンフリクトが発生していることを示すメッセージ
 
-“Merge Branches”ボタンを押すとマージが実行されます。
-ただし、この場合は、コンフリクトが生じるはずなので、マージの途中で止まります。
-
-コンフリクトの発生したファイルを開くと、次の例のように、衝突した部分が<<<<<と>>>>>で囲まれた状態になります。
+コンフリクトが発生したファイルを選択すると、上図のようなメッセージが表示されます。
+該当ファイルをテキストエディタで開くと、次の例のように、衝突した部分が<<<<<と>>>>>で囲まれた状態になります。
 
 .. code-block:: html
 
@@ -372,30 +365,31 @@ Windowsの場合は、ウィンドウ上あたりにあるブランチ名をク�
 
 HEADから=====までの部分が自分のブランチで加えた変更を、=====からmasterまでの部分が、upstreamで加えられた変更を表しています。
 正しい編集内容に自分で編集して、ファイルを保存しましょう。
-そして、通常の変更と同様にコミットします。コミットログには、自動的にこのコミットがマージでコンフリクトを解消したものである旨が記入されます。コミットができたら、GitHubにプッシュしましょう。
-
-.. image:: {filename}/images/github-conflict-resolved.png
-   :align: center
-   :alt: GitHub Conflict Resolved
-
-自動的にマージできる状態になっていれば、このように左側のアイコンが緑色で表示され、自動的にマージできるようになっているはずです
-(なお、上の図では、わたし自身がオーナー権限を持っているプロジェクトであるため右側にマージボタンが表示されていますが、そうでない場合は、このボタンは出ません)。
+そして、通常の変更と同様にコミットします。コミットログには、自動的にこのコミットがマージ時にコンフリクトを解消したものである旨が記入されます。コミットができたら、GitHubにプッシュ(Sync)しましょう。
+自動的にマージできる状態になっていれば、最初のプルリクエストのようにアイコンが緑色で表示されているはずです。
 
 自分がオーナーまたはコラボレーターに指定されている場合のワークフロー
 =====================================================================
 
 自分自身がオーナーである場合、またはコラボラーターに指定されている場合には、リポジトリに直接プッシュする権限があります。
-そのため、これまで説明したフローよりも簡単になります。最初にプロジェクトをフォークする必要はありませんし、
-upstreamの更新を取得する煩雑な手順も不要です。Syncボタンを押すだけで、GitHubから最新のコミットを取得できます。
+そのため、これまで説明したフローよりも簡単で、最初にプロジェクトをフォークする必要はありませんし、
+また、プルリクエストを作成せずに直接masterに変更を加えることも可能です。
+ただし複数人で共同作業をする場合には、プルリクエストを利用すると、メンバーにコードレビューをしてもらうときに便利です。
 
 まとめ
 =======
 
-本稿では、Gitの基本概念について述べました。また、GitHub for Mac/Windowsを使用して、プロジェクトをフォークし、ローカルマシンで修正を加えて、プルリクエストを作成するまでの流れをひととおり説明しました。
+本稿では、Gitの基本概念について述べました。また、GitHub Desktopを使用して、プロジェクトをフォークし、ローカルマシンで修正を加えて、プルリクエストを作成するまでの流れをひととおり説明しました。
+
+更新履歴
+=========
+
+* 2015/2/26 作成
+* 2016/4/28 GitHub Desktopに合わせて改訂。
 
 ----
 
 .. raw:: html
 
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
 
