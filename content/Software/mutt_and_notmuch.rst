@@ -574,3 +574,10 @@ muttの操作性を改善するためにパッチを当ててみたり、ある�
 また、SpamAssassinが重いので、代替のスパムフィルターに変更することも検討しています。いまのところの候補は、 `POPFile <http://getpopfile.org/>`_ です。
 
 当面は、このまま運用して様子を見ます。
+
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
+
