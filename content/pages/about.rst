@@ -45,8 +45,9 @@ About Me
 * C
 * Python
 * ActionScript 3
-* Objective-C
 * PHP
+* Objective-C
+* Ruby
 * Perl
 
 (おおざっぱに書いた量順)
@@ -54,6 +55,7 @@ About Me
 実績
 ====
 
+* Ruby on Railsによるウェブサービス開発。
 * Django,Tornadoによるウェブサービス開発(Python)。
 * `Lynda.com <https://www.lynda.jp/trainers/taiju-muto>`_ へのビデオコース提供
 * `LiVEARTH <http://livearth.jp/>`_ サーバーAPI(Node.js)
@@ -64,7 +66,7 @@ About Me
 * 動画・静止画の自動編集エンジン開発(C,OpenGL)
 * 動画ストリーミングサーバー開発(C++98,boost,Python)
 * C++でのWindowsデスクトップアプリ開発いろいろ(Win32,Qt,wxWidgets,OpenGL,DirectX等)
-* PHP,Java等でのWebシステム開発いろいろ(Concrete5,CodeIgniter,Restlet,Seasar2等)
+* PHP,Java等でのWebシステム開発いろいろ(Symfony2,Concrete5,CodeIgniter,Restlet,Seasar2等)
 * Firefox,Chromeのアドオン開発
 * ffmpeg等OSSの改造いくつか
 
