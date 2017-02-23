@@ -88,7 +88,7 @@ Reducerは、 :code:`(state, action) -> state` とい形式の純粋関数です
 純粋関数という制約を持つがゆえに、書くときにじゃっかん特殊なテクニックが要求されます。
 
 あるとき、筆者はReducerのあるケース節がとんでもなく可読性の低いコードになっていることに気付きました。
-階層化されたデータを直接変更することなく新しい値を得るために、無数のmap、アロー関数、スプレッド記法、Object.assignなどが詰め込まれた、解読に時間を要するようなコードです。このようなコードの例として、例えば、 `JSchematic <https://github.com/nicksenger/JSchematic>`_ というアプリの `Reducerの一部 <https://github.com/nicksenger/JSchematic/blob/29b841e7ec94c0730f0af277a6aa51554390ad14/src/js/reducers/reducerManageElements.js#L12>`_ はかなり読みづらいと思います。
+階層化されたデータを直接変更することなく新しい値を得るために、無数のmap、アロー関数、スプレッド記法、Object.assignなどが詰め込まれた、解読に時間を要するようなコードです。このようなコードの例として、例えば、 `JSchematic <https://github.com/nicksenger/JSchematic>`_ というアプリの `Reducerの一部 <https://github.com/nicksenger/JSchematic/blob/29b841e7ec94c0730f0af277a6aa51554390ad14/src/js/reducers/reducerManageElements.js#L12>`_ が挙げられます。これは、なかなか読みづらいと思います。
 
 また、こんなこともありました。Reducerの実装では、Redux標準のcombineReducersという高階関数を利用することで、複数のスライス(サブツリー)に分割して、関心の分離を実現できます。
 これはReduxアプリでの基本テクニックですが、スライスされたReducerから、別のスライスに分離されたサブツリーを参照したくなりました。
@@ -138,7 +138,7 @@ TofinoのReducerは、redux-ecosystem-linksに載っているアプリの中で�
 たとえば、 `pagesというReducer <https://github.com/mozilla/tofino/blob/7fd8ff0f9a17159893ea4edd613bb90fbc791a29/app/ui/browser-modern/reducers/pages.js>`_ は、Tofinoの中でももっとも複雑なスライスReducerですが、それでも十分な読み易さを保っていると思います。
 ポイントは、case節内の具体的な処理をすべてケース関数に抜き出しているところです。筆者の経験では、一定以上の長さのReducerでは、これをするだけで、ずいぶん見通しが良くなって印象が変わります。
 
-個々のケース関数に関しては、Immutable.jsの恩恵によって可読性が向上している面があります。Immutable.jsでは、withMutationsを使えばデータ構造への変更を破壊的に記述することができます。よって、ふつうの手続き型プログラミングと変わらない感覚でReducerが記述できます。
+個々のケース関数に関しては、Immutable.jsの恩恵によって可読性が向上している面があります。Immutable.jsでは、withMutationsを使えば不変データ構造の更新を破壊的に記述することができます。よって、ふつうの手続き型プログラミングと変わらない感覚でReducerが記述できます。
 
 例えば、ページを新規追加するときのケース関数は以下のようになっています。
 
@@ -195,15 +195,15 @@ TofinoのReducerは、redux-ecosystem-linksに載っているアプリの中で�
         return newState;
     }
 
-Immutable.jsを使うのと使わないのでは、コードを完全に理解するために要する時間がまったく違います。
+Immutable.jsを使うのと使わないのでは、コードを理解するために要する時間がまったく違います。
 ただ、筆者の所感としては、Immutable.jsは絶対に必要というわけではなく、適宜定型的な処理をユーティリティー関数として抽出したり、場合によっては、 `dot-prop-immutable <https://github.com/debitoor/dot-prop-immutable>`_ のようなモジュールを利用して補うことで、十分に可読性を保てると思っています。
 
 wp-calypsoでは、Ducksライクに `状態を関心ごとに分離しています。 <https://github.com/Automattic/wp-calypso/tree/6153f05db236cfadad8bc166edf99088974b493f/client/state>`_ 各ディレクトリごとにREADMEが配置されていて、設計論のようなものが記述されていたりするのがおもしろいです。Storeの階層はそれなりに深くなっています。扱う状態が深くなるほど、Reducerの可読性は低くなる傾向にあるように思いますが、combineReducersによって適切に状態をスライスすることで、個々のReducerはそれほど読みづらくはなっていない印象です。[ref]もちろん、全Reducerに目を通したわけではありませんが…[/ref]。スライスのスライスのスライスのような、3重にcombineRecucersされたReducerも見られることからも、このwp-calypsoの大規模さがうかがえます。
 
-こうした例から、Storeの構成法、ツリーの深さといったこちについて筆者の得た結論は、こうです。
+こうした例から、Storeの構成法、ツリーの深さといったことについて得た結論は、こうです:
 基本的には、 `正規化 <http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html>`_ を適切に施せば、そもそもツリーはそれほど深くならないはずだが、大規模アプリなど、管理の都合上どうしてもツリーが深くってしまう場合であっても、combineReducersによって適切にツリーをスライスすることで、Reducerの可読性を保つことができる。
 
-さて、combineReducersによって状態をスライスしたときに、そのメリットのコインの裏返しとして現れてくるのが、前述した、他のスライスが見えなくなるという問題です。これも基本的には、 `公式のBeyond combineReducersというドキュメント <http://redux.js.org/docs/recipes/reducers/BeyondCombineReducers.html#sharing-data-between-slice-reducers>`_ で解決策がいくつか提示されてますが、ここでは、そのひとつとして、 `reduce-reducers <https://github.com/acdlite/reduce-reducers>`_ を取り上げます。reduce-reducersを使うと、Reducerの過程を2パス(あるいはそれ以上)に分割することができます。つまり、reduce-reducersを利用して、1パス目で、他のスライスに依存しない通常のReducerを実行。その後、2パス目で、他のスライスに依存するReducerを改めて実行、というふうにするのです。例えば、次のコードを見てください。
+さて、combineReducersによって状態をスライスしたときに、そのメリットのコインの裏返しとして現れてくるのが、前述した、他のスライスが見えなくなるという問題です。これも基本的には、 `公式のBeyond combineReducersというドキュメント <http://redux.js.org/docs/recipes/reducers/BeyondCombineReducers.html#sharing-data-between-slice-reducers>`_ で解決策がいくつか提示されてますが、ここでは、そのひとつとして、 `reduce-reducers <https://github.com/acdlite/reduce-reducers>`_ を取り上げます。reduce-reducersを使うと、Reducerの過程を2パス(あるいはそれ以上)に分割することができます。つまり、reduce-reducersを利用して、1パス目で、他のスライスに依存しない通常のReducerを実行、その後、2パス目で、他のスライスに依存するReducerを改めて実行、というふうにするのです。例えば、次のコードを見てください。
 
 .. code-block:: javascript
 
@@ -253,7 +253,7 @@ Reduxでは、Store作成時に初期化(hydration)用のデータを与える�
     createStore(reducers, {x: 1, y: [3,4], z: 'foo'});
 
 ここで与えるデータの形は、Reducerによって規定されるデータの形と一致している必要があります。
-つまり、Storeの形状があらかじめ定められており、初期値を与える側と、Reducer側が協調して動作する必要があります。
+つまり、Storeの形状はあらかじめ定められており、初期値を与える側と、Reducer側が協調して動作する必要があります。
 上の例で言うと、reducerの返す状態は、xという数値、yという配列、zという文字列をプロパティとして持っているという暗黙の知識が前提になっています。
 しかし、ある程度の規模のアプリでStoreが複雑になってきたときに、初期値として与えているデータと、Reducerの期待するデータの形状が一致していると、どうすれば確信できるでしょうか?なにかひとつの対象を二重管理しているような気がして、若干の不安を感じます。
 
@@ -308,7 +308,7 @@ Componentの純粋さにどこまでこだわるべきか、UIに関する状態
 
 Reduxに含まれるサンプルプログラムをはじめとして、多くのアプリでは、 :code:`containers/` と :code:`components/` という形で `ディレクトリを分けています。 <https://github.com/reactjs/redux/tree/master/examples/real-world/src>`_
 しかし、このディレクトリ構成にどれほど意味があるのか筆者は疑問を感じています。
-主な理由としては、PresentationalとContainerの区別というのは、実際には `それほど明確ではなく、 <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.7smj0zmty>`_ しばしばPresentational ComponentであったものがContainer Componentに昇格したりしますし、Presentationalの世界にContainerはいっさい現れることなく閉じているのであればともかく、PresentationalとContainerと入り乱れてビューツリーを構築します。 また、しばらくこのやりかたで開発をしてみて、大きなメリットを感じたこともありません。むしろ、ディレクトリおよびクラスが明確に分かれていることに煩雑さを感じます。それなりに実際的なコードであるTofinoでもwp-calypsoでも、ディレクトリを分けて明確に区別することはしていませんし、国内における大規模なReact Reduxの適用事例のひとつであるアメブロでも、やはり `区別はしていない <https://developers.cyberagent.co.jp/blog/archives/636/>`_ ようです。
+主な理由としては、PresentationalとContainerの区別というのは、 `それほど明確ではなく、 <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.7smj0zmty>`_ しばしばPresentational ComponentであったものがContainer Componentに昇格したりしますし。また、Presentationalの世界にContainerはいっさい現れることなく閉じているのであればともかく、実際には、PresentationalとContainerが入り乱れてビューツリーを構築します。 また、しばらくこのやりかたで開発をしてみて、大きなメリットを感じたこともありません。むしろ、ディレクトリおよびクラスが明確に分かれていることに煩雑さを感じます。それなりに実際的なコードであるTofinoでもwp-calypsoでも、ディレクトリを分けて明確に区別することはしていませんし、国内における大規模なReact Reduxの適用事例のひとつであるアメブロでも、やはり `区別はしていない <https://developers.cyberagent.co.jp/blog/archives/636/>`_ ようです。
 
 かわりに筆者が使っているディレクトリ構成は次のようなものです。
 
@@ -340,8 +340,41 @@ Reduxに含まれるサンプルプログラムをはじめとして、多くの
 	    ├── index.jsx
 	    └── styles.pcss
 
-さて、次に :code:`propName={propName}` のような、プロパティの受け渡しが増殖して煩雑になってしまう問題です。
-実例として、Relaxというアプリの `LinkingというComponent <https://github.com/relax/relax/blob/cf18abcd28fbabd593bdccfc61721c9b64935750/lib/shared/screens/admin/shared/components/page-builder-menu/tabs/link/linking.jsx#L94>`_ を見てみます。このComponentではいくつかのプロパティを受け取っていますが、ほとんどは、そのまま次の :code:`Property` Componentに流しているだけです。
+さて、次に :code:`propName={propName}` のような、上から下へのプロパティの受け渡しが増殖して煩雑になってしまう問題です。
+実例として、Relaxというアプリの `LinkingというComponent <https://github.com/relax/relax/blob/cf18abcd28fbabd593bdccfc61721c9b64935750/lib/shared/screens/admin/shared/components/page-builder-menu/tabs/link/linking.jsx#L94>`_ を見てみます。
+
+.. code-block:: javascript
+
+  renderProperty (prefix, property) {
+    const {
+      links,
+      addSchemaLink,
+      changeLinkAction,
+      removeLink,
+      overLink,
+      outLink,
+      context,
+      goal
+    } = this.props;
+
+    return (
+      <Property
+        key={property.id}
+        property={property}
+        prefix={prefix}
+        links={links && links[prefix + property.id] || []}
+        addSchemaLink={addSchemaLink}
+        changeLinkAction={changeLinkAction}
+        removeLink={removeLink}
+        overLink={overLink}
+        outLink={outLink}
+        context={context}
+        goal={goal}
+      />
+    );
+  }
+
+このComponentではいくつかのプロパティを受け取っていますが、ほとんどは、そのまま次の :code:`Property` Componentに流しているだけです。
 Reactアプリを開発していて、このような状況に遭遇したことのある方も多いのではないでしょうか。
 
 この状況を解消する手段はいくつか考えられます。
@@ -362,7 +395,7 @@ PropTypesを定義する際に、子Componentに渡したくないプロパテ�
 
 この記事では、Redux Real World Example、Project Tofino、wp-calypsoといった実際のアプリのソースコードを参考に、React Redux開発において生じる疑問へのヒントを探りました。
 
-Storeの構成は、概ね公式ドキュメントの通りにやれば可読性を担保でき、大規模な場合にはDucksパターンを使う、スライス間での状態共有が必要な場合にはreduce-reducersを使う、といったことを見ました。
+Storeの構成は、概ね公式ドキュメントをよく読んでその通りにやれば可読性を担保でき、大規模な場合にはDucksパターンを使う、スライス間での状態共有が必要な場合にはreduce-reducersを使う、といったテクニックを見ました。
 
 Storeの初期化データ定義については、Immutable.jsのRecordを利用する方法があることや、ローカルに保存された状態を動的にバリデーションする必要がある場合があることを見ました。また、flowtypeを利用することで問題が解消することについても触れました。
 
