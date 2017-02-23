@@ -129,4 +129,9 @@ freeeはウェブサービスなので、随時アップデートされます。
 
 たとえば、「期首振替については、どのように処理すればいいんだっけ?」という疑問が湧いたら、「期首振替」と入力すれば、勘定科目と簡単な解説が見られるので、簿記についての知識があまりない人間が経理の処理をする際にとても助かりました。freeeにはこの機能はないため、インターネットで検索するなどして補完しています。
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
 

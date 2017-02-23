@@ -29,3 +29,8 @@
 
 したがって、サーバーサイドでのメールアドレスチェックは、入力有無や長さ確認など、メールアドレス以外のテキストフィールドと同様の処理を行えば十分であり、ユーザーインターフェイスの改善を目的とした形式チェックはクライアントサイドのみで行えば十分です。
 
+----
+
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。

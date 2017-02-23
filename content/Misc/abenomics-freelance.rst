@@ -143,4 +143,8 @@
 * `経済産業省が発表「雇用関係によらない新しい働き方」社会はどう受け入れ、活用していけばいいのか？ <http://leverage-share.com/study/post-2344/>`_
 * `「クラウドソーシングサイトも共犯だ」　キュレーションメディア炎上騒動についてWELQ記事寄稿ライターが怒りの告発 <http://nlab.itmedia.co.jp/nl/articles/1612/13/news140.html>`_ 
 
+----
 
+.. raw:: html
+
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
