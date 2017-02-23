@@ -16,13 +16,12 @@ React Reduxを使ってプロダクトを作りはじめて、かれこれ半年
 
 この記事は、上記のリンク集でまとめられている実際のReact Reduxプロダクトのソースコードを調査することで、筆者がふだんReact Reduxで開発をしていて感じる疑問への答えを探る試みです。
 
-筆者が答えを得たいと思っている疑問は次の4つです
+筆者が答えを得たいと思っている疑問は次の3つです
 [ref]いろいろわかった今から見れば、単に筆者の無知から来る疑問だったものもあります。実際のところ、これらの疑問の多くは `公式ドキュメント <http://redux.js.org/>`_ を隅から隅まで読めば、答えやヒントが言及されています)。ちなみに、副作用については、筆者の中では現状 `redux-saga <https://github.com/redux-saga/redux-saga>`_ で対応するという答えで決着しており、とくに疑問に思う部分もないため扱いません。[/ref]
 
 * Storeはどんな具合に階層化すべきか
 * Store初期化(hydration)用データの定義はどうすべきか
 * Componentはどう整理すべきか
-* データフェッチはどう実装すべきか
 
 .. contents:: 目次
 
@@ -30,21 +29,7 @@ React Reduxを使ってプロダクトを作りはじめて、かれこれ半年
 ----
 
 冒頭で上げたReact Reduxアプリリンク集には、実に32個ものサンプルがありました(2016年12月時点)。
-ひととおり手元にダウンロードして動かしてみたり、コードがどのように書かれているかを簡単に確認しましたが、ここですべてに触れることはもちろんできません。本記事では、もっとも典型的なコードの書き方のお手本と考えて良いであろう、公式のRedux Real World Exampleに加えて、規模の大きさやコードの綺麗さなどから、参考になりそうな2つのアプリをとくに詳しく見ます。
-
-Redux Real World Example
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-https://github.com/reactjs/redux/tree/master/examples/real-world
-
-.. figure:: {filename}/images/real-world-redux/redux-real-world.png
-   :alt: Redux Real World Example
-
-   Redux Real World Exampleのスクリーンショット
-
-GitHubのAPIから取得したデータを表示するサンプルです。
-非常に小規模なコードですが、URLルーティングや非同期API通信など最低限の要素を備えています。[ref]componentDidMountではなく、 `componentWillMount <https://facebook.github.io/react/docs/react-component.html#componentwillmount>`_ でデータフェッチをしている点がちょっと気になるところではあります。[/ref]
-`react-router <https://github.com/ReactTraining/react-router>`_ を使用しており、指定されたユーザーがスターを付けたプロジェクトを一覧する画面と、指定されたプロジェクトのコントリビューター一覧を表示する2つの画面から成ります。また、 `normalizr <https://github.com/paularmstrong/normalizr>`_ を使ってAPIからのレスポンスを正規化しているのも特徴です。
+ひととおり手元にダウンロードして動かしてみたり、コードがどのように書かれているかを簡単に確認しましたが、ここですべてに触れることはもちろんできません。本記事では、規模の大きさやコードの綺麗さなどから参考になりそうな2つのアプリをとくに詳しく見ます。
 
 Project Tofino
 ~~~~~~~~~~~~~~~
@@ -57,7 +42,7 @@ https://github.com/mozilla/tofino
    Tofinoのスクリーンショット
 
 MozillaによるブラウザUI実験用のElectronアプリで、UI部分がReact Reduxで実装されています。
-小〜中規模プロダクトでありそうなコード量(UI部分だけで12000行程度)であることと、Reducerのコードが非常に読みやすく整理されているため取り上げることにします。Immutable.js使用。
+小〜中規模プロジェクトでありそうなコード量(UI部分だけで12000行程度)であることと、Reducerのコードが非常に読みやすく整理されているため取り上げることにします。Immutable.js使用。
 
 redux部分は、 `/app/ui/にまとまっています。 <https://github.com/mozilla/tofino/tree/7fd8ff0f9a17159893ea4edd613bb90fbc791a29/app/ui>`_ 
 
@@ -290,7 +275,7 @@ Tofinoで興味深いのは、Immutable.jsの `Record <https://facebook.github.i
 データ型の定義という点において、wp-calypsoではまた違ったアプローチを取っています。このアプリでは、 `is-my-json-valid <https://github.com/mafintosh/is-my-json-valid>`_ というJSONバリデータを使って定義したスキーマによって、動的に型チェックを行います。
 このスキーマ定義は、初期化時にローカル保存しておいたStoreの状態が、動作しているプログラムが期待するデータ構造と一致するかをチェックすることを目的としたものです。wp-calypsoでは、SERIALIZEアクションによって構築される永続化用の状態を、 `定期的にローカル保存します。 <https://github.com/Automattic/wp-calypso/blob/f8ea145698153ffcc69579362b264d945483d030/client/state/initial-state.js#L70>`_ アプリのバージョンが異なれば永続化されるデータ構造も異なる可能性があるため、このようなバリデーションが必要になってくるのです。
 
-あるいは、 `flowtype <https://flowtype.org/>`_ を使ってStoreの状態全体の型を定義すれば、Storeの形状は暗黙の知識ではなくコードで明示されたものになるため、問題を完全に解消できます。ただし、flowtypeによるチェックはあくまで静的なものであるため、ローカルに保存しておいたデータをStoreに流し込んだときに、動的にデータの整合性をチェックするような使い方はできません。[ref] `flow-runtime <https://codemix.github.io/flow-runtime/#/>`_ を利用することで、解決するかもしれません。[/ref] 今回調査したアプリの中には、このようなflowtypeの使いかたを参考になるレベルでしているものは残念ながらありませんでした。[ref]jenkins blueocean-pluginというアプリが `flowtypeを使っていました <https://github.com/jenkinsci/blueocean-plugin/blob/ac60b900a90122cd42a96ca08e2b85c90746df8f/blueocean-web/src/main/js/redux/router.js#L55>`_ が、コード規模が小さくてあまり参考にならないため、取り上げませんでした。[/ref]
+あるいは、 `flowtype <https://flowtype.org/>`_ を使ってStoreの状態全体の型を定義すれば、Storeの形状は暗黙の知識ではなくコードで明示されたものになるため、問題を完全に解消できます。ただし、flowtypeによるチェックはあくまで静的なものであるため、ローカルに保存しておいたデータをStoreに流し込んだときに、動的にデータの整合性をチェックするような使い方はできません。[ref] `flow-runtime <https://codemix.github.io/flow-runtime/#/>`_ を利用することで、解決するかもしれません。[/ref]
 
 余談ですが、Server Side Renderingを行う際のRedux Storeへのデータの受け渡し・初期化方法についても、 `Server Rendering <http://redux.js.org/docs/recipes/ServerRendering.html>`_ というドキュメントが用意されています。 `Relax <https://github.com/relax/relax>`_ というCMSが、このドキュメント `ほぼそのままのやりかた <https://github.com/relax/relax/blob/cf18abcd28fbabd593bdccfc61721c9b64935750/lib/server/shared/helpers/render-html.js>`_ で実装しており、ReduxでSSRをやるときには参考になると思います。
 
@@ -372,55 +357,6 @@ PropTypesを定義する際に、子Componentに渡したくないプロパテ�
 
 もう一つ考えられるのは、renderが大きくなってきてコードを整理する際に、別Componentに分けるのではなく、別メソッドにrenderFooのようなメソッドを設けて分離することです。同じクラス内のメソッドであれば、Componentのプロパティには :code:`this` 経由でどこからでもアクセスできるため、そもそもプロパティの受け渡しは不要です。
 
-データフェッチはどう実装すべきか
----------------------------------
-
-あるComponentがマウントされてたときに表示に必要なデータフェッチのトリガーは、どこからどのような形で行うべきでしょうか?
-筆者がまず思い付いたやりかたは、onDidMountのような名前のデータフェッチのトリガーとなるメソッドをmapDispatchToPropsで定義して、componentDidMountからそれを呼ぶという方法です。
-
-.. code-block:: javascript
-
-    class Foo extends Component {
-	componentDidMount {
-            this.props.onDidMount();
-	}
-    }
-
-    function mapStateToProps(state) {
-        return {};
-    }
-
-    function mapDispatchToProps(dispatch) {
-	return {
-	    onDidMount() {
-		dispatch(fetchData());
-	    }
-	}
-    }
-
-    export default connect(mapStateToProps, mapDispatchtoProps)(Foo); 
-
-しかし、これはあまりしっくり来てはいません。もっといい方法はないでしょうか?
-
-また、react-routerを使うと、あるURLにアクセスしたときに、それに対応するComponentがマウントされます。
-たとえば、 :code:`/page/:id/` のようなURLにアクセスしたときには、ページの最新情報をアクセスしたタイミングで取得したい場合が多いでしょう。このとき、実装方法がまずいと、まずStoreに残っている古いデータが表示され、最新情報のフェッチが完了した後に、はじめて最新の情報が表示されるということが起きます。アプリの性質にもよりますが、多くの場合、これはあまり望ましい挙動ではないでしょう。
-
-このような挙動を防ぐためには、フェッチ開始時にデータをクリアする、あるいはフェッチ中はローディング表示するなどして、フェッチ完了語に最新のデータを表示する必要があります。もっともスマートな方法は、どのような方法になるでしょうか。
-
-データフェッチについての見解
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Redux Real World Exampleでは、やはりContainer Componentの `マウント時 <https://github.com/reactjs/redux/blob/79e81bffcc41aad4a55c5533915047fe09bebabd/examples/real-world/src/containers/RepoPage.js#L26>`_ にmapDispatchToPropsで渡されたコールバックを呼び出して、フェッチアクションをdispatchしています。筆者の考えた素朴な方法と同様です。
-また、古いキャッシュされたデータへの対処については、API用の特殊なMiddlewareを用意して、そこでリクエスト開始・完了に対応した `アクションを発行しています。 <https://github.com/reactjs/redux/blob/79e81bffcc41aad4a55c5533915047fe09bebabd/examples/real-world/src/middleware/api.js#L113>`_ これらのアクションに応じて、isFetchingという状態がON/OFFされるので、そのフラグに応じて表示制御を行っています。独自のMiddlewareを用意している点はじゃっかん風変りですが、 `公式のAsync Actionsというドキュメント <http://redux.js.org/docs/advanced/AsyncActions.html>`_ で紹介されている基本的な方法の変形と考えていいでしょう。
-
-wp-calypsoでも、ほぼ同等の `redux-thunk <https://github.com/gaearon/redux-thunk>`_ を使用した方法を取っている部分がある他、 `非同期通信用のMiddleware <https://github.com/Automattic/wp-calypso/tree/7475c744b951cbe4b44525c2aa93d2708adaeae0/client/state/data-layer>`_ も用意されているようです。
-
-tofinoはブラウザなので若干特殊で、Componentから通常のDOMイベントを監視して、アクションをdispatchしたりしているようで、あまりウェブアプリの参考にはならなさそうです。
-
-redux-ecosystem-linksに載っているアプリではあまり使われていなかったのですが、URLルーティングと同時にデータフェッチするケースをサポートしてくれるライブラリとして、 `redux-async-connect <https://github.com/Rezonans/redux-async-connect>`_ 、 `redux-async-loader <https://github.com/recruit-tech/redux-async-loader>`_ `redux-saga-router <https://github.com/jfairbank/redux-saga-router>`_ 、 `redux-tower <https://github.com/kuy/redux-tower>`_ といったものがあります。redux-async-loaderでは、 `モバイルでページ遷移をしたときに生じる微妙な問題 <https://speakerdeck.com/yoshidan/nodefest2016?slide=17>`_ も適切にハンドリングしてくれるようなので、こういった問題に対処したい場合には必須かもしれません。このライブラリであれば、ライフサイクルイベントの発生をデータフェッチ完了まで遅延させてくれるようなので、ローディング中かどうかの制御も不要になるのかもしれません。
-
-また、詳しくはないのですが、GraphQLを使っている場合は、 `Relay.js <https://facebook.github.io/relay/>`_ のようなライブラリを使うと、サーバーとの接続まで含めてData Componentがケアしてくれるようです。
-
 まとめ
 --------
 
@@ -430,9 +366,7 @@ Storeの構成は、概ね公式ドキュメントの通りにやれば可読性
 
 Storeの初期化データ定義については、Immutable.jsのRecordを利用する方法があることや、ローカルに保存された状態を動的にバリデーションする必要がある場合があることを見ました。また、flowtypeを利用することで問題が解消することについても触れました。
 
-また、Componentの整理について、多数のReact Reduxアプリを見た中で行き着いたファイル構成のスタイルを提案し、プロパティの受け渡しが冗長になってしまう場合の対策をいくつか紹介しました。
-
-最後に、データフェッチについては今回調査した範囲では公式ドキュメントの非同期プラクティスより大きく優れたものは見つからず、かわりにデータフェッチを簡単にしてくれるライブラリをいくつか紹介しました。
+最後に、Componentの整理について、多数のReact Reduxアプリを見た中で行き着いたファイル構成のスタイルを提案し、プロパティの受け渡しが冗長になってしまう場合の対策をいくつか紹介しました。
 
 参考リンク
 -----------
@@ -442,7 +376,6 @@ Storeの初期化データ定義については、Immutable.jsのRecordを利用
 * `Presentational and Container Components <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.wot8t890i>`_
 * `Ducks: Redux Reducer Bundles <https://github.com/erikras/ducks-modular-redux>`_
 * `Real World Redux <https://speakerdeck.com/chrisui/real-world-redux>`_
-* `React + Reduxを使った大規模商用サービスの開発 <https://www.youtube.com/watch?v=rtmiiNATv84>`_
 * `アメブロ2016 ~ React/ReduxでつくるIsomorphic web app ~ <https://developers.cyberagent.co.jp/blog/archives/636/>`_
 
 ----
