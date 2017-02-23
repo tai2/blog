@@ -132,7 +132,7 @@ Reducerの構成方法については、実は `公式のStructuring Reducersと
 * 高階Reducer: Reducerを受け取って別のReducerを返す関数
 
 といった概念を導入し、それに沿ってReducerを読み易くするための工夫を説明しています。 
-とくに、この `リファクタリングの例 <http://redux.js.org/docs/recipes/reducers/RefactoringReducersExample.html>`_ などは参考になると思います。適切に関数を分割して、ユーティリティー関数を導入することで、可読性が向上していく様が見て取れるからです。
+とくに、 `Refactoring Reducer Logic Using Functional Decomposition and Reducer Composition <http://redux.js.org/docs/recipes/reducers/RefactoringReducersExample.html>`_ などは参考になると思います。適切に関数を分割して、ユーティリティー関数を導入することで、可読性が向上していく様が見て取れるからです。
 
 TofinoのReducerは、redux-ecosystem-linksに載っているアプリの中でも、とくに見易い印象を受けました。
 たとえば、 `pagesというReducer <https://github.com/mozilla/tofino/blob/7fd8ff0f9a17159893ea4edd613bb90fbc791a29/app/ui/browser-modern/reducers/pages.js>`_ は、Tofinoの中でももっとも複雑なスライスReducerですが、それでも十分な読み易さを保っていると思います。
@@ -308,7 +308,7 @@ Componentの純粋さにどこまでこだわるべきか、UIに関する状態
 
 Reduxに含まれるサンプルプログラムをはじめとして、多くのアプリでは、 :code:`containers/` と :code:`components/` という形で `ディレクトリを分けています。 <https://github.com/reactjs/redux/tree/master/examples/real-world/src>`_
 しかし、このディレクトリ構成にどれほど意味があるのか筆者は疑問を感じています。
-主な理由としては、PresentationalとContainerの区別というのは、 `それほど明確ではなく、 <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.7smj0zmty>`_ しばしばPresentational ComponentであったものがContainer Componentに昇格したりしますし。また、Presentationalの世界にContainerはいっさい現れることなく閉じているのであればともかく、実際には、PresentationalとContainerが入り乱れてビューツリーを構築します。 また、しばらくこのやりかたで開発をしてみて、大きなメリットを感じたこともありません。むしろ、ディレクトリおよびクラスが明確に分かれていることに煩雑さを感じます。それなりに実際的なコードであるTofinoでもwp-calypsoでも、ディレクトリを分けて明確に区別することはしていませんし、国内における大規模なReact Reduxの適用事例のひとつであるアメブロでも、やはり `区別はしていない <https://developers.cyberagent.co.jp/blog/archives/636/>`_ ようです。
+主な理由としては、PresentationalとContainerの区別というのは、 `それほど明確ではなく、 <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.7smj0zmty>`_ しばしばPresentational ComponentであったものがContainer Componentに昇格したりします。また、Presentationalの世界にContainerはいっさい現れることなく閉じているのであればともかく、実際には、PresentationalとContainerが入り乱れてビューツリーを構築します。 また、しばらくこのやりかたで開発をしてみて、大きなメリットを感じたこともありません。むしろ、ディレクトリおよびクラスが明確に分かれていることに煩雑さを感じます。それなりに実際的なコードであるTofinoでもwp-calypsoでも、ディレクトリを分けて明確に区別することはしていませんし、国内における大規模なReact Reduxの適用事例のひとつであるアメブロでも、やはり `区別はしていない <https://developers.cyberagent.co.jp/blog/archives/636/>`_ ようです。
 
 かわりに筆者が使っているディレクトリ構成は次のようなものです。
 
@@ -383,7 +383,7 @@ Reactアプリを開発していて、このような状況に遭遇したこと
 Redux作者のdan_abramovも、プロパティを使わずに次のComponentに送っていることに気付いたら、新しいContainer Componentを導入する良いタイミングであると `述べています。 <https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.a4ezrej5l>`_
 
 それから、多くのプロパティを次に委譲しているだけであれば、Reactの `spread演算子 <https://zhenyong.github.io/react/docs/jsx-spread.html>`_ を使うことで、コードを大幅に短縮することもできます。
-例えば、wp-calypsoの `Card <https://github.com/Automattic/wp-calypso/blob/7475c744b951cbe4b44525c2aa93d2708adaeae0/client/components/card/index.jsx>`_ というComponentは、共通のプロパティであるバリエーションである、 `CompactCard <https://github.com/Automattic/wp-calypso/blob/7475c744b951cbe4b44525c2aa93d2708adaeae0/client/components/card/compact.jsx>`_ というComponentを持っています。これはReactにおけるspread演算子の典型的な利用例です。
+例えば、wp-calypsoの `Card <https://github.com/Automattic/wp-calypso/blob/7475c744b951cbe4b44525c2aa93d2708adaeae0/client/components/card/index.jsx>`_ というComponentは、共通のプロパティを持つバリエーションである `CompactCard <https://github.com/Automattic/wp-calypso/blob/7475c744b951cbe4b44525c2aa93d2708adaeae0/client/components/card/compact.jsx>`_ を持っています。これはReactにおけるspread演算子の典型的な利用例です。
 
 Tofinoにもspread演算子に関するおもしろいテクニックが見られます。
 PropTypesを定義する際に、子Componentに渡したくないプロパティを別に分けておき、lodashの :code:`omit` と :code:`Object.keys` を利用することで、プロパティの **消費** を `賢く表現しています。 <https://github.com/mozilla/tofino/blob/7fd8ff0f9a17159893ea4edd613bb90fbc791a29/app/ui/shared/widgets/dropdown-menu-btn.jsx#L132>`_ ただし、このテクニックは、Componentのプロパティ定義をflowtypeで行っている場合には残念ながら使えません。flowtypeの型情報は実行時には除去されてしまうためです。
