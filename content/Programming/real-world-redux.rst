@@ -1,5 +1,5 @@
 React Redux Real World Examples 〜先人から学ぶReact Reduxの知恵〜
-===================================================================
+###################################################################
 
 :date: 2017-2-22
 :slug: real-world-redux
@@ -26,13 +26,13 @@ React Reduxを使ってプロダクトを作りはじめて、かれこれ半年
 .. contents:: 目次
 
 事例
-----
+====
 
 冒頭で上げたReact Reduxアプリリンク集には、実に32個ものサンプルがありました(2016年12月時点)。
 ひととおり手元にダウンロードして動かしてみたり、コードがどのように書かれているかを簡単に確認しましたが、ここですべてに触れることはもちろんできません。本記事では、規模の大きさやコードの綺麗さなどから参考になりそうな2つのアプリをとくに詳しく見ます。
 
 Project Tofino
-~~~~~~~~~~~~~~~
+---------------
 
 https://github.com/mozilla/tofino
 
@@ -47,7 +47,7 @@ MozillaによるブラウザUI実験用のElectronアプリで、UI部分がReac
 redux部分は、 `/app/ui/にまとまっています。 <https://github.com/mozilla/tofino/tree/7fd8ff0f9a17159893ea4edd613bb90fbc791a29/app/ui>`_ 
 
 wp-calypso
-~~~~~~~~~~~
+-----------
 
 https://github.com/Automattic/wp-calypso
 
@@ -67,7 +67,7 @@ createClassとextends Componentが同居してたり、fluxとreduxが同居し�
 ----------
 
 [コラム]Ducksパターン
-----------------------
+======================
 
 `Ducks <https://github.com/erikras/ducks-modular-redux>`_ は、Action Type、Action Creator、Reducerを関心ごとにひとまとめにしてパッケージ化するためのパターンです。
 本来、ActionはReducerとは直交する概念であり、任意のReducerが任意のAction Typeを扱うことができます。
@@ -80,7 +80,7 @@ wp-calypsoでは、Ducsk風の関心の分離を行うことで、分割統治�
 ----------
 
 Storeはどんな具合に構成すべきか
----------------------------------
+=================================
 
 Storeの形(Shape)は、Reducerの返すデータによって規定されます。言いかたを変えると、ReducerはStoreがそうあるべき形状に合致したデータを返さなければなりません。Storeをどのように構成するかによって、Reducerの可読性が決まるといっても過言ではないでしょう。
 
@@ -122,7 +122,7 @@ combineReducersによる分離では、各スライスが、あたかも独立�
 * スライス間で共有したいデータがある場合、どうすべきか。
 
 Store構成についての見解
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
 
 Reducerの構成方法については、実は `公式のStructuring Reducersというドキュメント <http://redux.js.org/docs/recipes/StructuringReducers.html>`_ にかなり丁寧に書いてあって、これを読めばだいたい勘所が掴めます。この中では、
 
@@ -244,7 +244,7 @@ wp-calypsoでは、Ducksライクに `状態を関心ごとに分離していま
 a,bは通常のスライスで、cはa,bの計算結果に依存します。このようにreduce-reducersを利用することで、適切な分割を保ちつつ、スライス間でデータを共有できない問題が解消できます。
 
 Store初期化(hydration)用データの定義はどうすべきか
-----------------------------------------------------
+====================================================
 
 Reduxでは、Store作成時に初期化(hydration)用のデータを与えることができます。
 
@@ -258,7 +258,7 @@ Reduxでは、Store作成時に初期化(hydration)用のデータを与える�
 しかし、ある程度の規模のアプリでStoreが複雑になってきたときに、初期値として与えているデータと、Reducerの期待するデータの形状が一致していると、どうすれば確信できるでしょうか?なにかひとつの対象を二重管理しているような気がして、若干の不安を感じます。
 
 Store初期化用のデータについての見解
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 これには、いくつかの緩和、あるいは解決策があります。
 
@@ -280,7 +280,7 @@ Tofinoで興味深いのは、Immutable.jsの `Record <https://facebook.github.i
 余談ですが、Server Side Renderingを行う際のRedux Storeへのデータの受け渡し・初期化方法についても、 `Server Rendering <http://redux.js.org/docs/recipes/ServerRendering.html>`_ というドキュメントが用意されています。 `Relax <https://github.com/relax/relax>`_ というCMSが、このドキュメント `ほぼそのままのやりかた <https://github.com/relax/relax/blob/cf18abcd28fbabd593bdccfc61721c9b64935750/lib/server/shared/helpers/render-html.js>`_ で実装しており、ReduxでSSRをやるときには参考になると思います。
 
 Componentはどう整理すべきか
------------------------------
+=============================
 
 JSXによって再利用性の高いComponentを宣言的に記述できることが、Reactの特徴のひとつです。
 Componentは実際のところただのJavaScriptの関数もしくはクラスなので、容易に括り出して共通化などができます。
@@ -299,7 +299,7 @@ Container componentを挿入する位置について、なにか指針はある�
 * 階層が深くなったときに、:code:`propName={propsName}` のような、プロパティを上から下に流すだけで記述が冗長になる問題には、どう対処すべきか。
 
 Componentについての見解
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 Componentの整理方法については、redux-ecosystem-linksに載っているアプリを見た限り、実に様々です。
 
@@ -391,7 +391,7 @@ PropTypesを定義する際に、子Componentに渡したくないプロパテ�
 もう一つ考えられるのは、renderが大きくなってきてコードを整理する際に、別Componentに分けるのではなく、別メソッドにrenderFooのようなメソッドを設けて分離することです。同じクラス内のメソッドであれば、Componentのプロパティには :code:`this` 経由でどこからでもアクセスできるため、そもそもプロパティの受け渡しは不要です。
 
 まとめ
---------
+========
 
 この記事では、Redux Real World Example、Project Tofino、wp-calypsoといった実際のアプリのソースコードを参考に、React Redux開発において生じる疑問へのヒントを探りました。
 
@@ -402,7 +402,7 @@ Storeの初期化データ定義については、Immutable.jsのRecordを利用
 最後に、Componentの整理について、多数のReact Reduxアプリを見た中で行き着いたファイル構成のスタイルを提案し、プロパティの受け渡しが冗長になってしまう場合の対策をいくつか紹介しました。
 
 参考リンク
------------
+===========
 
 * `Applications and Examples <https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md#applications>`_
 * `Container Components <https://medium.com/@learnreact/container-components-c0e67432e005#.lo4csvl0g>`_
