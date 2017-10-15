@@ -6,3 +6,4 @@ output/
 cache/
 pelican.pid
 srv.pid
+.pelican
