@@ -35,7 +35,7 @@ Rails自体の基本的な使い方は習得済みのエンジニアのために
 サンプルコード
 ===============
 
-本記事では、以下のサンプルコードを元に解説していきます。
+本記事では、以下のサンプルコードを元に解説していきます。[ref]記事内で引用しているコードは、型アノテーションを省略するなど、適宜省略した形で抜粋しています。[/ref]
 
 https://github.com/tai2/webpacker-react-example
 
@@ -498,6 +498,37 @@ redux-sagaに非常に高機能な非同期処理のためのユーティリテ�
 
 sagaはジェネレータ関数で定義されるため非同期処理を逐次処理のように記述できます。
 これもsagaの大きな魅力です。
+
+RailsからReduxへのデータ受け渡し
+--------------------------------
+
+RailsからReact Reduxアプリにデータを受け渡すには、Viewの中でデータ格納用の要素を用意し、属性としてJSON化した文字列を格納します。
+
+.. code-block:: erb
+
+  <%= content_tag :div,
+    id: 'todos-data',
+    data: {
+      todos: @todos
+    }.to_json do %>
+  <% end %>
+
+クライアント側からは、この文字列を取り出してパースした上で使用します。
+Reduxの `ストア作成関数 <http://redux.js.org/docs/api/createStore.html>`_ には、2番目の引数として初期値を指定できるため、これで、
+アプリの初期状態をサーバー側から制御できます。
+
+.. code-block:: javascript
+
+  function getPreloadedState() {
+    const node = document.getElementById('todos-data')!
+    return convert(JSON.parse(node.getAttribute('data')))
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // createAppStoreは、ストア作成用にアプリ内で定義しているヘルパー
+    store = createAppStore(getPreloadedState())
+    render(App)
+  })
 
 参考リンク
 -----------
