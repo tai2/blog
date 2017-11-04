@@ -13,8 +13,7 @@ IGNORE_FILES = ('*~', '*.swp')
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 FILENAME_METADATA = '(?P<slug>.*)'
 
-THEME = 'pelican-blueidea'
-TYPOGRIFY = True
+THEME = 'blog.tai2.net-theme'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -29,7 +28,6 @@ LINKS = (('tai2.net', 'http://tai2.net/'),
          ('blog.mikiishijima.com', 'http://blog.mikiishijima.com/'),
          ('Article Candidates', 'https://gist.github.com/tai2/5cb13126ed4ebb79a73d'))
 
-DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
 AUTHOR_SAVE_AS = ''
 
