@@ -949,10 +949,3 @@ webpack-bundle-analyzer
 
 後半では、React Reduxをはじめとして、モダンフロントエンド開発で使用されている便利なライブラリやツールを簡単に紹介しました。
 また、CSS Modulesの組込についてはとくに注意が必要なため、設定方法を紹介しました。Babelの節では、TypeScriptとBabelを併用することで得られるささいなメリットについても説明しました。
-
-----
-
-.. raw:: html
-
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
-

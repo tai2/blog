@@ -387,9 +387,3 @@ HEADから=====までの部分が自分のブランチで加えた変更を、==
 * 2015/2/26 作成
 * 2016/4/28 GitHub Desktopに合わせて改訂。
 
-----
-
-.. raw:: html
-
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
-

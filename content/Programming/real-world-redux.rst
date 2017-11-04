@@ -411,9 +411,3 @@ Storeの初期化データ定義については、Immutable.jsのRecordを利用
 * `Real World Redux <https://speakerdeck.com/chrisui/real-world-redux>`_
 * `アメブロ2016 ~ React/ReduxでつくるIsomorphic web app ~ <https://developers.cyberagent.co.jp/blog/archives/636/>`_
 
-----
-
-.. raw:: html
-
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>とします。
-

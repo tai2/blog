@@ -55,7 +55,7 @@ Pelicanでコンテンツを更新するときの流れは簡単です。付属�
 
 1. contents/ 以下の元ファイル(reSTやMarkDown)をテキストエディタで編集
 2. 付属の make ssh_uploadコマンドで、ファイルを生成&アップロード
-   
+
 contents/以下のrstファイルやmdファイルは、自動的に記事として使われます。
 アップロード先のサイトやアカウントの設定は、あらかじめ、設定ファイルに記述しておきます。
 
@@ -70,10 +70,3 @@ Static Site GeneratorのPelicanを採用した理由
 
 また、導入の過程で、Jinja2,pygments,Fabricといった便利そうなPythonライブラリを知れたのも個人的によかったです。
 動的なブログシステムでも同じですが、なんとなくインストールして、自分用にカスタマイズしてるだけでもたのしいですよ。
-
-----
-
-.. raw:: html
-
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
-

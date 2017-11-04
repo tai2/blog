@@ -5,7 +5,7 @@ XMLHttpRequestによるネイティブアプリ-WebView間でのストリーミ�
 :slug: xhr-bulktransfer-ios
 :tags: ios, xmlhttprequest, webkit, experiment
 :summary: モバイルアプリ開発で、ネイティブコードから、WebView内のJavaScriptに大量のデータを高速に流し込めると、いろいろとうれしいことが考えられます(たとえば、ネイティブアプリで生成した映像を、非圧縮動画としてWebViewに転送して表示したりできるかもしれません)。これを実現できないか模索してみます。まずは、XMLHttpRequestでのデータ転送を検証してみました。
-          
+
 モバイルアプリ開発で、ネイティブコードから、WebView内のJavaScriptに大量のデータを高速に流し込めると、いろいろとうれしい
 ことが考えられます(たとえば、ネイティブアプリで生成した映像を、非圧縮動画としてWebViewに転送して表示したりできるかもしれません)。
 
@@ -64,7 +64,7 @@ XMLHttpRequestでのストリーミング転送を行うにあたっては、い
 * チャンクサイズを大きくするほど、転送速度が早くなる
 * 第一世代iPad mini実機で、160Mbps程度(チャンクサイズ1MB)。
 * **レスポンスのメモリが開放されずにアプリが落ちてしまう**
-   
+
 VGA 30fps生RGBで221Mbps必要であることを考えると、もうすこしで実用可能な速度に届きそうなのですが、いろいろ試しているうちに、レスポンスが開放されないという致命的な問題に気付きました。Instrumentsで見ると、レスポンスに使っているArrayBufferオブジェクトが開放されずにそのまま蓄積されていっています。
 WebKitのコードを見ると、XMLHttpRequest::openしたときに開放処理(参照カウントのデクリメント)をしているのですが、メモリ上に残っているということは、他の部分からも参照されていて参照カウントが残っているのだと思います。
 
@@ -72,10 +72,3 @@ WebKitのコードを見ると、XMLHttpRequest::openしたときに開放処理
 もしかすると、Androidでは、また違った結果になるかもしれません。
 
 次は、`WebSocketで同様の実験 <{filename}websocket_bulktransfer_ios.rst>`_ をしてみようと思っています。
-
-----
-
-.. raw:: html
-
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
-

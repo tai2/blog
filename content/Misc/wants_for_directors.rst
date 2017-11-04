@@ -59,9 +59,3 @@
 
 その他、アプリのIDはどうするのか、バージョン番号はどう付けるのか、ソースコード管理ツール(Gitなど)の運用はどうするのか、サーバーの開発環境やステージング環境は用意するのか、使用するOSSのライセンスはどういったものならOKなのか、といったさまざまな決定が開発では必要になりますが、専門的な内容になってくるので、開発者と相談して決めてください。
 
-----
-
-.. raw:: html
-
-  <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この記事のライセンスは、<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>とします。
-
