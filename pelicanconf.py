@@ -20,14 +20,6 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-SOCIAL = (('twitter', 'https://twitter.com/__tai2__'),
-          ('facebook', 'https://www.facebook.com/taiju.muto'),
-          ('github', 'https://github.com/tai2/'))
-
-LINKS = (('tai2.net', 'http://tai2.net/'),
-         ('blog.mikiishijima.com', 'http://blog.mikiishijima.com/'),
-         ('Article Candidates', 'https://gist.github.com/tai2/5cb13126ed4ebb79a73d'))
-
 DEFAULT_DATE = 'fs'
 AUTHOR_SAVE_AS = ''
 
