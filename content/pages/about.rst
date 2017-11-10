@@ -72,6 +72,7 @@ hello@tai2.net
 * Ruby on Railsでのサーバーサイド開発。
 * `GraphQL API開発 <https://github.com/cotoami/cotoami-graphql>`_ (JavaScript)。
 * `Elmクライアントサイド開発 <https://github.com/cotoami/cotoami>`_ 。
+* TensorFlow(Python)のサンプルプログラム検証。
 
 2016年
 ------
