@@ -70,6 +70,8 @@ hello@tai2.net
 
 * React ReduxやVue.jsでのモダンフロントエンド開発。
 * Ruby on Railsでのサーバーサイド開発。
+* `GraphQL API開発 <https://github.com/cotoami/cotoami-graphql>`_ (JavaScript)。
+* `Elmクライアントサイド開発 <https://github.com/cotoami/cotoami>`_ 。
 
 2016年
 ------
