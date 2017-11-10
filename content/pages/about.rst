@@ -5,6 +5,11 @@
 アクティブなSNSは `ツイッター <https://twitter.com/__tai2__>`_ 。
 二児の父。
 
+.. image:: {filename}/images/myicon_nomi.jpg
+   :alt: ノミさんが描いてくれた似顔絵
+   :align: center
+   :class: about-face
+
 2007年から現在まで、受託開発を生業としているアプリケーションプログラマーです。
 `株式会社SGRA <https://www.sgra.co.jp/>`_ で3年弱の経験を積むんだ後、独立。
 以後フリーランスとして個人で活動しています。
