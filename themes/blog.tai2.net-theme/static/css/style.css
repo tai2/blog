@@ -1,0 +1,256 @@
+/*
+ * common
+ * ======
+ */
+
+html {
+    font-size: 1em;
+    font-family: serif;
+    color: #333;
+    background: #FFF8DC;
+}
+
+body {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0.5rem;
+    padding-bottom: 5rem;
+}
+
+p, ul, ol, blockquote {
+    line-height: 1.58;
+}
+
+dd {
+    margin-bottom: 0.2rem;
+}
+
+blockquote {
+    background: white;
+    margin: 0;
+    padding: 1rem;
+}
+blockquote :first-child{
+    margin-top: 0;
+}
+blockquote :last-child{
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+a:link,
+a:visited {
+    color: inherit;
+}
+a:hover {
+    color: #888;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*
+ * workaround for facebook button align problem.
+ * see: https://stackoverflow.com/a/24226514/8700337
+ */
+.fb_iframe_widget span {
+    vertical-align: baseline !important;
+}
+
+/*
+ * auto-applied class by pelican
+ */
+.highlight {
+    overflow-x: scroll;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.highlight :first-child {
+    margin-top: 0;
+}
+.highlight :last-child {
+    margin-bottom: 0;
+}
+
+.toc-backref:link,
+.toc-backref:visited {
+    text-decoration: none;
+}
+
+.figure {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.caption {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.align-center {
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+ * auto-applied class by simple-footnotes plugin
+ */
+.simple-footnotes {
+    font-size: 0.9rem;
+}
+
+.simple-footnotes li {
+    margin: 0.3rem 0;
+}
+
+/*
+ * twitter widgets
+ */
+.twitter-tweet.twitter-tweet-rendered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+ * pelican prohibis double underscore for class names.
+ * So we use just a hyphen for custom classes used in rst.
+ */
+.about-face {
+    max-width: 10rem;
+}
+
+/*
+ * index.html
+ * ==========
+ */
+
+.index__sitename {
+    margin: 5rem 0;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Spicy Rice', cursive;
+    text-align: center;
+}
+
+.index__article-list {
+    padding: 0;
+    margin: 0;
+}
+
+.index__article-item {
+    list-style: none;
+    margin: 1.5rem 0;
+    border-bottom: solid 1px transparent;
+    font-family: sans-serif;
+}
+
+.index__article-title {
+    display: table-cell;
+    width: 99%;
+    padding-right: 1rem;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.index__article-link:link,
+.index__article-link:visited {
+    text-decoration: none;
+}
+
+.index__article-date {
+    display: table-cell;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    vertical-align: top;
+}
+
+.index__footer {
+    text-align: right;
+}
+
+/*
+ * article.html
+ * ============
+ */
+
+.article__page-nav {
+    padding: 0.5rem 0;
+}
+
+.article__sitename {
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: 'Spicy Rice', cursive;
+    margin: 0;
+}
+
+.article__sitelink:link,
+.article__sitelink:visited {
+    color: inherit;
+    text-decoration: none;
+}
+.article__sitelink:hover {
+    color: #888;
+}
+
+.article__title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 3.5rem 0;
+    line-height: 1.4;
+}
+
+.article__info {
+    text-align: right;
+    font-family: sans-serif;
+}
+
+.article__author {
+    font-size: 0.9rem;
+}
+.article__author:link,
+.article__author:visited
+{
+    color: inherit;
+}
+.article__author:hover {
+    color: #888;
+}
+
+.article__footer {
+    text-align: right;
+}
+
+.article__footer-contents {
+    display: inline-block;
+}
+
+.article__license-link {
+    vertical-align: top;
+    margin-right: 0.2rem;
+}
+
+.article__content h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.article__content code {
+    font-style: italic;
+    font-family: sans-serif;
+}
+

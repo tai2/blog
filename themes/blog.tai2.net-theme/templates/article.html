@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock %}
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+{% block og_url %}{{ SITEURL }}/{{ article.url }}{% endblock %}
+{% block og_title %}{{ article.title }}{% endblock %}
+{% block og_image %}{{ SITEURL }}/images/og/{{ article.source_path | basename }}.png{% endblock %}
+
+{% block content %}
+    <nav class="article__page-nav">
+        <h2 class="article__sitename">
+            <a class="article__sitelink" href="/">{{ SITENAME }}</a>
+        </h2>
+    </nav>
+
+    <header class="article__header">
+        <h1 class="article__title">{{ article.title }}</h1>
+        <div class="article__info">
+            <a class="article__author" href="/pages/about.html">tai2</a>
+            <time class="article__date">{{ article.locale_date }}</time>
+        </div>
+    </header>
+
+    <div class="article__content">
+        {{ article.content }}
+    </div>
+
+    <footer class="article__footer">
+        <div class="article__footer-contents">
+            <a class="article__license-link" href="pages/license.html">ライセンス</a>
+
+            <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text={{ article.title }}">
+                Tweet
+            </a>
+            <script src="https://platform.twitter.com/widgets.js"></script>
+
+            <div class="fb-share-button" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fblog.tai2.net%2F&amp;src=sdkpreparse">Share</a></div>
+            <script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10"></script>
+
+            <a class="tumblr-share-button" data-color="blue" data-notes="right"  href="https://embed.tumblr.com/share">
+            </a>
+            <script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script>
+
+        </div>
+    </footer>
+
+    {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+	<div class="comments">
+	<h2>コメント</h2>
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_identifier = "{{ article.url }}";
+	    var disqus_url = "{{ SITEURL }}/{{ article.url }}";
+	    (function() {
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = '//{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	</div>
+    {% endif %}
+{% endblock %}
