@@ -7,3 +7,4 @@ cache/
 pelican.pid
 srv.pid
 .pelican
+node_modules

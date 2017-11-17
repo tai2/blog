@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>OG Image Generator</title>
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+        <style>
+            html {
+                color: #333;
+                background: #FFF8DC;
+            }
+
+            body {
+                margin: 0;
+                padding: 35px 35px 0;
+            }
+
+            h1 {
+                font-weight: bold;
+                font-family: '游ゴシック体', sans-serif;
+                line-height: 1.4;
+                margin: 0;
+            }
+
+            address {
+                background: rgba(0,0,0,0.9);
+                font-weight: bold;                                                                                                                           font-family: 'Spicy Rice', cursive;
+                font-style: normal;
+                font-size: 13vh;
+                text-align: right;
+                line-height: 18vh;
+                padding: 10px;
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .icon {
+                height: 18vh;
+                vertical-align: middle;
+            }
+
+            .sitename {
+                color: white;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title"></h1>
+        <address>
+            <img class="icon" src="content/images/myicon_nomi.jpg">
+            <span class="sitename">blog.tai2.net</span>
+        </address>
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const injectedProps = await getInjectedProps()
+                const title = document.getElementById('title')
+                title.innerHTML = injectedProps.title
+
+                let fontSize = 100 // px dimension
+                for (;;) {
+                    title.style.fontSize = fontSize + 'px'
+                    if (document.body.clientHeight <= window.innerHeight) {
+                        break
+                    }
+                    fontSize -= 1
+                }
+            })
+        </script>
+    </body>
+</html>

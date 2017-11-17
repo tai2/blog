@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from os import path
 
 AUTHOR = u'tai2'
 SITENAME = u'blog.tai2.net'
@@ -33,3 +34,8 @@ DISPLAY_CATEGORIES_ON_POSTINFO = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+def basename(str):
+    return path.splitext(path.basename(str))[0]
+
+JINJA_FILTERS = { 'basename': basename }

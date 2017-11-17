@@ -1,0 +1,23 @@
+{
+  "name": "blog.tai2.net",
+  "version": "1.0.0",
+  "description": "og:image generator",
+  "main": "ogimage.js",
+  "scripts": {
+    "ogimage": "node ogimage.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tai2/blog.git"
+  },
+  "author": "tai2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tai2/blog/issues"
+  },
+  "homepage": "https://github.com/tai2/blog#readme",
+  "dependencies": {
+    "puppeteer": "^0.13.0",
+    "restructured": "0.0.11"
+  }
+}
