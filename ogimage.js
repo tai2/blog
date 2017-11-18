@@ -18,8 +18,8 @@ function parseArticle(path) {
 
 async function capture(article) {
     const viewport = {
-        width: 1000,
-        height: 500,
+        width: 1200,
+        height: 630,
     }
     const injectedProps = {
         title: article.title,
