@@ -22,6 +22,7 @@ Puppeteerとは
 `og:image用に組んだHTML <https://github.com/tai2/blog/blob/d1cef7ddd6c8b1bfee089e207393b183fb5fcac2/ogimage.html>`_ をPuppeteerでレンダリングして、画像として保存します。
 
 og:imageの生成とキャプチャは、以下のような非常に短かい関数で実現できます。
+`exposeFunction` でChrome側に関数をエクスポートできるので、これを使って、HTML側に記事タイトルを注入します。
 
 .. code-block:: javascript
 
@@ -47,7 +48,7 @@ og:imageの生成とキャプチャは、以下のような非常に短かい関
         await browser.close()
     }
 
-`exposeFunction` でChrome側に関数をエクスポートできるので、これを使って、HTML側に記事タイトルを注入します。
+HTML側では、レンダリング結果が画像サイズをはみ出ないように、1ピクセルずつ小さくしながら最適なフォントサイズを探索します。
 
 .. code-block:: javascript
 
@@ -62,8 +63,6 @@ og:imageの生成とキャプチャは、以下のような非常に短かい関
 
         fontSize -= 1
     }
-
-HTML側では、レンダリング結果が画像サイズをはみ出ないように、1ピクセルずつ小さくしながら最適なフォントサイズを探索します。
 
 なお、実装は、いったんPuppeteerとは切り離して単体のHTMLとしてデザインを完成させた上で、
 あとからPuppeteerを組込むという工程で進めました。
