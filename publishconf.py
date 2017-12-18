@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = '//blog.tai2.net'
+SITEURL = 'https://blog.tai2.net'
 RELATIVE_URLS = False
 DISQUS_SITENAME = 'tai2'
 
