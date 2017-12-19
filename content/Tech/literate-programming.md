@@ -22,14 +22,14 @@ slug: literate-programming
 そこで、この記事では、Node.jsで文芸的プログラミングの簡単な処理系を実装します。
 おもちゃの実装なので、[toylit](https://github.com/tai2/toylit)という名前にします。
 
-なお、[この記事自体](https://github.com/tai2/blog/blob/master/content/Tech/literate-programming.md)が、実装した文芸的プログラミングの処理系で処理できるソースコードになっています。
+なお、[この記事自体](https://github.com/tai2/blog/blob/master/content/Tech/literate-programming.md)が、toylitで処理できるソースコードになっています。
 ですから、以下のように、このブログ記事をコンパイルすることで、「このブログ記事をコンパイルできるプログラム」を生成することができます。
 
 ```sh
 $ wget https://raw.githubusercontent.com/tai2/blog/master/content/Tech/literate-programming.md
 $ toylit literate-programming.md -o output1.js # このブログ記事をコンパイル
 $ npm install yargs marked # 依存モジュールのインストール
-$ node output1.js literate-programming -o output2.js # このブログ記事をコンパイルした結果のプログラムに、このブログ記事を与える
+$ node output1.js literate-programming. -o output2.js # このブログ記事をコンパイルした結果のプログラムに、このブログ記事を与える
 $ diff output1.js output2.js && echo 'results are same'
 results are same
 ```
