@@ -160,6 +160,6 @@ hello@tai2.net
 
 * RTMPストリーミングサーバー開発(C++)。
 * JavaScriptウィジェット開発。
-* 3DCG関連研究開発(Direct3D,cgシェーダー)。
+* 3DCG関連研究開発(OpenGL,cgシェーダー)。
 * コンソールゲーム機研究開発。
 
