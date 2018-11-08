@@ -65,6 +65,13 @@ hello@tai2.net
 実績
 ====
 
+2018年
+------
+
+* OpenGL 4.5(Windows)を使ったツール開発。
+* React Reduxでのフロントエンド開発。
+* Ruby on Railsでのサーバーサイド開発。
+
 2017年
 ------
 
