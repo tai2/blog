@@ -1,6 +1,6 @@
 PY=python
 PELICAN=pelican
-PELICANOPTS=
+PELICANOPTS=-t themes/blog.tai2.net-theme
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -54,7 +54,6 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
