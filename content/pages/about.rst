@@ -5,8 +5,8 @@
 アクティブなSNSは `ツイッター <https://twitter.com/__tai2__>`_ 。
 二児の父。
 
-.. image:: {filename}/images/myicon_nomi.jpg
-   :alt: ノミさんが描いてくれた似顔絵
+.. image:: {filename}/images/vulcan_tai2.jpg
+   :alt: バルカン人加工されたtai2
    :align: center
    :class: about-face
 
