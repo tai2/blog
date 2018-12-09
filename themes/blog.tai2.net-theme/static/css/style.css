@@ -253,3 +253,13 @@ img {
     font-style: italic;
     font-family: sans-serif;
 }
+
+.article__content table {
+    border-spacing: 0;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.article__content th,.article__content td {
+    padding: 0.3rem;
+}
