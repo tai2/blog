@@ -28,7 +28,7 @@ dd {
 blockquote {
     background: white;
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
 }
 blockquote :first-child{
     margin-top: 0;
