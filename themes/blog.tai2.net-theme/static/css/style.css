@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    max-width: 40rem;
+    max-width: 36rem;
     margin: 0 auto;
     padding: 0.5rem;
     padding-bottom: 5rem;
@@ -253,4 +253,3 @@ img {
     font-style: italic;
     font-family: sans-serif;
 }
-
