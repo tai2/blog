@@ -141,7 +141,7 @@ img {
     margin: 5rem 0;
     font-size: 3rem;
     font-weight: bold;
-    font-family: 'Volkhov', cursive;
+    font-family: 'Volkhov', serif;
     text-align: center;
 }
 
@@ -193,7 +193,7 @@ img {
 .article__sitename {
     font-size: 1.1rem;
     font-weight: normal;
-    font-family: 'Volkhov', cursive;
+    font-family: 'Volkhov', serif;
     margin: 0;
 }
 
