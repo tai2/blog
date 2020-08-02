@@ -1,4 +1,4 @@
-PY=python
+PY=python3
 PELICAN=pelican
 PELICANOPTS=-t themes/blog.tai2.net-theme
 
