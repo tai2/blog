@@ -24,7 +24,7 @@ Gitを使用すると、ディレクトリに含まれるファイルのスナ�
 Gitを使えば、システム上にある任意のディレクトリをリポジトリ化できます。[ref]リポジトリ化されたディレクトリのルートには、.gitという隠しディレクトリが作成されます。この中にGitが必要とするすべての情報が格納されます。[/ref] 
 実際の使用では、プロジェクトごと(例えば、ウェブサイトに関連するファイル一式など)にリポジトリを作成する場合が多いと思います。
 
-.. figure:: {filename}/images/github_client_howto/git-snapshots.png
+.. figure:: {static}/images/github_client_howto/git-snapshots.png
    :alt: Git Snapshots
 
    Gitではディレクトリの内容を「スナップショット」として積み重ねていく
@@ -40,7 +40,7 @@ Gitは行指向のツールです。つまり、Gitのファイル管理機能�
 GitHubとは
 ===========
 
-.. figure:: {filename}/images/github_client_howto/octocat.png
+.. figure:: {static}/images/github_client_howto/octocat.png
    :alt: Octocat
 
    GitHubのキモかわいいマスコットキャラクターOctocat君
@@ -102,7 +102,7 @@ __ GitHubFlow_
 5. プッシュする
 6. プルリクエストを作成する
 
-.. figure:: {filename}/images/github_client_howto/github-workflow1.png
+.. figure:: {static}/images/github_client_howto/github-workflow1.png
    :alt: GitHub Workflow
 
    GitHubでのワークフロー
@@ -118,7 +118,7 @@ __ GitHubFlow_
 
 まずは、フォークしたいプロジェクトのGitHub上のページをブラウザで開きましょう。
 
-.. figure:: {filename}/images/github_client_howto/github-fork-button.png
+.. figure:: {static}/images/github_client_howto/github-fork-button.png
    :alt: Fork Button
 
    フォークボタンの場所
@@ -132,14 +132,14 @@ __ GitHubFlow_
 リポジトリをクローンすると、クローンした(自分の手元にある)リポジトリには、どこからクローンしてきたかという情報が記録されます。
 クローンされた元のことをoriginと言います。
 
-.. figure:: {filename}/images/github_client_howto/github-clone-button.png
+.. figure:: {static}/images/github_client_howto/github-clone-button.png
    :alt: Clone Button
 
    クローンボタンの場所
 
 フォークしたプロジェクトのページを表示して、“Download Zip” の左隣にあるボタンを押しましょう。自分のローカル環境にリポジトリをクローンできます。
 
-.. figure:: {filename}/images/github_client_howto/github-clone-desktop.png
+.. figure:: {static}/images/github_client_howto/github-clone-desktop.png
    :alt: Desktop Clone
 
    GitHub Desktopからクローンする
@@ -156,14 +156,14 @@ Gitのファイル管理では、スナップショットを任意のタイミ�
 作成したブランチは、いつでも自由に切り替えることができて、それに追随して、実際のディレクトリの中身も入れ替わります。Gitでは、ブランチの作成や切り替えは、非常に高速に行うことができます。[ref]Subversionのような中央管理型のSCMでは、そうはいきません。[/ref]
 リポジトリを新規に作成すると、masterと呼ばれるデフォルトのブランチがひとつ自動的に作成されます。
 
-.. figure:: {filename}/images/github_client_howto/git-branch.png
+.. figure:: {static}/images/github_client_howto/git-branch.png
    :alt: Branch
 
    ブランチでバージョンを「派生」させる
 
 プロダクトに新しい機能を実装したり[ref]新機能用のブランチをフィーチャーブランチあるいはトピックブランチと呼んだりします。[/ref]バグフィックスをしたりするときには、その作業用のブランチを作成します。ブランチの名前は、これから行おうとしている作業を適切に表した名前にしましょう。たとえば、サイトにサイドバーを追加しようとしているなら、add-sidebarのようなブランチ名にします。
 
-.. figure:: {filename}/images/github_client_howto/github-client-branch.png
+.. figure:: {static}/images/github_client_howto/github-client-branch.png
    :alt: GitHub Client Branching
 
    ブランチボタンの場所
@@ -178,7 +178,7 @@ GitHub Desktopでブランチを作成するには、ウィンドウ上部にあ
 
 リポジトリ化したディレクトリ内にファイルを追加したり、あるいはリポジトリに含まれるファイルを更新・削除したりすると、下記の図のように変更点が表示されます。
 
-.. figure:: {filename}/images/github_client_howto/github-commit.png
+.. figure:: {static}/images/github_client_howto/github-commit.png
    :alt: GitHub Commit
 
    コミットの差分
@@ -186,7 +186,7 @@ GitHub Desktopでブランチを作成するには、ウィンドウ上部にあ
 ファイル名の左側についているチェックボックスは、コミットにそのファイルを含めるかどうかを表しています。チェックをはずすと、そのファイルに対して加えた変更は、コミットから除外されます。右側のビューでの赤い行は削除される行、緑の行は追加される行を示しています。
 変更内容を確認の上、その内容でスナップショットを保存していいと判断したら、コミットログを記入してコミットボタンを押します。
 
-.. figure:: {filename}/images/github_client_howto/github-commit-button.png
+.. figure:: {static}/images/github_client_howto/github-commit-button.png
    :alt: GitHub Commit Button
 
    コミットするときは、変更内容の説明を記入する
@@ -205,14 +205,14 @@ GitHub Desktopでブランチを作成するには、ウィンドウ上部にあ
 実装が完了して、すべてコミットできたら、ローカルで作成したブランチをGitHubに送信しましょう。
 これを **プッシュ** と言います。
 
-.. figure:: {filename}/images/github_client_howto/github-publish-button.png
+.. figure:: {static}/images/github_client_howto/github-publish-button.png
    :alt: GitHub Publish Button
 
    Publishボタンの場所
 
 対象ブランチの右側にある“Publish”ボタンを押せば、ブランチをプッシュできます。
 
-.. figure:: {filename}/images/github_client_howto/github-sync-button.png
+.. figure:: {static}/images/github_client_howto/github-sync-button.png
    :alt: GitHub Sync Button
 
    Syncボタンの場所
@@ -228,7 +228,7 @@ GitHub Desktopでブランチを作成するには、ウィンドウ上部にあ
 
 プルリクエストを送りたいブランチを選択した状態で、ウィンドウ右上の“Pull Request”ボタンを押すと、以下のようにプルリクエストペインが表示されます。
 
-.. figure:: {filename}/images/github_client_howto/github-pullrequest-button.png
+.. figure:: {static}/images/github_client_howto/github-pullrequest-button.png
    :alt: GitHub Pull Request Button
 
    プルリクエストボタンの場所
@@ -238,7 +238,7 @@ GitHub Desktopでブランチを作成するには、ウィンドウ上部にあ
 これらが適切であることを確認し、必要に応じてコメントを記入したら、プルリクエストペインの下部にある “Send Pull Request”ボタンを押しましょう。
 
 
-.. figure:: {filename}/images/github_client_howto/github-merge-to.png
+.. figure:: {static}/images/github_client_howto/github-merge-to.png
    :alt: GitHub Pull Request Which Branch Merge to
 
    必要に応じてプルリクエストのマージ先を選択する
@@ -267,7 +267,7 @@ GitHubでのワークフロー(2回目以降)
 4. プッシュする
 5. プルリクエストを作成する
 
-.. figure:: {filename}/images/github_client_howto/github-workflow2.png
+.. figure:: {static}/images/github_client_howto/github-workflow2.png
    :alt: GitHub Workflow 2
 
    GitHubでのワークフロー(2回目以降)
@@ -280,7 +280,7 @@ GitHubでのワークフロー(2回目以降)
 まず、masterブランチを選択します。upstreamのmasterではなく、ローカルのmasterを選択する必要があるので注意してください(XXXXX/masterでなく、ただのmasterを選択する)。
 upstreamに更新がある場合には、“Update from XXXXX/master”というボタンが押せる状態になっています。このボタンを押すと、upstreamでの更新をローカルに取り込んでマージすることができます。
 
-.. figure:: {filename}/images/github_client_howto/update-from-master.png
+.. figure:: {static}/images/github_client_howto/update-from-master.png
    :alt: GitHub Update from Master
 
    クローン元から最新の状態を取得する
@@ -298,14 +298,14 @@ upstreamに更新がある場合には、“Update from XXXXX/master”という
 
 プルリクエストを出したときに、GitHubウェブサイトのプルリクエスト画面上で、次の図のように、左側のマージアイコンが灰色で表示され、自動的にマージができない旨のメッセージがでる場合があります。これは、あなたのブランチを取り込むときに **コンフリクト** が発生することを示しています。
 
-.. figure:: {filename}/images/github_client_howto/github-conflict.png
+.. figure:: {static}/images/github_client_howto/github-conflict.png
    :alt: GitHub Conflict
 
    コンフリクトが発生しているとマージできない
 
 GitHub Desktopであれば、プルリクエストペインに次のように警告が表示されます。
 
-.. figure:: {filename}/images/github_client_howto/desktop-conflict.png
+.. figure:: {static}/images/github_client_howto/desktop-conflict.png
    :alt: GitHub Desktop Conflict
 
    GitHub Desktopでのコンフリクト表示。
@@ -314,7 +314,7 @@ GitHub Desktopであれば、プルリクエストペインに次のように警
 
 コンフリクトが発生したということは、ブランチを作成した後に、upstreamでmasterに対してコミットが追加されたことを示しています。
 
-.. figure:: {filename}/images/github_client_howto/github-conflict-branches.png
+.. figure:: {static}/images/github_client_howto/github-conflict-branches.png
    :alt: GitHub Conflicing Branches
 
    自分の作業と並行して、upstreamにも変更が加えられている場合がある
@@ -323,14 +323,14 @@ GitHub Desktopであれば、プルリクエストペインに次のように警
 さきほどのupstreamからmasterへの更新取得と同じ要領で更新を取得します。
 対象のブランチを選択した上で、“Update from XXXXX/master”ボタンを押せばOKです。
 
-.. figure:: {filename}/images/github_client_howto/retrieve-update-to-branch.png
+.. figure:: {static}/images/github_client_howto/retrieve-update-to-branch.png
    :alt: Retrieve Updates from Upstream
 
    Upstreamからブランチに更新を取り込む
 
 するとコンフリクトが生じるはずなので、更新取得後、マージの途中で止まります。
 
-.. figure:: {filename}/images/github_client_howto/conflict-message.png
+.. figure:: {static}/images/github_client_howto/conflict-message.png
    :alt: Conflict message on a file
 
    ファイルにコンフリクトが発生していることを示すメッセージ

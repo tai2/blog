@@ -314,8 +314,8 @@ Stream APIはコールバックベースのインターフェースであるた�
   if (argv._.length === 0) {
     await runCompile(process.stdin, output)
   } else {
-    for (const filename of argv._) {
-      const input = fs.createReadStream(filename)
+    for (const static of argv._) {
+      const input = fs.createReadStream(static)
       await runCompile(input, output)
     }
   }
@@ -429,7 +429,7 @@ class StringWritable extends Writable {
 ```javascript
 function getArgv () {
   return require('yargs')
-    .usage('Usage: $0 [-i filename] [-o filename]')
+    .usage('Usage: $0 [-i static] [-o static]')
     .option('output', {
       alias: 'o',
       describe: 'output path. standard output when omitted.'

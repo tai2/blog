@@ -17,7 +17,7 @@
 
 `納期・予算・機能(スコープ)・品質 <https://support.office.com/ja-jp/article/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E4%B8%89%E8%A7%92%E5%BD%A2-8c892e06-d761-4d40-8e1f-17b33fdcf810?ui=ja-JP&rs=ja-JP&ad=JP>`_ すべてを固定しての開発はギャンブルです。プロジェクトの状況は日々刻々と変化するので、当初の予定とのズレを把握して、これら4要素を柔軟に調整してください。とくに、作業者は、実際の作業に集中すると視野が狭くなるものですので、プロジェクト全体の状況を客観的にモニタリングする責務がディレクターには期待されます。
 
-.. figure:: {filename}/images/project_triangle.png
+.. figure:: {static}/images/project_triangle.png
    :alt: Project Triangle
 
    プロジェクトの三角形
@@ -29,7 +29,7 @@
 
 作業者は、それぞれの領域における技能と経験を持ったプロフェッショナルなので、その資産を最大限活かすべきです。そのためには、各メンバーが相互にコミュニケーションをして、知識の交換をカジュアルにできる場を設けるのがいいでしょう。お互いが物理的に近い場所で毎日作業しているのであれば、それだけで十分かもしれませんが、そうでなければ、開発用のチャットなどを用意するのがいいと思います。 `Slack <https://slack.com/>`_、 `ChatWork <http://www.chatwork.com/>`_、 `HipChat <https://www.hipchat.com/>`_、Skype、IRCなどツールはいくらでもあります。
 
-.. figure:: {filename}/images/accelerate_collaboration.png
+.. figure:: {static}/images/accelerate_collaboration.png
    :alt: Accelerate Collaboration
 
    参加者の相互コミュニケーションを加速する

@@ -36,7 +36,7 @@ Project Tofino
 
 https://github.com/mozilla/tofino
 
-.. figure:: {filename}/images/real-world-redux/tofino.png
+.. figure:: {static}/images/real-world-redux/tofino.png
    :alt: Project Tofino
 
    Tofinoのスクリーンショット
@@ -51,7 +51,7 @@ wp-calypso
 
 https://github.com/Automattic/wp-calypso
 
-.. figure:: {filename}/images/real-world-redux/wp-calypso.png
+.. figure:: {static}/images/real-world-redux/wp-calypso.png
    :alt: wp-calypso
 
    wp-calypsoのスクリーンショット

@@ -8,7 +8,7 @@ NodeSchool TokyoイベントレポートとNodeSchoolコミュニティの紹介
 
 .. contents:: 目次
 
-.. image:: {filename}/images/nodeschool-tokyo-logo.png
+.. image:: {static}/images/nodeschool-tokyo-logo.png
    :align: center
    :alt: NodeSchool Tokyo logo
 
@@ -31,13 +31,13 @@ NodeSchoolについて話すためには、まずワークショッパーにつ�
 
 javascriptingを起動すると次のようなメニューが表示されます。
 
-.. image:: {filename}/images/javascripting-menu.png
+.. image:: {static}/images/javascripting-menu.png
    :align: center
    :alt: javascripting menu
 
 覚えたい項目を選択すると次のように問題文が表示されます。
 
-.. image:: {filename}/images/javascripting-problem.png
+.. image:: {static}/images/javascripting-problem.png
    :align: center
    :alt: javascripting problem
 
@@ -49,13 +49,13 @@ javascriptingを起動すると次のようなメニューが表示されます�
 
 間違っていたら、どこが間違っているのか丁寧に教えてくれます。
 
-.. image:: {filename}/images/javascripting-fail.png
+.. image:: {static}/images/javascripting-fail.png
    :align: center
    :alt: javascripting fail
 
 正解すると褒めてもらえます:)
 
-.. image:: {filename}/images/javascripting-succeeded.png
+.. image:: {static}/images/javascripting-succeeded.png
    :align: center
    :alt: javascripting succeeded
 
@@ -82,7 +82,7 @@ NodeSchoolは元々は、Node.jsを使ってプログラムを作ったり、知
 
 参加者は、満員の150名程度。メンターも正確には把握していませんが最終的に20名程度集まったようです。
 
-.. image:: {filename}/images/nodeschool-tokyo-picture.jpg
+.. image:: {static}/images/nodeschool-tokyo-picture.jpg
    :align: center
    :alt: NodeSchool Tokyo picture
 

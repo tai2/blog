@@ -6,14 +6,14 @@
 :tags: architecture
 :summary: Robert Martin (a.k.a.ボブおじさん) による、The Clean Architecture の翻訳です。
 
-`Robert Martin (a.k.a. ボブおじさん) <https://twitter.com/unclebobmartin>`_ による、 `The Clean Architecture <http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html>`_ の翻訳です。似たようなアーキテクチャである `ヘキサゴナルアーキテクチャ <{filename}hexagonal_architecture.rst>`_ も翻訳したので参考にしてください。
+`Robert Martin (a.k.a. ボブおじさん) <https://twitter.com/unclebobmartin>`_ による、 `The Clean Architecture <http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html>`_ の翻訳です。似たようなアーキテクチャである `ヘキサゴナルアーキテクチャ <{static}hexagonal_architecture.rst>`_ も翻訳したので参考にしてください。
 
 
 この記事を翻訳して公開したことは `8th Light, Inc. <http://8thlight.com/>`_ に報告済みです。いまのところ苦情は来ていません。
 
 ----
 
-.. figure:: {filename}/images/CleanArchitecture.jpg
+.. figure:: {static}/images/CleanArchitecture.jpg
    :alt: The Clean Architecture
 
 ここ数年以上、システムのアーキテクチャに関する実にさまざまなアイデアを見てきた。これには、次のものが含まれる:

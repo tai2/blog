@@ -56,7 +56,7 @@ CSSのリロードは、ふつうに `LiveReload <http://livereload.com/>`_ で�
 
 `react-redux-reload-sample <https://github.com/tai2/react-redux-reload-sample>`_
 
-.. figure:: {filename}/images/react-redux-reload/screenshot.png
+.. figure:: {static}/images/react-redux-reload/screenshot.png
    :alt: サンプルアプリのスクリーンショット
 
    サンプルアプリのスクリーンショット

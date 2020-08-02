@@ -9,7 +9,7 @@
 クラウドワークスが、 `社外のエンジニアに寿司をおごる企画をやっている <https://crowdworks.co.jp/recruit/engineer/>`_ というのを見かけて、寿司がタダで食べられるなら良いなと思い、なにも考えずに申し込んでみました。
 [ref]筆者のようになにも考えずに申し込む人間はレアケースで、応募してくるのは知り合いが多いそうです。なお、suzan2goさんを指名したのは筆者で二人目で、一人目は筆者の妻でした。[/ref]
 
-.. figure:: {filename}/images/crowdworks-sushi/recruit.jpg
+.. figure:: {static}/images/crowdworks-sushi/recruit.jpg
    :alt: crowdworks recruiting
 
    選べる!寿司ランチ
@@ -21,7 +21,7 @@
 
 こちらがクラウドワークスで提供していただいた寿司になります。
 
-.. figure:: {filename}/images/crowdworks-sushi/sushi.jpg
+.. figure:: {static}/images/crowdworks-sushi/sushi.jpg
    :alt: crowdworks recruiting
 
    筆者もたまに出前する銀のさらの寿司

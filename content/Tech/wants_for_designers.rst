@@ -17,7 +17,7 @@
 
 最近は、どのプラットフォームも、たいていデザインガイドラインを用意しています。Appleであれば、 `Human Interface Guidlines <https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/>`_ 、Androidであれば、 `Material Design <https://developer.android.com/design/index.html>`_ などです。これらを熟読して、そのプラットフォームの標準では、どういったUI要素をどのように使うことが可能なのかを把握しておいてもらえれば、話は早いです。[ref]プラットフォームの都合で標準のガイドラインがいきなり変わって、最新のガイドラインが、現在市場でメインターゲットとなる機種でサポートされていないため、役に絶たないという場合もありますが…[/ref] しかしながら、これまで仕事をしてきて、こういったガイドラインの内容をきちんと把握しているデザイナーにはあまり出会ったことがありません。また、たとえデザインガイドラインレベルで把握していたとしても、実装で生じ得るデザイン起因の問題を完璧に把握することは難しいでしょう。けっきょく、実装の問題は、実装をしなければわかりません。
 
-.. figure:: {filename}/images/concerns-of-programmers-and-designers.png
+.. figure:: {static}/images/concerns-of-programmers-and-designers.png
    :alt: Concerns of programmers and designers
 
    プログラマーとデザイナーの関心領域の違い
@@ -35,7 +35,7 @@ Web制作においては、従来、大雑把な工程として、デザイン�
 
 これは、デザインの工程が、2次元のビットマップあるいはベクタ画像を成果物としており、実質的に無制約であるのに対して、コーディングは、ブラウザ上に動的にレイアウトする作業であるため、より制約が強いからです。
 
-.. figure:: {filename}/images/html-constraint.png
+.. figure:: {static}/images/html-constraint.png
    :alt: Constraint of HTML/CSS
 
    単なるビットマップ・ベクトル画像よりもHTML/CSSのほうが制約が強い
@@ -47,7 +47,7 @@ Webアプリ開発の場合
 
 静的なHTMLではなく、従来的なWebアプリケーション[ref]SPAの場合は若干事情が異なる可能性があります。わたしはSPAでのウェブアプリケーション開発は経験がまだないので、よくわかりません[/ref]の場合でも、ネイティブアプリ開発よりは状況が良いように見えます。Webアプリケーションでは、ビューやテンプレートと言われるファイル自体は、HTML+αの記述で書けるようになっている場合が多く、また、ネイティブアプリに比べて、ビジネスロジックとプレゼンテーション(ビュー)の、より明確な分離ができている傾向にあるように思います。ですから、デザインに加えて、ビューの実装自体を完全にデザイナーに任せるという役割分担も実現し易いのではないでしょうか。そうでなくても、デザイナーがHTML/CSSレベルまで落とし込んでくれれば、それをビュー実装に変換するのは容易なので、デザイナーの成果物=HTML/CSSという形で、プログラマーとデザイナーがうまく協業できているプロジェクトも多いでしょう。
 
-.. figure:: {filename}/images/roles-of-programmers-and-designers.png
+.. figure:: {static}/images/roles-of-programmers-and-designers.png
    :alt: Roles of programmers and designers
 
    プログラマーとデザイナーの綺麗な役割分担
@@ -78,7 +78,7 @@ Webアプリ開発の場合
 
 このように言えば、デザイナーは、プログラマーのように視覚表現の発想力がなく、デザイン原則を考えない人間に、そんな重要なことを任せられるかと怒ると思いますし、そうあって欲しいと思います。であれば、デザイナーには、プラットフォームについて、せめてガイドラインレベルでは理解しておいてもらいたいものです。それに、ソフトウェア開発の現場では、プログラマーの作業比重が(デザイナーと比べて)重くなりすぎているというのが現実なので、できるだけ負担を分けあいたいのです。それは、ソフトウェア開発市場におけるデザイナーの職域拡大にも結び付くことだと思います。[ref]開発現場で、プログラマーが偏重されているというデザイナーからの意見が、しばしば耳に入ってきます[/ref]
 
-.. figure:: {filename}/images/weight-of-programmers-and-designers.png
+.. figure:: {static}/images/weight-of-programmers-and-designers.png
    :alt: Weight of programmers and designers
 
    アプリ開発では、デザイナーよりプログラマーのほうが負担が大きい
@@ -124,19 +124,19 @@ PSDでそのまま渡すというやりかたは、レイヤー構造自体が�
 
 デザインドキュメントに、逐一数値だけで記述されていると、見る側からすれば、どこで使われている色と共通する色なのか、パッと見て識別できません。とくにそれが微妙な色の違いの場合には、ミスにも繋がりかねません。
 
-.. figure:: {filename}/images/design-document-1.png
+.. figure:: {static}/images/design-document-1.png
    :alt: Color scheme 1
 
    数値で色が指定してあるデザイン指示書
 
 また、プログラムのソースコード内では、多くの場合数値には名前を付けて管理するので、最初から色に名前がついていれば、自分で考える手間が省けて助かります。色の命名方法は、これ自体色々やりかたが考えられますが、いくつか使用する色をピックアップして、その彩度違いのバージョンを末尾に数値を付けて表す、などが考えられます。それをさらにUI的な情報構造と関連付けて整理するというのも有効だと思います。
 
-.. figure:: {filename}/images/design-document-2.png
+.. figure:: {static}/images/design-document-2.png
    :alt: Color scheme 2
 
    名前で色が指定してあるデザイン指示書
 
-.. figure:: {filename}/images/design-document-3.png
+.. figure:: {static}/images/design-document-3.png
    :alt: Color scheme 3
 
    情報構造と関連付けて色が指定してあるデザイン指示書

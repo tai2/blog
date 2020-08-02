@@ -25,7 +25,7 @@ MxA
 メールシステムに関わるサブシステムとして、以下のようなものがあります。どれも(Mail|Message) * Agentという名前なので、総称してMxAと呼ばれたりします。
 必ずしも、それぞれが、ひとつのプログラムに対応しているとは限らず、あるサブシステムの役割に相当するプログラムを同時に複数使うこともありますし、単一のプログラムが、複数のサブシステムの役割を担うこともあります。
 
-.. figure:: {filename}/images/mutt_and_notmuch/MxA.png
+.. figure:: {static}/images/mutt_and_notmuch/MxA.png
    :alt: メールシステム
 
    メールに関わるサブシステムの図 `General overview of the mail processing chain <http://dev.mutt.org/trac/wiki/MailConcept/Layout>`_ から転載
@@ -108,7 +108,7 @@ Mail.appの代わりになる、軽量なメールクライアントはないか
 mutt
 ~~~~
 
-.. figure:: {filename}/images/mutt_and_notmuch/mutt.png
+.. figure:: {static}/images/mutt_and_notmuch/mutt.png
    :alt: muttのインデックス画面
 
    muttのインデックス画面

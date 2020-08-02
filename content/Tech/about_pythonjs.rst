@@ -6,7 +6,7 @@ CPythonよりも(制約付きで)速いPythonJS
 :tags: python, javascript, v8, altjs
 :summary: PythonJSというPythonからJavaScriptへのトランスレーターで変換されたコードが、元のCPythonコードよりも高速になったという 記事が出ました。ちょっと興味が湧いたので、PythonJSについて調べてみました(この記事はプログラマ向けです)。
 
-.. image:: {filename}/images/python-logo.png
+.. image:: {static}/images/python-logo.png
    :align: center
    :alt: Python logo
 
@@ -18,7 +18,7 @@ PythonJSとは
 `PythonJS <https://github.com/PythonJS/PythonJS>`_ は、正確に言うと、Pythonから、JavaScriptを含む各種プログラミング言語(現状、JavaScript,Dart,Lua,CoffeScript)へのトランスレーターです。
 このトランスレーター自体はPythonで書かれていますが、`empythoned <https://github.com/replit/empythoned>`_ を使ってNode.jsから実行することもできます(empythoned自体もPythonJSに同梱されてます)。Node.js用のライブラリとしてのインターフェイスもありますので、Node.jsアプリケーションから、Pythonコードを動的に変換して使用するといった(若干変態的な)荒技も可能です。
 
-.. image:: {filename}/images/pythonjs_flow.png
+.. image:: {static}/images/pythonjs_flow.png
    :align: center
    :alt: PythonJS conversion flow
 

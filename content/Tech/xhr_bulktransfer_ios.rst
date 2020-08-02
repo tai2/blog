@@ -43,7 +43,7 @@ XMLHttpRequestでのストリーミング転送
 iOSで、アプリ内にWebサーバーを立てて、XMLHttpRequestでの転送を行って、どの程度速度が出るか実験してみました。
 コードは、githubに置いてあります: `XHRBulkTransferDemo_iOS <https://github.com/tai2/XHRBulkTransferDemo_iOS>`_
 
-.. image:: {filename}/images/xhr.png
+.. image:: {static}/images/xhr.png
    :align: center
    :alt: In-app web server to webview
 
@@ -71,4 +71,4 @@ WebKitのコードを見ると、XMLHttpRequest::openしたときに開放処理
 速度的には、チューニングをすれば、もう少し上げられそうな気がしていますが、この手法は使えなさそうなので、これ以上追求するのはやめました。
 もしかすると、Androidでは、また違った結果になるかもしれません。
 
-次は、`WebSocketで同様の実験 <{filename}websocket_bulktransfer_ios.rst>`_ をしてみようと思っています。
+次は、`WebSocketで同様の実験 <{static}websocket_bulktransfer_ios.rst>`_ をしてみようと思っています。

@@ -7,7 +7,7 @@ WebSocketによるネイティブアプリ-WebView間でのストリーミング
 :summary: モバイルネイティブアプリ側からWebViewへの動画(無圧縮RGB)データ転送の可能性を模索して、 XMLHttpRequestによる実験 を行いました。 XHRを用いた手法は、期待する速度が出ないことと、メモリが蓄積されていってアプリがクラッシュしてしまうことから 実用性がないことがわかったため、今度はWebSocketで同様の実験を行ってみました。
           
 モバイルネイティブアプリ側からWebViewへの動画(無圧縮RGB)データ転送の可能性を模索して、
-`XMLHttpRequestによる実験 <{filename}xhr_bulktransfer_ios.rst>`_ を行いました。
+`XMLHttpRequestによる実験 <{static}xhr_bulktransfer_ios.rst>`_ を行いました。
 XHRを用いた手法は、期待する速度が出ないことと、メモリが蓄積されていってアプリがクラッシュしてしまうことから
 実用性がないことがわかったため、今度はWebSocketで同様の実験を行ってみました。
 
@@ -17,7 +17,7 @@ WebSocketでのストリーミング転送
 iOSで、アプリ内にWebSocketサーバーを立てて、WebView内のWebSocketオブジェクトへの転送を行い、どの程度速度が出るか実験してみました。
 コードは、githubに置いてあります: `WebSocketBulkTransferDemo_iOS <https://github.com/tai2/WebSocketBulkTransferDemo_iOS>`_
 
-.. image:: {filename}/images/websocket.png
+.. image:: {static}/images/websocket.png
    :align: center
    :alt: In-app web server to webview
 

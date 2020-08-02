@@ -103,7 +103,7 @@ Webpackとは
 また、モジュール機能のないブラウザ上で実行するために、変換したソースコードはすべて
 結合してひとつのソースコードにします(バンドル化)。
 
-.. figure:: {filename}/images/webpacker3/webpack.png
+.. figure:: {static}/images/webpacker3/webpack.png
    :alt: Webpack
 
    WebpackはJSアプリのアセットをひとまとめにする
@@ -379,7 +379,7 @@ Reduxでは、アプリのほぼすべての状態[ref]コンポーネント自�
 ストアは、言わば巨大なグローバル変数であり、それは基本的にはJSONシリアライズ可能なJavaScriptのオブジェクトです。[ref]実際にはJSONシリアライズできないオブジェクトを格納することも可能で、それが必要な場合もあるが(FileやBlobなど)、そうするといくつかのReduxの恩恵を受けられなくなる[/ref]
 Reduxでのデータの流れは次の図のようになります。
 
-.. figure:: {filename}/images/webpacker3/redux.png
+.. figure:: {static}/images/webpacker3/redux.png
    :alt: Redux
 
    Reduxにおけるデータの流れ
@@ -447,7 +447,7 @@ Reduxを使用することで次のようなメリットが得られます。
 また、アプリ内で起きたイベントが、Actionのシーケンスとして表現されるため、DX向上にも活用できます。
 たとえば、 `Chrome拡張 <https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en>`_ を導入すれば、次のスクリーンショットのようにアクションのログをブラウザ内で見ることができます。
 
-.. figure:: {filename}/images/webpacker3/redux-devtools.png
+.. figure:: {static}/images/webpacker3/redux-devtools.png
    :alt: redux-devtools-extention
 
    Chrome拡張でアクションログが確認できる
@@ -463,7 +463,7 @@ Reduxでは、ミドルウェアと呼ばれる拡張機構が用意されてお
 非同期処理を扱うミドルウェアは、 `redux-thunk <https://github.com/gaearon/redux-thunk>`_ 、 `redux-promise <https://github.com/acdlite/redux-promise>`_ 、 `redux-api-middleware <https://github.com/agraboso/redux-api-middleware>`_ などさまざまな
 ものがあり、しばしば論争の種になったりもしますが、筆者は `redux-saga <https://redux-saga.js.org/>`_ というライブラリを使用しています。
 
-.. figure:: {filename}/images/webpacker3/redux-with-async.png
+.. figure:: {static}/images/webpacker3/redux-with-async.png
    :alt: Redux with async
 
    Reduxにおけるデータの流れ(非同期版)
@@ -834,7 +834,7 @@ Storybook
 `Storybook <https://storybook.js.org/>`_ は、プロトタイピング、ビジュアルTDD、デザイナーとの協業など、さまざまな可能性を秘めたツールです。
 これをを使うと、Reactコンポーネントを状態ごとにカタログとして一覧表示できます。
 
-.. figure:: {filename}/images/webpacker3/storybook.png
+.. figure:: {static}/images/webpacker3/storybook.png
    :alt: Storybook
 
    Storybookによるコンポーネントの表示
@@ -875,7 +875,7 @@ power-assert
 `power-assert <https://github.com/power-assert-js/power-assert>`_ を使うと、Node.jsの標準アサーションAPIを使いつつ、テスト失敗時に結果をわかりやすく表示できます。
 アサーションAPIは厳選されており、多数の細分化されたアサーションAPIの使い分けに頭を悩ますことなく、テスト対象という本質にフォーカスできます。
 
-.. figure:: {filename}/images/webpacker3/power-assert.png
+.. figure:: {static}/images/webpacker3/power-assert.png
    :alt: power-assert
 
    power-assertを使えば式のどこが期待と異なるのか一目瞭然
@@ -936,7 +936,7 @@ webpack-bundle-analyzer
 `webpacker-bundle-analyzer <https://github.com/webpack-contrib/webpack-bundle-analyzer>`_ というプラグインを使えば、
 以下の画像のようにバンドルサイズの内訳をグラフィカルに表示できるので、最適化のための方針が立てやすくなります。
 
-.. figure:: {filename}/images/webpacker3/webpacker-bundle-analyzer.png
+.. figure:: {static}/images/webpacker3/webpacker-bundle-analyzer.png
    :alt: webpacker-bundle-analyzer
 
    webpacker-bundle-analyzerによる解析結果

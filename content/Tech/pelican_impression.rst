@@ -12,7 +12,7 @@ Static Site GeneratorのPelicanを使ってみた
 Static Site Generator
 =====================
 
-.. image:: {filename}/images/pelican.jpg
+.. image:: {static}/images/pelican.jpg
    :align: center
    :width: 100%
    :alt: Flying pelican

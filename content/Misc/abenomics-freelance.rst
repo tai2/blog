@@ -26,7 +26,7 @@
 
 発表資料の中にわかりやすい図があったため抜粋します。
 
-.. figure:: {filename}/images/abenomics-freelance/env.png
+.. figure:: {static}/images/abenomics-freelance/env.png
    :alt: abenomics freelance model
 
    雇用関係によらない働き方の模式図

@@ -193,7 +193,7 @@ Flow/Mortar/Dagger 2を使用したMVPアプリの構成では、ひとつの画
 
 の4つから構成されます。
 
-.. figure:: {filename}/images/android_mvp/structure.png
+.. figure:: {static}/images/android_mvp/structure.png
    :alt: Squrea Stack Structure
 
    Squareスタックにおける基本的な構成
@@ -276,7 +276,7 @@ Activityのライフサイクルメソッドを肩代わりするためのFlowDe
 ContextWrapperは、Contextインスタンスを包んで追加の機能やフィールドを持たせるためのプロキシークラスです。
 ContextWrapperの派生クラスを見ると、このクラスがAndroid SDK内でも多用されていることがわかります。
 
-.. figure:: {filename}/images/android_mvp/context_wrapper.png
+.. figure:: {static}/images/android_mvp/context_wrapper.png
    :alt: ContextWrappers wrap Context
 
    ContextWapperはContextに機能を追加する
@@ -304,7 +304,7 @@ MortarScope
 実際のアプリでは、次の図のように、Rootスコープ(Applicationスコープ)、Activityスコープ、Pathスコープという3階層までになります。
 なお、Pathスコープが2ノードになるのは、マスター・ディテールなど複数画面構成の場合のみで、1画面構成のアプリの場合は、常に1ノードです。
 
-.. figure:: {filename}/images/android_mvp/scopes.png
+.. figure:: {static}/images/android_mvp/scopes.png
    :alt: MortarScope consists tree structure
 
    MortarScopeのツリー構造
@@ -335,7 +335,7 @@ Presenterには、次の4つのライフサイクルメソッドが用意され�
 * void onSave(Bundle outState): Presenterの中断時に呼び出される。
 * void onExitScope(): PresenterがScopeから登録解除されたとき(画面遷移時)に一度だけ実行される。
 
-.. figure:: {filename}/images/android_mvp/presenter_lifecycle.png
+.. figure:: {static}/images/android_mvp/presenter_lifecycle.png
    :alt: Lifecyle of Presenter
 
    Presenterのライフサイクル
@@ -383,7 +383,7 @@ PathContextは、Pathインスタンスと対になるContextで、Path固有の
 同時に、前の画面のPathContextは破棄します。
 ちなみに、PathContextの親Contextは、Activityです。
 
-.. figure:: {filename}/images/android_mvp/pathcontext.png
+.. figure:: {static}/images/android_mvp/pathcontext.png
    :alt: PathContext
 
    PathContextは、遷移時に生成・破棄される
@@ -400,7 +400,7 @@ Flowクラスは、Flowを使うときの窓口になるクラス(いわゆる `
 Flowインスタンスは、FlowDelegateインスタンスの中に保持されます。
 FlowDelegateインスタンス自体は、Activityに持たせますので、実質的に、Flowインスタンスはシングルトンのようなものです。
 
-.. figure:: {filename}/images/android_mvp/flowdelegate.png
+.. figure:: {static}/images/android_mvp/flowdelegate.png
    :alt: FlowDelegate
 
    ActivityはライフサイクルメソッドをFlowDelegateに委譲する
@@ -410,7 +410,7 @@ FlowDelegateインスタンス自体は、Activityに持たせますので、実
 
 Historyのエントリーには、View階層の状態と、対応するPathオブジェクト自身が含まれます。
 
-.. figure:: {filename}/images/android_mvp/history.png
+.. figure:: {static}/images/android_mvp/history.png
    :alt: History
 
    Historyは、PathとViewの状態を保持する
@@ -435,7 +435,7 @@ PathContainerView
 Viewは、PathContainerViewの子ViewとしてViewツリーに追加されます。それらは、PathContainerに管理されます。
 そして、PathContainerViewは、Activityによって表示されます。PathContainerViewは、マスター・ディテールなどの場合に複数になることがあります。
 
-.. figure:: {filename}/images/android_mvp/pathcontainer.png
+.. figure:: {static}/images/android_mvp/pathcontainer.png
    :alt: PathContainer manages child views
 
    PathContainerは子Viewを管理する
@@ -455,7 +455,7 @@ Bundleへの状態保存とBundleからの復元は、BundleServiceRunnerが行�
 また、このオブジェクトは、保存の大本になるルートBundleを保持します。
 BundleServiceRunnerは、ActivityのonCreate/onSaveInstanceStateをトリガーとして、保存と復元を行います。
 
-.. figure:: {filename}/images/android_mvp/bundle_tree.png
+.. figure:: {static}/images/android_mvp/bundle_tree.png
    :alt: Bundle Tree
 
    Bundleはツリー構造を成す
@@ -510,7 +510,7 @@ Dagger 2では、オブジェクトグラフに含まれるインスタンスは
 異なるComponent階層に対して、同じ@Scopeアノテーション(例えば@Singleton)をつけようとしても、ビルドエラーになってしまいます。
 なお、ここで言うスコープは、Mortarのスコープとは異なるもので、直接の関係はないので注意してください。
 
-.. figure:: {filename}/images/android_mvp/components.png
+.. figure:: {static}/images/android_mvp/components.png
    :alt: Component Hierarchy
 
    Componentの階層化

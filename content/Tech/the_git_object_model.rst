@@ -47,7 +47,7 @@ SVNとの違い
 
 ブロブは、一般的にファイルの内容を格納する。
 
-.. figure:: {filename}/images/object-blob.png
+.. figure:: {static}/images/object-blob.png
    :alt: Object blob
 
 `git show <https://www.kernel.org/pub/software/scm/git/docs/git-show.html>`_ を使えば、ブロブの内容を確認できる。ブロブのSHAがあるとして、このようにすればコンテンツを確認できる。
@@ -72,7 +72,7 @@ SVNとの違い
 ツリーは、シンプルなオブジェクトで、ブロブや他のツリーへのポインタを束ねたものだ。一般的に、ディレクトリやサブディレクトリの内容を表している。
 
 
-.. figure:: {filename}/images/object-tree.png
+.. figure:: {static}/images/object-tree.png
    :alt: Tree Object
 
 非常に多彩な機能を持つ `git show <https://www.kernel.org/pub/software/scm/git/docs/git-show.html>`_ を使って、ツリーオブジェクトの内容を確認することももちろんできるが、 `git ls-tree <http://www.kernel.org/pub/software/scm/git/docs/git-ls-tree.html>`_ ならもっと詳しいことがわかる。ツリーのSHAがあるとすると、このように内容を確認できる:
@@ -103,7 +103,7 @@ SVNとの違い
 
 「コミット」オブジェクトは、ツリーの物理的な状態と、そこにどうやって辿りつくのかの記述、及びその理由を結びつける。
 
-.. figure:: {filename}/images/object-commit.png
+.. figure:: {static}/images/object-commit.png
    :alt: Commit Object
 
 --pretty=rawオプションを `git show <https://www.kernel.org/pub/software/scm/git/docs/git-show.html>`_ または `git log <https://www.kernel.org/pub/software/scm/git/docs/git-log.html>`_ に与えて、好きなコミットの内容を見ることができる。
@@ -154,7 +154,7 @@ SVNとの違い
 
 そして、これをGitリポジトリにコミットしたとすると、このように表される。
 
-.. figure:: {filename}/images/objects-example.png
+.. figure:: {static}/images/objects-example.png
    :alt: Objects structure
 
 (ルートを含めて)ディレクトリー毎に **ツリー** オブジェクトが、ファイル毎に **ブロブ** オブジェクトができたことがわかる。それから、 ルートを指している **コミット** オブジェクトがあるので、コミットされた時点でのプロジェクトのあるがままの形を追跡することができる。
@@ -162,7 +162,7 @@ SVNとの違い
 タグオブジェクト
 -----------------
 
-.. figure:: {filename}/images/object-tag.png
+.. figure:: {static}/images/object-tag.png
    :alt: Tag Object
 
 タグオブジェクトは、オブジェクトの名前(単に「オブジェクト」と呼ばれる)、オブジェクトの型、タグ名、タグを作成した人の名前(タガー)、そしてメッセージが含まれる。メッセージにはシグネチャが含まれることもある。これは `git cat-file <https://www.kernel.org/pub/software/scm/git/docs/git-cat-file.html>`_ を使えば見られる:

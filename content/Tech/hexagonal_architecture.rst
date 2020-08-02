@@ -6,7 +6,7 @@
 :tags: architecture
 :summary: Alistair Cockburn による Hexagonal architecture の翻訳です。
 
-`Alistair Cockburn <http://alistair.cockburn.us/>`_ による `Hexagonal architecture <http://alistair.cockburn.us/Hexagonal+architecture>`_ の翻訳です。PoEAAで言及されていることから、2002年ごろにはすでにC2 Wikiにページがあった模様。似たようなアーキテクチャである `クリーンアーキテクチャ <{filename}clean_architecture.rst>`_ も翻訳したので参考にしてください。
+`Alistair Cockburn <http://alistair.cockburn.us/>`_ による `Hexagonal architecture <http://alistair.cockburn.us/Hexagonal+architecture>`_ の翻訳です。PoEAAで言及されていることから、2002年ごろにはすでにC2 Wikiにページがあった模様。似たようなアーキテクチャである `クリーンアーキテクチャ <{static}clean_architecture.rst>`_ も翻訳したので参考にしてください。
 
 この記事は著者から許可を得て公開しています。Thanks to Alistair Cockburn!
 
@@ -16,7 +16,7 @@
 
 UIやデータベースがなくても動くようにアプリケーションを作ること。そうすれば、アプリケーションに対して自動化された回帰テストを動かすことができるし、データベースが利用できなくなっても動作するし、ユーザーの介入がなくともアプリケーション群を結合できる。
 
-.. figure:: {filename}/images/hexagonal_architecture/3005.jpeg
+.. figure:: {static}/images/hexagonal_architecture/3005.jpeg
    :alt: Microscope
 
 パターン: Ports and Adapters (構造に関するパターン)
@@ -33,7 +33,7 @@ UIやデータベースがなくても動くようにアプリケーションを
 
 イベントが外側の世界からポートに届くと、特定テクノロジーのアダプターが、利用可能な手続き呼び出しか、メッセージにそれを変換して、アプリケーションに渡す。よろこばしいことに、アプリケーションは、入力デバイスの正体を知らない。アプリケーションがなにかを送る必要があるとき、それはポートを通じてアダプターに送られて、受信側のテクノロジーが必要とする信号を生む(人力であれ自動であれ)。アプリケーションは、実際に他方のアダプターの正体を知ることはなしに、全側面のアダプターと意味的に完全なやりとりをする。
 
-.. figure:: {filename}/images/hexagonal_architecture/2301.gif
+.. figure:: {static}/images/hexagonal_architecture/2301.gif
    :alt: Figure 1
 
    図1
@@ -92,14 +92,14 @@ UIやデータベースがなくても動くようにアプリケーションを
 構造
 ----
 
-.. figure:: {filename}/images/hexagonal_architecture/2302.gif
+.. figure:: {static}/images/hexagonal_architecture/2302.gif
    :alt: Figure 2
 
    図2
 
 図2は、2つのアクティブなポートと、各ポートに複数のアダプターを持つアプリケーションを示している。2つのポートは、アプリケーション制御側と、データ取り出し側だ。この素描は、アプリケーションが、自動化されたシステムレベルの回帰テスト、人間のユーザー、リモートHTTPアプリケーション、あるいは、他のローカルアプリケーションから、同じように駆動されることを示している。データ側では、アプリケーションは、外部のデータベースから分離して実行されるよう構成することができる。これには、インメモリのオラクル(すなわち「モック」)データベースの置き換えを利用する。あるいは、テストまたはランタイムのデータベースに対して、動かすことができる。アプリケーションの機能的な仕様は、(もしかするとユースケース内で)内側の六角形のインターフェイスに対して作られるのであって、使われるかもしれない外部のテクノロジーに対してではない。
 
-.. figure:: {filename}/images/hexagonal_architecture/2303.gif
+.. figure:: {static}/images/hexagonal_architecture/2303.gif
    :alt: Figure 3
 
    図3
@@ -297,7 +297,7 @@ port and adaptersアーキテクチャを理解すると、ユースケースは
 既知の用例
 ~~~~~~~~~~
 
-.. figure:: {filename}/images/hexagonal_architecture/2304.gif
+.. figure:: {static}/images/hexagonal_architecture/2304.gif
    :alt: Figure 4
 
    図4

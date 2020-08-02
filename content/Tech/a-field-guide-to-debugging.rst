@@ -14,7 +14,7 @@ p5.jsのドキュメントに含まれる `初心者向けにデバッグの心�
 
     このチュートリアルは、2015年5月、カーネギーメロン大学の `The Frank-Ratchye STUDIO for Creative Inquiry <http://studioforcreativeinquiry.org/>`_ にて催された p5.js コントリビューターカンファレンスにおいて、教育ワーキンググループによって作成された。このチュートリアルには、 `Jason Alderman <http://huah.net/jason/>`_ 、 `Tega Brain <http://tegabrain.com/>`_ 、 `Taeyoon Choi <http://taeyoonchoi.com/>`_ および  `Luisa Pereira <http://luisaph.com/>`_ が貢献した。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/0-0.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/0-0.jpg
    :alt: デバッグフィールドガイド
 
 これは、みんなのためのデバッグ向けフィールドガイドだ。コードを書きはじめたばかりの人にとっても、長年コーディングをしてきた人にとっても、このガイドは、問題を解くという謎に満ちたプロセスを解剖する。
@@ -26,7 +26,7 @@ p5.jsのドキュメントに含まれる `初心者向けにデバッグの心�
 
 バグというのは、システムがやっているとキミが思っていることと、実際にシステムがやっていることとの間にあるギャップなんだ。 `Clay Shirkyがうまいこと言ってくれたんだけど、 <https://vimeo.com/channels/debugging>`_ バグとは「コードにある技術的な問題にとどまらず、コード内でなにが起きているかについて、あなたが頭の中で思い描いていることにも問題がある瞬間」だ。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/0-1.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/0-1.jpg
    :alt: バグとはなにか
 
    「あなたはネズミを円に動かしたと思っている」「しかし、実際には、コンピューターはネズミを円から離す命令を与えてしまっている」
@@ -36,16 +36,16 @@ p5.jsのドキュメントに含まれる `初心者向けにデバッグの心�
 プロジェクトに取り組んでいるとき、キミは、いくつもの異なる役割りを演じるかもしれない。プログラムを設計し、計画しているときは設計者だし、開発しているときはエンジニアだ。そして、探検家になって、問題と誤りを探し、プログラムが動く必要のあるあらゆるシチュエーションでテストをすることになるだろう。キミは、プログラムが、いかにも壊れそうなところを探そうとする。最後に、デバッグするとき、キミは探偵だ。どのようにして、なんで、それが壊れるのか、把握するよう勤めるんだ。
 
 
-.. image:: {filename}/images/a-field-guide-to-debugging/0-3.png
+.. image:: {static}/images/a-field-guide-to-debugging/0-3.png
    :alt: プログラマーの役割 ー 設計者
 
-.. image:: {filename}/images/a-field-guide-to-debugging/0-4.png
+.. image:: {static}/images/a-field-guide-to-debugging/0-4.png
    :alt: プログラマーの役割 ー 開発者
 
-.. image:: {filename}/images/a-field-guide-to-debugging/0-5.png
+.. image:: {static}/images/a-field-guide-to-debugging/0-5.png
    :alt: プログラマーの役割 ー 探検家
 
-.. image:: {filename}/images/a-field-guide-to-debugging/0-6.png
+.. image:: {static}/images/a-field-guide-to-debugging/0-6.png
    :alt: プログラマーの役割 ー 探偵
 
 じゃあ、どうすれば、良い探偵になって、プログラムをデバッグできるだろうか? 以下の10のステップが、コード名探偵になるための助けになる。
@@ -61,7 +61,7 @@ p5.jsのドキュメントに含まれる `初心者向けにデバッグの心�
 
 手掛かりは、変数の値と、プログラムの流れの中にある。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/1-0.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/1-0.jpg
    :alt: 視点を変える
 
 2.問題を観察する
@@ -69,21 +69,21 @@ p5.jsのドキュメントに含まれる `初心者向けにデバッグの心�
 
 問題をだれかに一歩一歩解説しよう、その人自身はプログラムができなくてもかまわない。まわりにだれもいなければ、Eメールの草稿を作って、その中で、キミがなにをしたのか説明し、問題を分解しよう。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/2-1.png
+.. figure:: {static}/images/a-field-guide-to-debugging/2-1.png
    :alt: メールを書いてみる
 
    「サムへ ボクの関数は、2度走る"はず"なんだ、だけど、3度走ってしまう!それは、i=0から2までのループで…」
 
 このメールは、実際には送る必要がないかもしれない。なぜなら、書くという行為は、しばしば、次にすべきことを見つけさせ、識別させてくれるからだ。プログラマーの中には、問題をラバーダックのような親しみ深い無機物に説明することで知られている人さえいる。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/2-2.png
+.. figure:: {static}/images/a-field-guide-to-debugging/2-2.png
    :alt: ラバーダックに問題を説明する
 
    「でね、関数があって、ボタンをクリックすると走る"はず"なんだ。なのに…」
 
 また、コードにコメントを追加する良いタイミングでもある。各関数が正確になにをしているのかがわかるようにするんだ。コード(もしくはその一部分)をプリントアウトして、行ごとに精査し、変数のパスを追跡して、メモ書きするコーダーもいる。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/2-3.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/2-3.jpg
    :alt: コードをプリントアウトして精査する
 
 3.はじめる前に…
@@ -91,33 +91,33 @@ p5.jsのドキュメントに含まれる `初心者向けにデバッグの心�
 
 なにかをはじめる前には、コードのコピーを保存して、戻れるようにしておこう。デバッグ中に他の問題を引き起こして、壊したり、意図せず問題ない部分を消してしまうというのは、よくあることだ。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/3-1.png
+.. figure:: {static}/images/a-field-guide-to-debugging/3-1.png
    :alt: コードを保存しておく
 
    「うーん、キミは壊れてるっぽいけど、もっとおかしくしちゃうかもしれないし、コピーを取っとこうかな…!」
 
 デバッグの過程で、さらなるバグを生み出すべきではない。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/3-2.png
+.. figure:: {static}/images/a-field-guide-to-debugging/3-2.png
    :alt: バグの出現
 
    バグ「こんにちは!」
 
 もしミスをしたり、問題が悪いほうに運んだりした場合には、いつでもアンドゥ、すなわち、保存したファイルに戻すことができる。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/3-3.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/3-3.jpg
    :alt: ここってなにがあったんだっけ…
 
 Githubのようなバージョン管理を試すのもアリだ。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/3-4.png
+.. figure:: {static}/images/a-field-guide-to-debugging/3-4.png
    :alt: gitを使おう
 
    キミがウィザードなら、gitバージョン管理を使うのもアリ
 
 やろうとしていることのリストを書いて、チェックの必要なことを追跡できるようにしよう。方法論的にいこう、長い目で見れば、それが時間の節約になるんだ。
 
-.. image:: {filename}/images/a-field-guide-to-debugging/3-5.jpg
+.. image:: {static}/images/a-field-guide-to-debugging/3-5.jpg
    :alt: いちどにひとつのことを
    :align: right
 
@@ -134,17 +134,17 @@ Githubのようなバージョン管理を試すのもアリだ。
 * パスに打ち間違いはない?
 * サーバーは確認した? 他
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/4-1.png
+.. figure:: {static}/images/a-field-guide-to-debugging/4-1.png
    :alt: ファイルの依存関係を確認しよう
 
    「なんでボクのロボットはレモネードを持ってきてくれないんだ?」「ああ、左手を付けるの忘れてた!」依存関係を確認しよう
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/4-2.png
+.. figure:: {static}/images/a-field-guide-to-debugging/4-2.png
    :alt: 正しいファイルをテストしてる?
 
    「なんでボクのロボットはレモネードを持ってきてくれないんだ?」「ああ、オフィスに電話してた、携帯番号じゃなくて!」正しいファイルをテストしてる?
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/4-3.png
+.. figure:: {static}/images/a-field-guide-to-debugging/4-3.png
    :alt: 正しいファイルを編集・保存してる?
 
    「なんでボクのロボットはレモネードを持ってきてくれないんだ?」「ああ、間違ってエリカのロボットにレモネードを頼んじゃってた!」正しいファイルを編集・保存してる?
@@ -154,16 +154,16 @@ Githubのようなバージョン管理を試すのもアリだ。
 
 ブラックボックスというのは、内部がどうなっているのか理解していない、システムの部分を意味している。例えば、自分で書いていないライブラリ、あるいは関数だ。系統的に、各ブラックボックスをひとつひとつ取り出して、プログラムを走らせてみて。それらのプログラムの中に誤りが含まれているか見るのに役立つから。
 
-.. image:: {filename}/images/a-field-guide-to-debugging/5-1.jpg
+.. image:: {static}/images/a-field-guide-to-debugging/5-1.jpg
    :alt: ブラックボックスは中身がわからない
 
-.. image:: {filename}/images/a-field-guide-to-debugging/5-2.png
+.. image:: {static}/images/a-field-guide-to-debugging/5-2.png
    :alt: ブラックボックスをひとつひとつ確認する
 
 6.エラー報告を追加する
 ========================
 
-.. image:: {filename}/images/a-field-guide-to-debugging/6-1.png
+.. image:: {static}/images/a-field-guide-to-debugging/6-1.png
    :alt: エラー報告がないと、プログラムの流れがわからない
    :align: right
 
@@ -173,7 +173,7 @@ Githubのようなバージョン管理を試すのもアリだ。
 
    <div style="clear:both;"></div>
 
-.. image:: {filename}/images/a-field-guide-to-debugging/6-2.png
+.. image:: {static}/images/a-field-guide-to-debugging/6-2.png
    :alt: エラー報告があると、プログラムの流れがわかる
    :align: right
 
@@ -181,7 +181,7 @@ Githubのようなバージョン管理を試すのもアリだ。
 
 変数の値を表示して、なにが起きているのか見られるようにするために、console.log() を足すのも便利だ。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/6-3.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/6-3.jpg
    :alt: console.logは便利
 
 7.他のヘルプを探す
@@ -193,13 +193,13 @@ Githubのようなバージョン管理を試すのもアリだ。
 * Processingフォーラムを p5.js タグで検索する。
 * Stack Overflowのような開発者フォーラムを検索する。[ref](訳注) 日本語版は以下 http://ja.stackoverflow.com/ [/ref]
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/7-1.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/7-1.jpg
    :alt: 他のヘルプを探す
 
 8.人に聞く
 ===========
 
-.. image:: {filename}/images/a-field-guide-to-debugging/8-0.jpg
+.. image:: {static}/images/a-field-guide-to-debugging/8-0.jpg
    :alt: 人に聞く
    :align: right
 
@@ -220,7 +220,7 @@ Githubのようなバージョン管理を試すのもアリだ。
 
 これも大事: 小さな問題からはじめよう! 一度にひとつのことをしよう。ひとつのことを確かめるのに、小さなスケッチ[ref](訳注) Processingの世界では、プログラムのことをスケッチと呼ぶ[/ref]を作るのが良いだろう(星を描く! twitterをチェックする!)、そして、それらをボルトロン[ref](訳注) 1984年にアメリカで放送された、合体ロボットアニメ。https://www.youtube.com/watch?v=tZZv5Z2Iz_s [/ref]させて、より大きなスケッチにするんだ(星を描いて、twitterの通知が届いたら赤くする!)。
 
-.. figure:: {filename}/images/a-field-guide-to-debugging/9-1.jpg
+.. figure:: {static}/images/a-field-guide-to-debugging/9-1.jpg
    :alt: コンピューターと対話するプログラマ
 
 10.他のリソース

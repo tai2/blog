@@ -34,7 +34,7 @@ Android Wearには、 **提案(Suggest)** と **要求(Demand)** という、2�
 
 (ユーザーからの)要求は、 **キューカード** によって実現されます。
 
-.. image:: {filename}/images/wear_cuecard.png
+.. image:: {static}/images/wear_cuecard.png
    :align: center
    :width: 30%
    :alt: The Cue Card

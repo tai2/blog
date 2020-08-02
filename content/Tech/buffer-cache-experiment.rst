@@ -20,7 +20,7 @@ RAM上の領域にキャッシュしておく機能があります(以降バッ�
 バッファーキャッシュは、カーネルの管理しているメモリ空間に配置され、アプリのアクセスできるユーザー空間とは隔離されています。
 これはカーネルによって透過的に管理されているため、ふだんアプリケーションプログラミングをしている分には、あまり意識することがありません。
 
-.. figure:: {filename}/images/buffer-cache-experiment/disk_cache.png
+.. figure:: {static}/images/buffer-cache-experiment/disk_cache.png
    :alt: Buffer Cache
 
    バッファーキャッシュ
@@ -79,8 +79,8 @@ LinuxではO_DIRECTフラグ、WindowsではFILE_FLAG_NO_BUFFERINGフラグを�
 	 t1 = time.time()
 	 print('{}: {:.6f}'.format(self.label, t1 - self.t0))
 
-   def read(filename, no_cache, parse):
-      with open(filename, 'rb') as f:
+   def read(static, no_cache, parse):
+      with open(static, 'rb') as f:
 	 if no_cache:
 	       fcntl.fcntl(f.fileno(), fcntl.F_NOCACHE, 1)
 	 data = f.read()

@@ -64,7 +64,7 @@ freeeに乗り換えて楽になった点
 いままでは、銀行やクレジットカードの取引履歴を目視で確認して、それを一件一件手作業を記帳していました。
 freeeでは、対応している銀行やクレジットカード[ref]freeeでは、便宜上クレジットカードも口座の一種として扱われます。[/ref]サービスであれば、自動で同期してくれます。
 
-.. figure:: {filename}/images/freee-review/import-transactions.png
+.. figure:: {static}/images/freee-review/import-transactions.png
    :alt: auto transaction import
 
    freeeは履歴を自動で同期してくれる
@@ -76,7 +76,7 @@ freeeでは、対応している銀行やクレジットカード[ref]freeeで�
 
 自動で取り込まれたばかりの取引は、一時的に、まだ仕訳がされていない未確定状態に置かれます。これをひとつずつ、仕訳して台帳に記入していく作業が必要ですが、freeeでは、過去の似たような仕訳の履歴から、取引に対して勘定科目を提案してくれます。これにより、多くの場合、内容を確認して、確定ボタンを押すだけで仕訳が完了するため、だいぶ作業が楽になります。ただし、間違った勘定科目の提案をしてくることもあるので、その場合は、手動で訂正します。
 
-.. figure:: {filename}/images/freee-review/transaction-inference.png
+.. figure:: {static}/images/freee-review/transaction-inference.png
    :alt: transaction inference
 
    freeeは勘定科目を推測してくれる
@@ -88,7 +88,7 @@ UIが使い易い
 
 主観でしかないのですが、UIはfreeeのほうがスッキリしていて使い易い気がします。やよいの振替伝票まわりのUIなどはとくに使い辛くストレスを感じていました。処理しなければならない内容が本質的に複雑なので、どうしてもUIも複雑になってしまうのですが、freeeは、一般的なのウェブブラウザのUIで実装されているため、親しみ易さを感じます。Windowsの使い慣れないUIでなく、ふだん使っているMacでふつうに作業ができるということも大きいです。[ref]VirtualBox上のWindowsだと日本語変換ひとつままならず、非常に不便でした。[/ref]
 
-.. figure:: {filename}/images/freee-review/freee-ui.png
+.. figure:: {static}/images/freee-review/freee-ui.png
    :alt: freee ui is not special
 
    freeeのUIは、一般的なWebサービスのUIなので、馴染みやすい

@@ -11,7 +11,7 @@ Node.jsクイズ第58問 ./node_modules直下にはどのパッケージが入�
 
 アプリに必要なプラグイン群への依存を別パッケージにまとめて記述しておいて、アプリはそのパッケージに依存するようにすれば便利ではないでしょうか?
 
-.. figure:: {filename}/images/node_quiz_about_npm_install/meta-package.png
+.. figure:: {static}/images/node_quiz_about_npm_install/meta-package.png
    :alt: Meta package
 
    npmでこのようなメタパッケージを実現したい
@@ -27,7 +27,7 @@ Node.jsクイズ第58問 ./node_modules直下にはどのパッケージが入�
 
 以下のようなパッケージの依存関係があるとします。
 
-.. figure:: {filename}/images/node_quiz_about_npm_install/dependencies.png
+.. figure:: {static}/images/node_quiz_about_npm_install/dependencies.png
    :alt: Package dependencies
 
    パッケージの依存関係
@@ -59,7 +59,7 @@ Nodeモジュールの検索アルゴリズム
 4. /Users/node_modules/bar
 5. /node_modules/bar
 
-.. figure:: {filename}/images/node_quiz_about_npm_install/require-algorithm.png
+.. figure:: {static}/images/node_quiz_about_npm_install/require-algorithm.png
    :alt: Node's module search algorithm
 
    Node.jsのモジュール検索アルゴリズム
