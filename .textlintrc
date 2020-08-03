@@ -1,0 +1,20 @@
+{
+  "filters": {},
+  "rules": {
+     "ja-no-mixed-period": {
+	     "allowPeriodMarks": [":", "?"],
+     },
+     "no-double-negative-ja": true,
+     "no-mix-dearu-desumasu": true,
+     "no-doubled-joshi": false,
+     "ja-hiragana-keishikimeishi": true,
+     "ja-hiragana-fukushi": true,
+     "ja-hiragana-hojodoushi": true,
+     "ja-unnatural-alphabet": true,
+     "@textlint-ja/textlint-rule-no-insert-dropping-sa": true,
+     "@textlint-ja/no-synonyms": true
+  },
+  "plugins": [
+    "rst"
+  ]
+}
