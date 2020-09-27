@@ -16,7 +16,11 @@
     <header class="article__header">
         <h1 class="article__title">{{ article.title }}</h1>
         <div class="article__info">
-            <a class="article__author" href="https://tai2.net">tai2</a>
+	    {% if article.author and article.author_url %}
+	    <a class="article__author" href="{{ article.author_url }}">{{ article.author }}</a>
+	    {% else %}
+	        <a class="article__author" href="https://tai2.net">tai2</a>
+	    {% endif %}
             <time class="article__date">{{ article.locale_date }}</time>
         </div>
     </header>
@@ -27,7 +31,7 @@
 
     <footer class="article__footer">
         <div class="article__footer-contents">
-            <a class="article__license-link" href="pages/license.html">ライセンス</a>
+            <a class="article__license-link" href="pages/license.html">LICENSE</a>
 
             <a class="twitter-share-button"
                 href="https://twitter.com/intent/tweet?text={{ article.title }}">
