@@ -6,7 +6,7 @@
 :tags: react, redux, rails, webpack
 :summary: クラウドワークスが、社外のエンジニアに寿司をおごる企画をやっているというのを見かけて、寿司がタダで食べられるなら良いなと思い、なにも考えずに申し込んでみました。
 
-クラウドワークスが、 `社外のエンジニアに寿司をおごる企画をやっている <https://crowdworks.co.jp/recruit/engineer/>`_ というのを見かけて、寿司がタダで食べられるなら良いなと思い、なにも考えずに申し込んでみました。
+クラウドワークスが、 `社外のエンジニアに寿司をおごる企画をやっている <https://web.archive.org/web/20190515082326/https://crowdworks.co.jp/recruit/engineer/>`_ というのを見かけて、寿司がタダで食べられるなら良いなと思い、なにも考えずに申し込んでみました。
 [ref]筆者のようになにも考えずに申し込む人間はレアケースで、応募してくるのは知り合いが多いそうです。なお、suzan2goさんを指名したのは筆者で二人目で、一人目は筆者の妻でした。[/ref]
 
 .. figure:: {static}/images/crowdworks-sushi/recruit.jpg
