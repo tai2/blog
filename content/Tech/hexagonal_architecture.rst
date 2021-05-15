@@ -6,7 +6,7 @@
 :tags: architecture
 :summary: Alistair Cockburn による Hexagonal architecture の翻訳です。
 
-`Alistair Cockburn <http://alistair.cockburn.us/>`_ による `Hexagonal architecture <http://alistair.cockburn.us/Hexagonal+architecture>`_ の翻訳です。PoEAAで言及されていることから、2002年ごろにはすでにC2 Wikiにページがあった模様。似たようなアーキテクチャである `クリーンアーキテクチャ <{static}clean_architecture.rst>`_ も翻訳したので参考にしてください。
+`Alistair Cockburn <http://alistair.cockburn.us/>`_ による `Hexagonal architecture <http://alistair.cockburn.us/Hexagonal+architecture>`_ の翻訳です。PoEAAで言及されていることから、2002年ごろにはすでにC2 Wikiにページがあった模様。似たようなアーキテクチャである `クリーンアーキテクチャ <{filename}/Tech/clean_architecture.rst>`_ も翻訳したので参考にしてください。
 
 この記事は著者から許可を得て公開しています。Thanks to Alistair Cockburn!
 

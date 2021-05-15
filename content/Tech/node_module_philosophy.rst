@@ -8,7 +8,7 @@
 ライセンスはCC BY 3.0 です。
 書いたのは、かつてNode.js界で人気のライブラリをたくさん作っていた `substack <https://github.com/substack>`_ 。
 
-`DHHのおまかせ思想 <{static}rails_is_omakase.rst>`_ と対比するとおもしろいです。
+`DHHのおまかせ思想 <{filename}/Tech/rails_is_omakase.rst>`_ と対比するとおもしろいです。
 
 変更点:
 
@@ -39,7 +39,7 @@ githubのスター数や、プロジェクトアクティビティー、見掛�
 
 利便性の庇護の元に機能を一箇所にまとめてエクスポートしようとするモジュールには、二つ大きな問題がある: 境界線を決めるための縄張り争いと、どのモジュールが何をしているのかの探索だ。
 
-機能がごちゃ混ぜになったパッケージは、どの新機能が入り、どれがそうでないのかの `境界を管理するのに多大な時間を浪費させる <https://github.com/jashkenas/underscore/search?q=%22special-case%22&ref=cmdform&type=Issues>`_ 。この種のパッケージの問題領域において、スコープが何なのかについて明快で自然な境界はない、すべては `どこかのだれかの独り善がりな見解だ <{static}rails_is_omakase.rst>`_ 。
+機能がごちゃ混ぜになったパッケージは、どの新機能が入り、どれがそうでないのかの `境界を管理するのに多大な時間を浪費させる <https://github.com/jashkenas/underscore/search?q=%22special-case%22&ref=cmdform&type=Issues>`_ 。この種のパッケージの問題領域において、スコープが何なのかについて明快で自然な境界はない、すべては `どこかのだれかの独り善がりな見解だ <{filename}/Tech/rails_is_omakase.rst>`_ 。
 
 Node, npm, そしてbrowserifyは、そうではない。これらは、公式にアラカルト、参加型であり、見解の相違や、雨後の竹の子のように新しいアイデア・アプローチが出てくることをむしろ祝福し、こういったものを一致、標準、あるいは「ベストプラクティス」の名の元に押さえ込むことを良しとしない。
 

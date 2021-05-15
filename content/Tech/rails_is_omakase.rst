@@ -7,7 +7,7 @@ Railsはおまかせ(Rails is omakase翻訳)
 作者DHHによる `Railsの思想を語ったエッセイ <http://david.heinemeierhansson.com/2012/rails-is-omakase.html>`_ の翻訳です。
 DHHから許可を得て公開しています(ライセンス不明)。
 
-`substackのモジュール哲学 <{static}node_module_philosophy.rst>`_ と対比するとおもしろいです。
+`substackのモジュール哲学 <{filename}/Tech/node_module_philosophy.rst>`_ と対比するとおもしろいです。
 
 ----
 

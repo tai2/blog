@@ -71,4 +71,4 @@ WebKitのコードを見ると、XMLHttpRequest::openしたときに開放処理
 速度的には、チューニングをすれば、もう少し上げられそうな気がしていますが、この手法は使えなさそうなので、これ以上追求するのはやめました。
 もしかすると、Androidでは、また違った結果になるかもしれません。
 
-次は、`WebSocketで同様の実験 <{static}websocket_bulktransfer_ios.rst>`_ をしてみようと思っています。
+次は、`WebSocketで同様の実験 <{filename}/Tech/websocket_bulktransfer_ios.rst>`_ をしてみようと思っています。

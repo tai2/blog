@@ -5,8 +5,8 @@ BowerとMacGlashanのMVP論文要約
 :slug: bower-and-macglashan-mvp-architecture
 :tags: mvp, mvc, architecture
 :summary: BowerとMacGlashanによるMVPを提唱した論文の要約です。最近MVPモデルのフレームワークでプログラミングをしているのですが、ビューとプレゼンターの境界が曖昧になって、どちらにコードを置くべきか迷う場面が出てきたので、根本的な理解を求めて読んでみました。
- 
-BowerとMacGlashanによるMVPを提唱した論文の要約です。最近MVPモデルのフレームワークでプログラミングをしているのですが、ビューとプレゼンターの境界が曖昧になって、どちらにコードを置くべきか迷う場面が出てきたので、根本的な理解を求めて読んでみました。 `PotelのMVP <{static}potel_mvp.rst>`_ に比べると、自分が理解しているMVPの姿とほぼ同じだったこともあり参考になりました。ただ、現在モバイル開発やウェブ開発でよく言われているMVCと、この論文で言及されているMVC[ref]VisualWorksの開発したMVCモデル[/ref]はだいぶかけはなれているので、昨今の典型的なMVC(MVPとかなり似ている)とMVPの微妙な違いは、これを読んでもよくわかりませんでした。
+
+BowerとMacGlashanによるMVPを提唱した論文の要約です。最近MVPモデルのフレームワークでプログラミングをしているのですが、ビューとプレゼンターの境界が曖昧になって、どちらにコードを置くべきか迷う場面が出てきたので、根本的な理解を求めて読んでみました。 `PotelのMVP <{filename}/Tech/potel_mvp.rst>`_ に比べると、自分が理解しているMVPの姿とほぼ同じだったこともあり参考になりました。ただ、現在モバイル開発やウェブ開発でよく言われているMVCと、この論文で言及されているMVC[ref]VisualWorksの開発したMVCモデル[/ref]はだいぶかけはなれているので、昨今の典型的なMVC(MVPとかなり似ている)とMVPの微妙な違いは、これを読んでもよくわかりませんでした。
 
 TWISTING THE TRIAD The evolution of the Dolphin Smalltalk MVP application framework.
 =====================================================================================
