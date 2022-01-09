@@ -6,6 +6,7 @@ Benefits That Help Attract And Retain Top Talent
 :summary: The recruitment market is more competitive each year, so offering the right benefits will increase the company’s chances to attract top talent. Gone are the days where employees were happy with a good salary and decent health insurance; now they expect more after going through university or years of experience.
 :author: Artur Meyster
 :author_url: pages/arturmeyster.html
+:lang: en
 
 The recruitment market is more competitive each year, so offering the right benefits will increase the company’s chances to attract top talent. Gone are the days where employees were happy with a good salary and decent health insurance; now they expect more after going through university or years of experience.
 

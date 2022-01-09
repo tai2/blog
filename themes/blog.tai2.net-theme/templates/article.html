@@ -5,6 +5,10 @@
 {% block og_url %}{{ SITEURL }}/{{ article.url }}{% endblock %}
 {% block og_title %}{{ article.title }}{% endblock %}
 {% block og_image %}{{ SITEURL }}/images/og/{{ article.source_path | basename }}.png{% endblock %}
+{% if article.lang %}
+	{% block lang %}{{ article.lang }}{% endblock %}
+{% endif %}
+
 
 {% block content %}
     <nav class="article__page-nav">

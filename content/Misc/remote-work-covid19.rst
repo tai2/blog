@@ -6,6 +6,7 @@ How Remote Work Is Changing Tech Salaries In The Era Of Coronavirus
 :summary: The coronavirus pandemic caused us to trade corner offices and cubicles for bedroom offices or repurposed kitchen tables. Remote work is gaining traction among employees and employers. Remote work is both different and the same as work pre-Covid-19. The work we are doing hasn't changed, but our methods of communication and meeting have.
 :author: Artur Meyster
 :author_url: pages/arturmeyster.html
+:lang: en
 
 The coronavirus pandemic caused us to trade corner offices and cubicles for bedroom offices or repurposed kitchen tables. Remote work is gaining traction among employees and employers. Remote work is both different and the same as work pre-Covid-19. The work we are doing hasn't changed, but our methods of communication and meeting have.
 
