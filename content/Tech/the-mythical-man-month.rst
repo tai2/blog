@@ -1,7 +1,7 @@
 人月の神話
 ############
 
-:date: 2022-3-28
+:date: 2022-2-28
 :slug: the-mythical-man-month
 :summary: 人月の神話をひさしぶりに読んでみた
 
