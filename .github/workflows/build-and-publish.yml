@@ -11,10 +11,19 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - run: make html
-      - uses: shallwefootball/s3-upload-action@master
+      - name: Upload to S3
+        uses: shallwefootball/s3-upload-action@master
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: 'tai2.net'
           destination_dir: 'blog'
           source_dir: 'output'
+      - name: Invalidate CDN caches
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+          PATHS: "/*"
+          AWS_REGION: "us-east-1"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
