@@ -11,4 +11,10 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - run: make html
-
+      - uses: shallwefootball/s3-upload-action@master
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: 'tai2.net'
+          destination_dir: 'blog'
+          source_dir: 'output'
