@@ -10,7 +10,7 @@ jobs:
           python-version: '3.9'
           cache: 'pip'
       - run: pip install -r requirements.txt
-      - run: make html
+      - run: make publish
       - name: Upload to S3
         uses: shallwefootball/s3-upload-action@master
         with:
