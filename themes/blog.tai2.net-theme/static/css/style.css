@@ -29,6 +29,7 @@ blockquote {
     background: white;
     margin: 0;
     padding: 2rem;
+    font-style: italic;
 }
 blockquote :first-child{
     margin-top: 0;
