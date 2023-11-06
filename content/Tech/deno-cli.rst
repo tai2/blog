@@ -45,7 +45,7 @@ GitHubリポジトリにアクセスするためのCDNに過ぎない。 :code:`
 
     import { DOMParser } from 'https://deno.land/x/deno_dom@v0.1.42/deno-dom-wasm.ts';
 
-こういうふうにURLから直接インポートする。
+こういうふうにリモートURLから直接インポートする。
 
 ただし、npmもサポートしていて、 `Node互換API <https://docs.deno.com/runtime/manual/node/compatibility>`_ 
 も完全にではないにしろ用意されてはいるので、Node.js向けに公開されているパッケージもある程度利用できる。
