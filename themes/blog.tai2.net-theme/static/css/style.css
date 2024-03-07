@@ -259,6 +259,11 @@ img {
     border-spacing: 0;
     width: 90%;
     margin-left: 5%;
+    border: none;
+}
+
+.article__content td {
+    border: none;
 }
 
 .article__content th,.article__content td {
