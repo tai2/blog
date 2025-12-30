@@ -1,25 +1,29 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <header class="index__header">
-        <h1 class="index__sitename">{{ SITENAME }}</h1>
-    </header>
-    <ol class="index__article-list">
-        {% for article in articles_page.object_list %}
-            <li class="index__article-item">
-                <h2 class="index__article-title">
-                    <a
-                        class="index__article-link"
-                        href="{{ SITEURL }}/{{ article.url }}"
-                        rel="bookmark"
-                        title="Permalink to {{ article.title|striptags }}"
-                    >{{ article.title }}</a>
-                </h2>
-                <time class="index__article-date" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-            </li>
-        {% endfor %}
-    </ol>
-    <footer class="index__footer">
-        <a href="https://gist.github.com/tai2/5cb13126ed4ebb79a73d" >*</a>
-    </footer>
+{% extends "base.html" %} {% block content %}
+<header class="index__header">
+  <h1 class="index__sitename">{{ SITENAME }}</h1>
+</header>
+<ol class="index__article-list">
+  {% for article in articles_page.object_list %}
+  <li class="index__article-item">
+    <h2 class="index__article-title">
+      <a
+        class="index__article-link"
+        href="{{ SITEURL }}/{{ article.url }}"
+        rel="bookmark"
+        title="Permalink to {{ article.title|striptags }}"
+        >{{ article.title }}</a
+      >
+      {% if article.translations %} ({% for translation in article.translations
+      %}<a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a
+      >{% endfor %}) {% endif %}
+    </h2>
+    <time class="index__article-date" datetime="{{ article.date.isoformat() }}">
+      {{ article.locale_date }}
+    </time>
+  </li>
+  {% endfor %}
+</ol>
+<footer class="index__footer">
+  <a href="https://gist.github.com/tai2/5cb13126ed4ebb79a73d">*</a>
+</footer>
 {% endblock content %}
