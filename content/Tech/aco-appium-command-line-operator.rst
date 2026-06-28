@@ -18,7 +18,7 @@ https://www.npmjs.com/package/@tai2/aco
 
 .. code-block:: bash
 
-   aco session start --platform ios --app /tmp/MyApp.app
+   aco session start --platform ios --app /tmp/MyApp.app.zip
 
 肝は、サーバーも裏側で起動した上で、capabilitiesも適切に構築してくれるので、正確なフォーマットを知らなくてもとりあえず動かせるということ。そして、セッションが開始できたら、もうコマンドを送信できる。
 
