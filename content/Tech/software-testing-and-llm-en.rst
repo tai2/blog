@@ -7,7 +7,7 @@ On Testing — The Reality of Testing in Web Development and Automated Testing w
 :lang: en
 :translation: true
 
-In this post I want to think about two (largely unrelated) topics: the reality of testing at web application development sites, and the possibilities of using LLMs (AI agents) for software testing. I hold a few opinions about these topics, but I don't have anything like a firm conclusion, so I'll sort out my thoughts as I write.
+In this post I want to think about two (largely unrelated) topics: the reality of testing at web application development sites, and the possibilities of using LLMs (AI agents) for software testing.
 
 Who's writing this
 ------------------
