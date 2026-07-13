@@ -3,7 +3,7 @@ I built aco (Appium Command-line Operator), a tool for operating Appium from the
 
 :date: 2026-6-28
 :slug: aco-appium-command-line-operator
-:summary: Page source in mobile automation is fundamentally different from web page source, and it comes with various difficulties
+:summary: I built a command-line tool to make Appium as easy to use as humanly possible. Its name is aco (Appium Command-line Operator).
 :lang: en
 
 While building a mobile test execution system (Appium-based) at work, I frequently want to experiment with and verify the behavior of Appium or the AUT (application under test). `Exploring how to swipe in order to achieve a stable amount of scrolling <https://github.com/tai2/appium-meetup-tokyo-2-swipe-experiment>`_, investigating the differences in startup time across simulator versions, checking what accessibility IDs are available on a particular screen, and so on and so forth.

@@ -3,7 +3,7 @@ AppiumをCLIから操作するためのツールaco (Appium Command-line Operato
 
 :date: 2026-6-28
 :slug: aco-appium-command-line-operator
-:summary: モバイル自動化におけるページソースは、ウェブのページソースと本質的に違り、さまざまな困難を伴う
+:summary: Appiumを極限まで簡単に使えるようにするためのコマンドラインツールを作った。名前はaco (Appium Command-line Operator)。
 :lang: ja
 
 業務でモバイルテスト実行システム(Appiumベース)を作っていると、AppiumやAUT(テスト対象アプリ)の挙動を実験して確認したいことが頻繁にある。 `安定したスクロール量を実現するためのスワイプのしかたを模索したり <https://github.com/tai2/appium-meetup-tokyo-2-swipe-experiment>`_ 、シミュレーターのバージョンごとの起動時間の違いを調べたり、特定の画面でどのようなアクセシビリティーIDが利用可能なのか調べたり、等等等。
