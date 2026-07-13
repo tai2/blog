@@ -32,7 +32,13 @@ def sequence_gen(genlist):
 def parse_for_footnotes(article_or_page_generator):
     all_content = [
         getattr(article_or_page_generator, attr, None)
-        for attr in [u"articles", u"drafts", u"pages"]
+        for attr in [
+            u"articles",
+            u"translations",
+            u"drafts",
+            u"drafts_translations",
+            u"pages",
+        ]
     ]
     all_content = [x for x in all_content if x is not None]
     for article in sequence_gen(all_content):
